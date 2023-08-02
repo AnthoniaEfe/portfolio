@@ -1,11 +1,12 @@
-import './App.css';
+import "./App.css";
+import Coming from "./pages/coming";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div>
-      <h1>PORTFOLIO</h1>
-      
-         </div>
+      <Coming />
+    </div>
   );
 }
 

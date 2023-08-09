@@ -592,3 +592,8 @@ video {
   width: 100vw;
 }
 
+.bg-vesta-10 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(23 10 37 / var(--tw-bg-opacity));
+}
+

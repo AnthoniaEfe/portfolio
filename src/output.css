@@ -632,8 +632,8 @@ video {
   height: 100vh;
 }
 
-.w-4\/5 {
-  width: 80%;
+.w-5\/6 {
+  width: 83.333333%;
 }
 
 .w-screen {
@@ -718,9 +718,9 @@ video {
   padding: 1.5rem;
 }
 
-.px-16 {
-  padding-left: 4rem;
-  padding-right: 4rem;
+.px-12 {
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 .px-2 {
@@ -733,24 +733,9 @@ video {
   padding-bottom: 0.25rem;
 }
 
-.py-12 {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-
-.px-1 {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
-}
-
-.px-12 {
-  padding-left: 3rem;
-  padding-right: 3rem;
 }
 
 .text-justify {
@@ -771,9 +756,9 @@ video {
   font-weight: 700;
 }
 
-.text-white {
+.text-gray-300 {
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: rgb(209 213 219 / var(--tw-text-opacity));
 }
 
 .underline-offset-2 {
@@ -801,15 +786,19 @@ video {
 
 .icon {
   width: 4rem;
-  fill: #fff;
+  fill: #d1d5db;
+}
+
+@media (min-width: 768px) {
+  .icon {
+    width: 7rem;
+  }
 }
 
 .anchor {
   padding: 1rem;
   font-size: 0.875rem;
   line-height: 1.25rem;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
   text-decoration-line: underline;
   text-decoration-color: rgb(78 12 131 / 0);
   text-decoration-style: dashed;
@@ -844,8 +833,8 @@ video {
 
 .grid-child:hover {
   --tw-rotate: 6deg;
-  --tw-scale-x: 1.1;
-  --tw-scale-y: 1.1;
+  --tw-scale-x: 1.25;
+  --tw-scale-y: 1.25;
   -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
           transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -857,6 +846,10 @@ video {
 @media (min-width: 768px) {
   .md\:m-6 {
     margin: 1.5rem;
+  }
+
+  .md\:w-4\/5 {
+    width: 80%;
   }
 
   .md\:grid-cols-4 {
@@ -871,13 +864,14 @@ video {
     padding: 2rem;
   }
 
-  .md\:p-16 {
-    padding: 4rem;
-  }
-
   .md\:px-4 {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+
+  .md\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .md\:text-4xl {

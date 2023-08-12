@@ -4,13 +4,13 @@
 @import "tailwindcss/utilities";
 
 .icon {
-  @apply fill-white w-16;
+  @apply fill-gray-300 w-16 md:w-28;
 }
 
 .anchor {
-  @apply text-white md:text-lg text-sm p-4 underline underline-offset-4 hover:decoration-vesta-4 decoration-dashed decoration-vesta-4/0;
+  @apply  md:text-lg text-sm p-4 underline underline-offset-4 hover:decoration-vesta-4 decoration-dashed decoration-vesta-4/0;
 }
 
 .grid-child {
-  @apply col-span-1 flex items-center justify-center transform hover:scale-110 rotate-0 transition-transform hover:rotate-6;
+  @apply col-span-1 flex items-center justify-center transform hover:scale-125 rotate-0 transition-transform hover:rotate-6;
 }

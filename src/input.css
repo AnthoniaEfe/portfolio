@@ -1,12 +1,16 @@
 /* src/index.css */
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
-.icon{
-  @apply fill-white w-16
+.icon {
+  @apply fill-white w-16;
 }
 
-.anchor{
-  @apply text-white md:text-lg text-sm p-4 underline underline-offset-2 hover:underline-offset-4
+.anchor {
+  @apply text-white md:text-lg text-sm p-4 underline underline-offset-4 hover:decoration-vesta-4 decoration-dashed decoration-vesta-4/0;
+}
+
+.grid-child {
+  @apply col-span-1 flex items-center justify-center transform hover:scale-110 rotate-0 transition-transform hover:rotate-6;
 }

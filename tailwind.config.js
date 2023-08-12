@@ -6,7 +6,7 @@ module.exports = {
     extend: {
       colors: {
         vesta: {
-          1: "7239A1",
+          1: "#7239A1",
           2: "#642598",
           3: "#550F8E",
           4: "#4E0C83",

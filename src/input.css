@@ -3,3 +3,10 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+.icon{
+  @apply fill-white w-16
+}
+
+.anchor{
+  @apply text-white md:text-lg text-sm p-4 underline underline-offset-2 hover:underline-offset-4
+}

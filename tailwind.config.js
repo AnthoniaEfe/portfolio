@@ -17,7 +17,6 @@ module.exports = {
           9: "#1F0738",
           10: "#170A25",
         },
-
         atsev: {
           1: "#E1C6FD",
           2: "#B79AD2",
@@ -27,6 +26,11 @@ module.exports = {
           6: "#736482",
           7: "#62417C",
         },
+      },
+      fontFamily: {
+        abril: ['AbrilFatFace', 'sans'], // 'sans' is a default fallback
+        alice: ['Alice', 'sans'], // 'sans' is a default fallback
+        playfair: ['PlayFairDisplay', 'sans'], // 'sans' is a default fallback
       },
     },
   },

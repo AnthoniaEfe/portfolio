@@ -21,7 +21,7 @@ export default function Home() {
       "
         >
           <p
-            className=" text-2xl md:text-4xl font-bold m-2 md:m-8
+            className="text-2xl md:text-4xl font-playfair font-bold m-2 md:m-8
       "
           >
             Hi 👋🏾 , I'm{" "}
@@ -31,7 +31,7 @@ export default function Home() {
               rel="noreferrer"
               className=" transform hover:scale-105 hover-md:text-5xl transition-transform underline-offset-2 "
             >
-              Anthonia
+              ANTHONIA
             </a>
           </p>
 
@@ -40,12 +40,12 @@ export default function Home() {
               href="/"
               target="_blank"
               rel="noreferrer"
-              className=" flex text-xl flex-row-reverse animate-bounce w-fit hover:animation-none hover:scale-105 hover:text-atsev-5 "
+              className="font-alice flex text-xl flex-row-reverse animate-bounce w-fit hover:animation-none hover:scale-105 hover:text-atsev-5 "
             >
               Resume
             </a>
 
-            <p className="text-sm md:text-xl mb-4 text-justify">
+            <p className="text-sm md:text-xl mb-4 text-justify font-alice">
               Nulla et ipsum velit voluptate occaecat culpa est sunt. Ipsum id
               adipisicing consectetur magna. Voluptate deserunt tempor ex duis
               cupidatat magna nulla ullamco. Veniam sint nostrud nisi excepteur

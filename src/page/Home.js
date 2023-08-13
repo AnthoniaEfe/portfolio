@@ -24,32 +24,33 @@ export default function Home() {
             className=" text-2xl md:text-4xl font-bold m-2 md:m-8
       "
           >
-            Hi, I'm{" "}
+            Hi 👋🏾 , I'm{" "}
             <a
               href="https://twitter.com/Anthonia_Efe"
               target="_blank"
               rel="noreferrer"
-              className=" transform hover:underline hover-md:text-5xl transition-transform underline-offset-2 "
+              className=" transform hover:scale-105 hover-md:text-5xl transition-transform underline-offset-2 "
             >
               Anthonia
             </a>
           </p>
 
           <div className="w-11/12 md:w-5/6 h-full border-2 rounded-xl shadow-vesta-4 shadow-lg border-vesta-6 mx-auto my-8 p-6 md:p-8 justify-center items-center">
-            {/* <a
-              href={resume}
+            <a
+              href="/"
               target="_blank"
               rel="noreferrer"
-              className="  "
+              className=" flex text-xl flex-row-reverse animate-bounce w-fit hover:animation-none hover:scale-105 hover:text-atsev-5 "
             >
-              RESUME
-            </a> */}
+              Resume
+            </a>
+
             <p className="text-sm md:text-xl mb-4 text-justify">
-              👋🏾 Nulla et ipsum velit voluptate occaecat culpa est sunt. Ipsum
-              id adipisicing consectetur magna. Voluptate deserunt tempor ex
-              duis cupidatat magna nulla ullamco. Veniam sint nostrud nisi
-              excepteur laboris labore voluptate ipsum anim et. Nulla et ipsum
-              velit voluptate occaecat culpa est sunt. Ipsum id adipisicing
+              Nulla et ipsum velit voluptate occaecat culpa est sunt. Ipsum id
+              adipisicing consectetur magna. Voluptate deserunt tempor ex duis
+              cupidatat magna nulla ullamco. Veniam sint nostrud nisi excepteur
+              laboris labore voluptate ipsum anim et. Nulla et ipsum velit
+              voluptate occaecat culpa est sunt. Ipsum id adipisicing
               consectetur magna. Voluptate deserunt tempor ex duis cupidatat
               magna nulla ullamco. Veniam sint nostrud nisi excepteur laboris
               labore voluptate ipsum anim et. Nulla et ipsum velit voluptate
@@ -67,8 +68,8 @@ export default function Home() {
 
             <footer className=" py-2 px-4 flex flex-col justify-center items-center">
               <div
-                className="grid grid-cols-4 w-full 
-           justify-center items-center gap-8 py-2 px-4 md:px-16"
+                className="grid grid-cols-4 w-max 
+           justify-start items-start py-2 gap-10"
               >
                 <a
                   href="https://twitter.com/Anthonia_Efe"

@@ -4,7 +4,7 @@
 @import "tailwindcss/utilities";
 
 .icon {
-  @apply fill-white h-4 md:h-12 w-4 md:w-12 md:p-2 border-2 border-white rounded-full;
+  @apply fill-white h-4 md:h-10 w-4 md:w-10 md:p-2 hover:text-atsev-5;
 }
 
 .anchor {
@@ -12,7 +12,8 @@
 }
 
 .grid-child {
-  @apply col-span-1 flex items-center justify-center transform hover:scale-125 rotate-0 transition-transform hover:rotate-6;
+  @apply col-span-1 w-10 h-10 flex items-start justify-start 
+   transform hover:scale-110 rotate-0 transition-transform hover:rotate-3 border-2 border-white rounded-full;
 }
 
 .bg-stars {

@@ -8,15 +8,20 @@ import { ReactComponent as Github } from "../assets/github.svg";
 
 export default function Home() {
   return (
-    <div className="relative bg-gradient-to-b from-vesta-10 via-vesta-9 to-vesta-9 w-screen h-screen overflow-x-hidden text-gray-300 ">
-      <Navbar className="fixed" />
+    <div
+      className="relative bg-gradient-to-b from-vesta-10 via-vesta-9 to-vesta-9
+     w-screen h-screen overflow-x-hidden text-white bg-stars bg-cover
+      bg-center bg-opacity-10 bg-blend-darken  backdrop-brightness-50
+     "
+    >
+      <Navbar className="sticky top-0 left-0" />{" "}
       <main className="px-12 py-8 ">
         <div
           className="flex-col items-center justify-center
       "
         >
           <p
-            className=" text-2xl md:text-4xl font-bold m-2 md:m-6
+            className=" text-2xl md:text-4xl font-bold m-2 md:m-8
       "
           >
             Hi, I'm{" "}
@@ -26,58 +31,94 @@ export default function Home() {
               rel="noreferrer"
               className=" transform hover:underline hover-md:text-5xl transition-transform underline-offset-2 "
             >
-              Anthonia
+              Anthonia Efe
             </a>
           </p>
 
-          <div className="w-5/6 h-fit border-2 rounded-xl shadow-vesta-4 shadow-lg border-vesta-6 mx-auto my-8 p-6 md:p-8 justify-center items-center">
+          <div className="w-5/6 h-full border-2 rounded-xl shadow-vesta-4 shadow-lg border-vesta-6 mx-auto my-8 p-6 md:p-8 justify-center items-center">
             <p className="text-sm md:text-xl mb-4 text-justify">
               Nulla et ipsum velit voluptate occaecat culpa est sunt. Ipsum id
               adipisicing consectetur magna. Voluptate deserunt tempor ex duis
               cupidatat magna nulla ullamco. Veniam sint nostrud nisi excepteur
-              laboris labore voluptate ipsum anim et.
+              laboris labore voluptate ipsum anim et. Nulla et ipsum velit
+              voluptate occaecat culpa est sunt. Ipsum id adipisicing
+              consectetur magna. Voluptate deserunt tempor ex duis cupidatat
+              magna nulla ullamco. Veniam sint nostrud nisi excepteur laboris
+              labore voluptate ipsum anim et. Nulla et ipsum velit voluptate
+              occaecat culpa est sunt. Ipsum id adipisicing consectetur magna.
+              Voluptate deserunt tempor ex duis cupidatat magna nulla ullamco.
+              Veniam sint nostrud nisi excepteur laboris labore voluptate ipsum
+              anim et. Nulla et ipsum velit voluptate occaecat culpa est sunt.
+              Ipsum id adipisicing consectetur magna. Voluptate deserunt tempor
+              ex duis cupidatat magna nulla ullamco. Veniam sint nostrud nisi
+              excepteur laboris labore voluptate ipsum anim et. Nulla et ipsum
+              velit voluptate occaecat culpa est sunt. Ipsum id adipisicing
+              consectetur magna. Voluptate deserunt tempor ex duis cupidatat
+              magna nulla ullamco. Veniam sint nostrud nisi excepteur laboris
+              labore voluptate ipsum anim et. Nulla et ipsum velit voluptate
+              occaecat culpa est sunt. Ipsum id adipisicing consectetur magna.
+              Voluptate deserunt tempor ex duis cupidatat magna nulla ullamco.
+              Veniam sint nostrud nisi excepteur laboris labore voluptate ipsum
+              anim et. Nulla et ipsum velit voluptate occaecat culpa est sunt.
+              Ipsum id adipisicing consectetur magna. Voluptate deserunt tempor
+              ex duis cupidatat magna nulla ullamco. Veniam sint nostrud nisi
+              excepteur laboris labore voluptate ipsum anim et. Nulla et ipsum
+              velit voluptate occaecat culpa est sunt. Ipsum id adipisicing
+              consectetur magna. Voluptate deserunt tempor ex duis cupidatat
+              magna nulla ullamco. Veniam sint nostrud nisi excepteur laboris
+              labore voluptate ipsum anim et. Nulla et ipsum velit voluptate
+              occaecat culpa est sunt. Ipsum id adipisicing consectetur magna.
+              Voluptate deserunt tempor ex duis cupidatat magna nulla ullamco.
+              Veniam sint nostrud nisi excepteur laboris labore voluptate ipsum
+              anim et.
             </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 md:w-4/5 md:gap-12 md:px-8 justify-center items-center gap-8 mx-auto mt-8">
-            <a
-              href="https://twitter.com/Anthonia_Efe"
-              target="_blank"
-              rel="noreferrer"
-              className="grid-child"
-            >
-              <Twitter className="icon " />
-            </a>
-
-            <a
-              href="https://www.linkedin.com/in/anthoniaefe/"
-              target="_blank"
-              rel="noreferrer"
-              className="grid-child "
-            >
-              <Linkedin className="icon " />
-            </a>
-
-            <a
-              href="https://github.com/AnthoniaEfe"
-              target="_blank"
-              rel="noreferrer"
-              className="grid-child"
-            >
-              <Github className="icon " />
-            </a>
-
-            <a
-              href="mailto:anthoniaefe36@gmail.com"
-              target="_blank"
-              rel="noreferrer"
-              className="grid-child "
-            >
-              <Gmail className="icon " />
-            </a>
           </div>
         </div>
       </main>
+      <footer className=" bottom-0 left-0 p-4 bg-vesta-9">
+        <p className="mb-2 text-xl">Contact me:</p>
+        <div
+          className="grid grid-cols-4 w-screen md:gap-12 md:px-8
+           justify-center items-center gap-8 p-4
+           "
+        >
+          <a
+            href="https://twitter.com/Anthonia_Efe"
+            target="_blank"
+            rel="noreferrer"
+            className="grid-child"
+          >
+            <Twitter className="icon " />
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/anthoniaefe/"
+            target="_blank"
+            rel="noreferrer"
+            className="grid-child "
+          >
+            <Linkedin className="icon " />
+          </a>
+
+          <a
+            href="https://github.com/AnthoniaEfe"
+            target="_blank"
+            rel="noreferrer"
+            className="grid-child"
+          >
+            <Github className="icon " />
+          </a>
+
+          <a
+            href="mailto:anthoniaefe36@gmail.com"
+            target="_blank"
+            rel="noreferrer"
+            className="grid-child "
+          >
+            <Gmail className="icon " />
+          </a>
+        </div>
+      </footer>
     </div>
   );
 }

@@ -4,13 +4,17 @@
 @import "tailwindcss/utilities";
 
 .icon {
-  @apply fill-gray-300 w-16 md:w-28;
+  @apply fill-white w-16 md:w-52;
 }
 
 .anchor {
-  @apply  md:text-lg text-sm p-4 underline underline-offset-4 hover:decoration-vesta-4 decoration-dashed decoration-vesta-4/0;
+  @apply md:text-lg text-sm p-4 underline underline-offset-4 hover:decoration-atsev-1 decoration-dashed decoration-vesta-4/0;
 }
 
 .grid-child {
   @apply col-span-1 flex items-center justify-center transform hover:scale-125 rotate-0 transition-transform hover:rotate-6;
+}
+
+.bg-stars {
+  background-image: url(./assets/stars.jpeg);
 }

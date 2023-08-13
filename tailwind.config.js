@@ -28,9 +28,13 @@ module.exports = {
         },
       },
       fontFamily: {
-        abril: ['AbrilFatFace', 'sans'], // 'sans' is a default fallback
-        alice: ['Alice', 'sans'], // 'sans' is a default fallback
-        playfair: ['PlayFairDisplay', 'sans'], // 'sans' is a default fallback
+        mali: ["Mali", "sans"], // 'sans' is a default fallback
+        kalam: ["Kalam", "sans"], // 'sans' is a default fallback
+        calistoga: ["Calistoga", "mono"], // 'sans' is a default fallback
+        akaya: ["AkayaTelivigala", "sans"], // 'sans' is a default fallback
+      },
+      screens: {
+        xs: { min: "200px", max: "330px" },
       },
     },
   },

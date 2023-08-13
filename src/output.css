@@ -584,10 +584,6 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.relative {
-  position: relative;
-}
-
 .m-2 {
   margin: 0.5rem;
 }
@@ -630,11 +626,6 @@ video {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-}
-
-.w-max {
-  width: -webkit-max-content;
-  width: max-content;
 }
 
 .w-screen {
@@ -715,6 +706,10 @@ video {
   gap: 2.5rem;
 }
 
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
 .overflow-x-hidden {
   overflow-x: hidden;
 }
@@ -763,8 +758,16 @@ video {
   background-attachment: scroll;
 }
 
+.p-3 {
+  padding: 0.75rem;
+}
+
 .p-6 {
   padding: 1.5rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
 }
 
 .px-12 {
@@ -791,16 +794,12 @@ video {
   text-align: justify;
 }
 
-.font-abril {
-  font-family: AbrilFatFace, sans;
+.font-calistoga {
+  font-family: Calistoga, mono;
 }
 
-.font-playfair {
-  font-family: PlayFairDisplay, sans;
-}
-
-.font-alice {
-  font-family: Alice, sans;
+.font-mali {
+  font-family: Mali, sans;
 }
 
 .text-2xl {
@@ -855,14 +854,21 @@ video {
 }
 
 .icon {
-  height: 1rem;
-  width: 1rem;
+  height: 0.75rem;
+  width: 0.75rem;
   fill: #fff;
 }
 
 .icon:hover {
   --tw-text-opacity: 1;
   color: rgb(140 109 167 / var(--tw-text-opacity));
+}
+
+@media (min-width: 640px) {
+  .icon {
+    height: 1.25rem;
+    width: 1.25rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -897,13 +903,13 @@ video {
 .grid-child {
   grid-column: span 1 / span 1;
   display: flex;
-  height: 2.5rem;
-  width: 2.5rem;
+  height: 2rem;
+  width: 2rem;
   --tw-rotate: 0deg;
   -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
           transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
   border-radius: 9999px;
   border-width: 2px;
   --tw-border-opacity: 1;
@@ -923,24 +929,28 @@ video {
           transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+@media (min-width: 768px) {
+  .grid-child {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 330px) {
+  .grid-child {
+    height: 1rem;
+    width: 1rem;
+  }
+}
+
 .bg-stars {
   background-image: url(./assets/stars.jpeg);
 }
 
 @font-face {
-  font-family: "AbrilFatFace";
+  font-family: "AkayaTelivigala";
 
-  src: url("./fonts/Abril_Fatface/AbrilFatface-Regular.ttf") format("ttf");
-
-  font-weight: normal;
-
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Alice";
-
-  src: url("./fonts/Alice/Alice-Regular.ttf") format("ttf");
+  src: url("./fonts/Akaya_Telivigala/AkayaTelivigala-Regular.ttf") format("ttf");
 
   font-weight: normal;
 
@@ -948,12 +958,32 @@ video {
 }
 
 @font-face {
-  font-family: "PlayFairDisplay";
+  font-family: "Calistoga";
 
-  src: url("./fonts/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf")
-      format("ttf"),
-    url("./fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf")
-      format("ttf");
+  src: url("./fonts/Calistoga/Calistoga-Regular.ttf") format("ttf");
+
+  font-weight: normal;
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Kalam";
+
+  src: url("./fonts/Kalam/Kalam-Bold.ttf") format("ttf"),
+    url("./fonts/Kalam/Kalam-Light.ttf") format("ttf"),
+    url("./fonts/Kalam/Kalam-Regular.ttf") format("ttf");
+
+  font-weight: normal;
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mali";
+
+  src: url("./fonts/Mali/Mali-Bold.ttf") format("ttf"),
+    url("./fonts/Mali/Mali-Regular.ttf") format("ttf");
 
   font-weight: normal;
 
@@ -977,8 +1007,12 @@ video {
     margin: 2rem;
   }
 
-  .md\:w-5\/6 {
-    width: 83.333333%;
+  .md\:w-4\/5 {
+    width: 80%;
+  }
+
+  .md\:bg-fixed {
+    background-attachment: fixed;
   }
 
   .md\:p-8 {

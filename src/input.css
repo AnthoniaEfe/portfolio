@@ -4,7 +4,7 @@
 @import "tailwindcss/utilities";
 
 .icon {
-  @apply fill-white w-16 md:w-52;
+  @apply fill-white h-4 md:h-6 w-4 md:w-6;
 }
 
 .anchor {

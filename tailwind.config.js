@@ -1,8 +1,12 @@
-// tailwind.config.js
 module.exports = {
-  purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
+  content: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    fontFamily: {
+      blobbychug: ["blobbychug", "sans"],
+      mali: ["Mali", "sans"],
+      akaya: ["AkayaTelivigala", "mali", "sans"],
+    },
     extend: {
       colors: {
         vesta: {
@@ -27,12 +31,7 @@ module.exports = {
           7: "#62417C",
         },
       },
-      fontFamily: {
-        mali: ["Mali", "sans"], // 'sans' is a default fallback
-        kalam: ["Kalam", "sans"], // 'sans' is a default fallback
-        calistoga: ["Calistoga", "mono"], // 'sans' is a default fallback
-        akaya: ["AkayaTelivigala", "sans"], // 'sans' is a default fallback
-      },
+
       screens: {
         xs: { min: "200px", max: "330px" },
       },

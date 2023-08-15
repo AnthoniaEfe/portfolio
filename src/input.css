@@ -4,7 +4,7 @@
 @import "tailwindcss/utilities";
 
 .icon {
-  @apply fill-white sm:h-5 w-3 h-3 md:h-10 sm:w-5 md:w-10 md:p-2 hover:text-atsev-5;
+  @apply fill-gray-200 sm:h-5 w-3 h-3 md:h-10 sm:w-5 md:w-10 md:p-2;
 }
 
 .anchor {
@@ -12,8 +12,8 @@
 }
 
 .grid-child {
-  @apply col-span-1 xs:w-4 xs:h-4 w-8 md:w-10 h-8 md:h-10 flex items-center justify-center 
-   transform hover:scale-110 rotate-0 transition-transform hover:rotate-3 border-2 border-white rounded-full;
+  @apply col-span-1 xs:w-4 xs:h-4 w-8 md:w-12 h-8 md:h-12 flex items-center justify-center hover:bg-vesta-6 hover:border-vesta-6
+   transform hover:scale-110 border-2 border-gray-200 rounded-full rotate-0 hover:rotate-2 transition duration-300 ease-in-out;
 }
 
 .bg-stars {
@@ -21,32 +21,22 @@
 }
 
 @font-face {
+  font-family: "blobbychug";
+  src: url("./fonts/blobby-chug/BLOBBYCHUG-Bold.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "AkayaTelivigala";
-  src: url("./fonts/Akaya_Telivigala/AkayaTelivigala-Regular.ttf") format("ttf");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Calistoga";
-  src: url("./fonts/Calistoga/Calistoga-Regular.ttf") format("ttf");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Kalam";
-  src: url("./fonts/Kalam/Kalam-Bold.ttf") format("ttf"),
-    url("./fonts/Kalam/Kalam-Light.ttf") format("ttf"),
-    url("./fonts/Kalam/Kalam-Regular.ttf") format("ttf");
+  src: url("./fonts/Akaya_Telivigala/AkayaTelivigala-Regular.ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Mali";
-  src: url("./fonts/Mali/Mali-Bold.ttf") format("ttf"),
-    url("./fonts/Mali/Mali-Regular.ttf") format("ttf");
+  src: url("./fonts/Mali/Mali-Bold.ttf"), url("./fonts/Mali/Mali-Regular.ttf");
   font-weight: normal;
   font-style: normal;
 }

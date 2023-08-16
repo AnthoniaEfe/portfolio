@@ -597,28 +597,16 @@ video {
   display: grid;
 }
 
-.h-10 {
-  height: 2.5rem;
+.h-14 {
+  height: 3.5rem;
 }
 
 .h-screen {
   height: 100vh;
 }
 
-.h-12 {
-  height: 3rem;
-}
-
-.h-1 {
-  height: 0.25rem;
-}
-
-.h-14 {
-  height: 3.5rem;
-}
-
-.w-10 {
-  width: 2.5rem;
+.w-14 {
+  width: 3.5rem;
 }
 
 .w-5\/6 {
@@ -633,14 +621,6 @@ video {
 
 .w-screen {
   width: 100vw;
-}
-
-.w-12 {
-  width: 3rem;
-}
-
-.w-14 {
-  width: 3.5rem;
 }
 
 .transform {
@@ -709,14 +689,6 @@ video {
   justify-content: space-between;
 }
 
-.gap-10 {
-  gap: 2.5rem;
-}
-
-.gap-8 {
-  gap: 2rem;
-}
-
 .gap-6 {
   gap: 1.5rem;
 }
@@ -756,10 +728,6 @@ video {
 
 .bg-scroll {
   background-attachment: scroll;
-}
-
-.p-2 {
-  padding: 0.5rem;
 }
 
 .p-1 {

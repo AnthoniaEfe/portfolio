@@ -31,7 +31,7 @@ export default function Home() {
             />{" "}
           </a>
           <a
-            href="/"
+            href="portfolio-oi8kb32gc-anthoniaefe.vercel.app/ANTHONIA_EFE_RESUME.pdf"
             target="_blank"
             rel="noreferrer"
             className="font-akaya font-bold flex text-lg md:text-2xl flex-row-reverse p-1 md:p-2 transition duration-300 ease-in-out
@@ -52,13 +52,7 @@ export default function Home() {
             className="text-2xl md:text-9xl font-blobbychug -tracking-[.05em] 
       "
           >
-            I'm{" "}
-            <a
-              href="https://twitter.com/Anthonia_Efe"
-              className="animate-bounce"
-            >
-              Anthonia
-            </a>
+            I'm Anthonia
           </p>
           <p
             className="text-xl md:text-2xl font-akaya mx-auto text-justify w-5/6 

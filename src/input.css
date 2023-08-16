@@ -13,11 +13,14 @@
 
 .grid-child {
   @apply col-span-1 xs:w-4 xs:h-4 w-10 md:w-12 h-10 md:h-12 flex items-center justify-center hover:bg-vesta-6 hover:border-vesta-6
-   transform hover:scale-110 border-2 border-gray-200 rounded-full rotate-0 hover:rotate-2 transition duration-300 ease-in-out;
+   transform hover:scale-110 border-2 border-gray-200 rounded-full hover:rotate-2 transition duration-300 ease-in-out;
 }
 
 .bg-stars {
   background-image: url(./assets/stars.jpeg);
+}
+.copright {
+  @apply fixed bottom-0 md:static;
 }
 
 @font-face {

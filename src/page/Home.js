@@ -11,11 +11,11 @@ export default function Home() {
   return (
     <div
       className=" 
-     w-screen h-screen overflow-x-hidden text-gray-200 bg-stars bg-cover 
-      bg-scroll md:bg-fixed bg-opacity-10 bg-blend-darken overflow-y-auto
+     w-screen h-screen text-gray-200 bg-stars bg-cover 
+      bg-fixed md:bg-fixed overflow-y-auto overflow-x-hidden relative
       "
     >
-      <div className="px-10 md:px-20 py-6 md:py-12">
+      <div className="px-10 md:px-20 pt-12 pb-2 md:pt-4 md:pb-6">
         <div className="flex justify-between items-center">
           {" "}
           <a
@@ -34,41 +34,41 @@ export default function Home() {
             href="portfolio-oi8kb32gc-anthoniaefe.vercel.app/ANTHONIA_EFE_RESUME.pdf"
             target="_blank"
             rel="noreferrer"
-            className="font-akaya font-bold flex text-lg md:text-2xl flex-row-reverse p-1 md:p-2 transition duration-300 ease-in-out
+            className="font-akaya font-bold flex text-lg md:text-2xl flex-row-reverse px-2 py-1
+             md:p-2 transition duration-300 ease-in-out
             w-fit hover:scale-105 border-2 border-vesta-6 rounded-lg hover:bg-vesta-6"
           >
             Resume
           </a>
         </div>
 
-        <span>
+        <div className="pt-16 md:pt-0">
           <p
-            className="text-xl md:text-7xl font-blobbychug tracking-tighter
+            className="text-4xl md:text-7xl font-blobbychug tracking-tighter
       "
           >
             Hi there,
           </p>
           <p
-            className="text-2xl md:text-9xl font-blobbychug -tracking-[.05em] 
+            className="text-5xl md:text-9xl my-2 font-blobbychug -tracking-[.05em] 
       "
           >
             I'm Anthonia
           </p>
           <p
-            className="text-xl md:text-2xl font-akaya mx-auto text-justify w-5/6 
+            className="text-xl md:text-2xl font-akaya mx-auto text-justify w-11/12 my-8 md:mt-0 
       "
           >
             I'm a software developer with a knack for front-end development and
             crafting eye-catching web designs. I'm all about pushing my
-            boundaries and embracing new learning opportunities in creating
-            seamless digital experiences that leave a lasting impact.
+            boundaries in creating seamless digital experiences .
           </p>
-        </span>
+        </div>
       </div>
 
-      <footer
-        className="grid grid-cols-4 w-fit mx-auto
-           justify-start items-start py-2 gap-6 md:gap-10"
+      <div
+        className="grid grid-cols-4 w-fit mx-auto px-4 
+           justify-start items-start py-2 gap-8 md:gap-10 "
       >
         <a
           href="https://twitter.com/Anthonia_Efe"
@@ -105,6 +105,12 @@ export default function Home() {
         >
           <Gmail className="icon " />
         </a>
+      </div>
+
+      <footer className="fixed md:sticky bottom-0 w-screen mt-4 p-1 ">
+        <p className="font-mali">
+          &copy; {new Date().getFullYear()} Anthonia Efe
+        </p>{" "}
       </footer>
     </div>
   );

@@ -4,10 +4,20 @@ import { ReactComponent as Twitter } from "../assets/twitter.svg";
 import { ReactComponent as Gmail } from "../assets/gmail.svg";
 import { ReactComponent as Linkedin } from "../assets/linkedin.svg";
 import { ReactComponent as Github } from "../assets/github.svg";
-
 import avatar from "../assets/avatar.png";
 
+const FileURL = "https://www.anthoniaefe.com/ANTHONIA_EFE_RESUME.pdf";
+
 export default function Home() {
+  const downloadFileAtUrl = (url) => {
+    const fileName = url.split("/").pop();
+    const aTag = document.createElement("a");
+    aTag.href = url;
+    aTag.setAttribute("download", fileName);
+    document.body.appendChild(aTag);
+    aTag.click();
+    aTag.remove();
+  };
   return (
     <div
       className=" 
@@ -30,16 +40,16 @@ export default function Home() {
               className="rounded-full w-14 md:w-20 h-14 md:h-20 border-2 border-vesta-6 "
             />{" "}
           </a>
-          <a
-            href="portfolio-oi8kb32gc-anthoniaefe.vercel.app/ANTHONIA_EFE_RESUME.pdf"
-            target="_blank"
-            rel="noreferrer"
+          <button
+            onClick={() => {
+              downloadFileAtUrl(FileURL);
+            }}
             className="font-akaya font-bold flex text-lg md:text-2xl flex-row-reverse px-2 py-1
              md:p-2 transition duration-300 ease-in-out
             w-fit hover:scale-105 border-2 border-vesta-6 rounded-lg hover:bg-vesta-6"
           >
             Resume
-          </a>
+          </button>
         </div>
 
         <div className="pt-16 md:pt-0">

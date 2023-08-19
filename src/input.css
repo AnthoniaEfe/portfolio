@@ -4,21 +4,43 @@
 @import "tailwindcss/utilities";
 
 .icon {
-  @apply fill-gray-200 sm:h-5 w-3 h-3 md:h-10 sm:w-5 md:w-10 md:p-2;
+  @apply fill-atsev-3 sm:h-5 w-3 h-3 md:h-10 sm:w-5 md:w-10 md:p-2;
 }
 
-.anchor {
-  @apply md:text-lg text-sm p-4 underline underline-offset-4 hover:decoration-atsev-1 decoration-dashed decoration-vesta-4/0;
+.socials {
+  @apply fill-white sm:h-5 w-3 h-3 md:h-8 sm:w-5 md:w-8 md:p-2  transform hover:scale-110;
 }
 
 .grid-child {
-  @apply col-span-1 xs:w-4 xs:h-4 w-10 md:w-12 h-10 md:h-12 flex items-center justify-center hover:bg-vesta-6 hover:border-vesta-6
-   transform hover:scale-110 border-2 border-gray-200 rounded-full hover:rotate-2 transition duration-300 ease-in-out;
+  @apply col-span-1 xs:w-4 xs:h-4 w-10 md:w-12 h-10 md:h-12 flex items-center 
+  justify-center hover:bg-vesta-6 hover:border-vesta-6
+   transform hover:scale-110 border-2 border-atsev-3 rounded-full
+    hover:rotate-2 transition duration-300 ease-in-out;
 }
-
 
 .copright {
   @apply fixed bottom-0 md:static;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 @font-face {

@@ -7,6 +7,10 @@
   @apply fill-white sm:h-5 w-3 h-3 md:h-10 sm:w-5 md:w-10 md:p-2;
 }
 
+.theme {
+  @apply fill-white sm:h-5 w-3 h-3 md:h-10 sm:w-5 md:w-10 md:p-2;
+}
+
 .socials {
   @apply fill-white sm:h-5 w-3 h-3 md:h-9 sm:w-5 md:w-9 md:p-2  transform hover:scale-110;
 }
@@ -19,12 +23,29 @@
   @apply font-extrabold text-3xl md:text-5xl my-2 md:my-4;
 }
 .skills {
-  @apply grid grid-cols-3 gap-6 md:gap-10 justify-center 
+  @apply grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-10 justify-center 
   items-center mx-auto my-1 md:my-3 w-6/12;
 }
 
 .skill {
   @apply col-span-1 bg-atsev-1 border-2 border-atsev-1 p-1 md:p-2 rounded-lg w-24;
+}
+
+.projects {
+  @apply flex flex-col md:grid grid-cols-3 gap-10 w-11/12 justify-center items-center
+  my-2 md:my-4 mx-auto;
+}
+
+.project {
+  @apply col-span-1 bg-slate-200 shadow-slate-400 rounded-lg border-2 border-slate-400 ;
+}
+
+.project-img{
+  @apply w-full;
+}
+
+.project-text{
+  @apply text-lg md:text-xl font-bold flex justify-between
 }
 .grid-child {
   @apply col-span-1 xs:w-4 xs:h-4 w-10 md:w-12 h-10 md:h-12 flex items-center 

@@ -2,10 +2,12 @@
 import Socials from "./components/Socials";
 import Break from "./components/Break";
 import Skills from "./components/Skills";
+import Projects from "./components/Projects";
 
 // Assets
 import avatar from "./assets/avatar_blob.svg";
 import wave from "./assets/wave.png";
+import blob from "./assets/blob.svg";
 
 // Icons
 import { ReactComponent as Twitter } from "./assets/twitter.svg";
@@ -32,20 +34,20 @@ export default function Home() {
   return (
     <div
       className=" 
-     w-screen h-screen text-vesta-3 bg-cover overflow-y-auto scrollbar-thin
-     overflow-x-hidden relative font-akaya scrollbar-thumb-vesta-4 scrollbar-track-atsev-1
+     w-screen h-screen text-vesta-3 bg-cover overflow-y-auto scrollbar scroll-smooth
+     overflow-x-hidden relative font-akaya scrollbar-thumb-vesta-6 scrollbar-track-slate-100
       "
     >
       <main className=" md:px-12 px-8 ">
         {/* theme toggler */}
         <div
           id="theme-toggle"
-          className="bg-vesta-3 rounded-2xl border-2 w-fit h-fit 
-                  p-2 fixed right-4 top-2 text-sm text-white"
+          className="bg-vesta-3 rounded-full border-2 w-fit h-fit 
+                  p-1 fixed right-6 top-4 "
         >
           {" "}
           {/* {light ? <Sun /> : <Moon />} */}
-          <Sun className="icon" />
+          <Sun className="theme" />
         </div>
 
         {/* socials */}
@@ -86,6 +88,7 @@ export default function Home() {
             <Gmail className="socials " />
           </a>
         </div>
+
         {/* welcome section */}
         <section id="welcome" className="md:grid grid-cols-2 items-center">
           {/* left half */}{" "}
@@ -119,6 +122,12 @@ export default function Home() {
                 {" "}
                 A front end developer and web designer.
               </p>
+              <p
+                className="text-xl md:text-2xl 
+      "
+              >
+                Let's <a href="#footer">connect!</a>{" "}
+              </p>
             </div>
           </div>{" "}
         </section>
@@ -149,17 +158,20 @@ export default function Home() {
             className="justify-center 
   items-center mx-auto my-2"
           />
-          <p className="text text-center"> Download my resume:</p>
-          <button
-            onClick={() => {
-              downloadFileAtUrl(FileURL);
-            }}
-            className="font-bold text-lg md:text-2xl px-2 py-1 mb-2 md:mb-4
-             md:p-2 transition duration-300 ease-in-out w-fit hover:text-white
+          <p className="text text-center">
+            {" "}
+            Download my resume:
+            <button
+              onClick={() => {
+                downloadFileAtUrl(FileURL);
+              }}
+              className="font-bold text-lg md:text-2xl px-2 py-1 mb-2 md:mb-4 inline-block
+             md:p-2 transition duration-300 ease-in-out w-fit hover:text-white mx-4
               hover:scale-105 border-2 border-vesta-6 rounded-lg hover:bg-vesta-6"
-          >
-            Resume
-          </button>
+            >
+              Resume
+            </button>
+          </p>
           <Break />
         </section>
 
@@ -168,17 +180,9 @@ export default function Home() {
           <h2 className="heading">PROJECTS </h2>
           <p className="text">
             Voluptate cupidatat eu proident enim nostrud proident elit labore
-            et. Sint ullamco dolore laboris aliqua veniam ex magna. Et officia
-            sunt magna deserunt irure officia sunt anim laborum enim. Anim
-            exercitation tempor voluptate voluptate Lorem pariatur ullamco ea
-            elit aute velit. Consectetur minim sunt cupidatat ad. Mollit mollit
-            do irure est commodo eiusmod nulla qui ad incididunt ex dolore
-            aliquip. Adipisicing laborum dolore deserunt cupidatat laborum do
-            duis ex elit nulla aute ex. Cupidatat ad do cillum nulla aliqua amet
-            velit. Cillum est Lorem pariatur amet laboris deserunt reprehenderit
-            quis occaecat. Cupidatat laborum consectetur do cupidatat nisi
-            reprehenderit.
+            et. Sint ullamco dolore laboris aliqua veniam ex magna.
           </p>
+          <Projects />
         </section>
       </main>
 
@@ -187,12 +191,12 @@ export default function Home() {
         alt=""
         className="h-10 md:h-1/6 w-full mt-2 md:mt-6 mb-0"
       />
-      <footer className="my-0 w-full bg-atsev-1">
+      <section id="footer" className="my-0 w-full bg-atsev-1">
         <Socials />
         <p className="font-mali mt-2 md:mt-4">
           &copy; {new Date().getFullYear()} Anthonia Efe
         </p>{" "}
-      </footer>
+      </section>
     </div>
   );
 }

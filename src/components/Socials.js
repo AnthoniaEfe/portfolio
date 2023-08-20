@@ -7,7 +7,7 @@ export default function Socials() {
   return (
     <div
       className="grid grid-cols-4 w-fit mx-auto px-4 
-           justify-start items-start py-2 gap-8 md:gap-10 "
+           justify-start items-start gap-8 md:gap-10 "
     >
       <a
         href="https://twitter.com/Anthonia_Efe"

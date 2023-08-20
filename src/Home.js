@@ -1,16 +1,25 @@
+// Components
 import Socials from "./components/Socials";
 import Break from "./components/Break";
 import Skills from "./components/Skills";
+
+// Assets
 import avatar from "./assets/avatar_blob.svg";
 import wave from "./assets/wave.png";
+
+// Icons
 import { ReactComponent as Twitter } from "./assets/twitter.svg";
 import { ReactComponent as Gmail } from "./assets/gmail.svg";
 import { ReactComponent as Linkedin } from "./assets/linkedin.svg";
 import { ReactComponent as Github } from "./assets/github.svg";
+import { ReactComponent as Sun } from "./assets/sun.svg";
+import { ReactComponent as Moon } from "./assets/moon.svg";
+import { useEffect } from "react";
 
 const FileURL = "https://www.anthoniaefe.com/ANTHONIA_EFE_RESUME.pdf";
 
 export default function Home() {
+  // const [theme, setTheme] = useEffect("light");
   const downloadFileAtUrl = (url) => {
     const fileName = url.split("/").pop();
     const aTag = document.createElement("a");
@@ -23,8 +32,8 @@ export default function Home() {
   return (
     <div
       className=" 
-     w-screen h-screen text-vesta-3 bg-cover overflow-y-auto
-     overflow-x-hidden relative font-akaya  
+     w-screen h-screen text-vesta-3 bg-cover overflow-y-auto scrollbar-thin
+     overflow-x-hidden relative font-akaya scrollbar-thumb-vesta-4 scrollbar-track-atsev-1
       "
     >
       <main className=" md:px-12 px-8 ">
@@ -35,7 +44,8 @@ export default function Home() {
                   p-2 fixed right-4 top-2 text-sm text-white"
         >
           {" "}
-          theme
+          {/* {light ? <Sun /> : <Moon />} */}
+          <Sun className="icon" />
         </div>
 
         {/* socials */}
@@ -77,7 +87,7 @@ export default function Home() {
           </a>
         </div>
         {/* welcome section */}
-        <section id="welcome" className="grid grid-cols-2 items-center">
+        <section id="welcome" className="md:grid grid-cols-2 items-center">
           {/* left half */}{" "}
           <div className="col-span-1 justify-center items-center  ">
             {" "}
@@ -91,13 +101,13 @@ export default function Home() {
           <div className="col-span-1 justify-center items-center ">
             <div className="my-1 mx-1">
               <h2
-                className="text-7xl font-blobbychug tracking-tighter mt-4
+                className="text-4xl md:text-7xl font-blobbychug tracking-tighter mt-4
       "
               >
                 Hi there,
               </h2>
               <h1
-                className="text-8xl my-2 font-blobbychug tracking-tighter
+                className="text-5xl md:text-8xl my-2 font-blobbychug tracking-tighter
       "
               >
                 I'm Anthonia
@@ -111,11 +121,10 @@ export default function Home() {
               </p>
             </div>
           </div>{" "}
-          <Break />
         </section>
-
+        <Break />
         <section id="about my-4 md:my-8 p-2 md:p-4">
-          <h2 className="font-extrabold text-5xl my-2 md:my-4 ">ABOUT ME </h2>
+          <h2 className="heading ">ABOUT ME </h2>
 
           <p
             className="text
@@ -156,7 +165,7 @@ export default function Home() {
 
         <section id="projects">
           {" "}
-          <h2 className="font-bold text-5xl">PROJECTS </h2>
+          <h2 className="heading">PROJECTS </h2>
           <p className="text">
             Voluptate cupidatat eu proident enim nostrud proident elit labore
             et. Sint ullamco dolore laboris aliqua veniam ex magna. Et officia
@@ -170,11 +179,14 @@ export default function Home() {
             quis occaecat. Cupidatat laborum consectetur do cupidatat nisi
             reprehenderit.
           </p>
-         
         </section>
       </main>
 
-      <img src={wave} alt="" className=" h-1/6 w-full mt-2 md:mt-6 mb-0" />
+      <img
+        src={wave}
+        alt=""
+        className="h-10 md:h-1/6 w-full mt-2 md:mt-6 mb-0"
+      />
       <footer className="my-0 w-full bg-atsev-1">
         <Socials />
         <p className="font-mali mt-2 md:mt-4">

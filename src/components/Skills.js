@@ -3,7 +3,7 @@ import React from "react";
 export default function Skills() {
   return (
     <div id="skills" className="skills">
-      <div className="skill">HTML/CSS</div>
+      <div className="skill">HTML\CSS</div>
       <div className="skill">TailwindCSS</div>
       <div className="skill">Javascript</div>
       <div className="skill">React</div>

@@ -8,11 +8,15 @@
 }
 
 .socials {
-  @apply fill-white sm:h-5 w-3 h-3 md:h-8 sm:w-5 md:w-8 md:p-2  transform hover:scale-110;
+  @apply fill-white sm:h-5 w-3 h-3 md:h-9 sm:w-5 md:w-9 md:p-2  transform hover:scale-110;
 }
 
 .text {
-  @apply text-xl md:text-2xl mx-auto text-justify w-10/12 my-6 md:mt-0;
+  @apply text-lg md:text-2xl mx-auto text-justify w-10/12 my-6 md:mt-0;
+}
+
+.heading {
+  @apply font-extrabold text-3xl md:text-5xl my-2 md:my-4;
 }
 .skills {
   @apply grid grid-cols-3 gap-6 md:gap-10 justify-center 

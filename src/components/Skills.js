@@ -1,46 +1,59 @@
 import React from "react";
+import Git from "../assets/git.svg";
+import Figma from "../assets/figma.svg";
+import Firebase from "../assets/firebase.svg";
+import Javascript from "../assets/javascript.svg";
+import NodeJS from "../assets/nodejs.svg";
+import Reactlogo from "../assets/react.svg";
+import Tailwind from "../assets/tailwind.svg";
+import Tux from "../assets/tux.svg";
 
 export default function Skills() {
   return (
     <div id="skills" className="skills">
       <div className="skill">
-        <img src="" alt="" />
-        HTML\CSS
-      </div>
+        <img src={Git} alt="" className="skill-img" />
+        CSS
+      </div>{" "}
       <div className="skill">
-        <img src="" alt="" />
-        TailwindCSS
-      </div>
+        <img src={Figma} alt="" className="skill-img" />
+        Figma
+      </div>{" "}
       <div className="skill">
-        <img src="" alt="" />
-        Javascript
-      </div>
+        <img src={Firebase} alt="" className="skill-img" />
+        Firebase
+      </div>{" "}
       <div className="skill">
-        <img src="" alt="" />
-        ReactJS
-      </div>
-      <div className="skill">
-        <img src="" alt="" />
-        TypeScript
-      </div>
-      <div className="skill">
-        <img src="" alt="" />
-        NodeJS
-      </div>
-      <div className="skill">
-        <img src="" alt="" />
-        Linux
-      </div>
-      <div className="skill">
-        <img src="" alt="" />
+        <img src={Git} alt="" className="skill-img" />
         Git
       </div>
       <div className="skill">
-        <img src="" alt="" />
-        Figma
+        <img src={Git} alt="" className="skill-img" />
+        HTML
       </div>
       <div className="skill">
-        <img src="" alt="" />C
+        <img src={Javascript} alt="" className="skill-img" />
+        Javascript
+      </div>{" "}
+      <div className="skill">
+        <img src={Tux} alt="" className="skill-img" />
+        Linux
+      </div>{" "}
+      <div className="skill">
+        <img src={NodeJS} alt="" className="skill-img" />
+        NodeJS
+      </div>{" "}
+      <div className="skill">
+        <img src={Reactlogo} alt="" className="skill-img" />
+        ReactJS
+      </div>
+      <div className="skill">
+        <img src={Tailwind} alt="" className="skill-img" />
+        TailwindCSS
+      </div>
+      <div className="skill">
+        <img src={Reactlogo} alt="" className="skill-img" />
+        TypeScript
       </div>
     </div>
   );

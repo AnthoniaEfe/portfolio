@@ -23,30 +23,38 @@
   @apply font-extrabold text-3xl md:text-5xl my-2 md:my-4;
 }
 .skills {
-  @apply grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-10 justify-center 
-  items-center mx-auto my-1 md:my-3 w-6/12;
+  @apply grid grid-cols-2 md:grid-cols-3 gap-10 md:gap-10 justify-center 
+  items-center mx-auto my-1 md:my-3 w-9/12 md:w-7/12;
 }
 
 .skill {
-  @apply col-span-1 bg-atsev-1 border-2 border-atsev-1 p-1 md:p-2 rounded-lg w-24;
+  @apply col-span-1 bg-atsev-1 border-2 border-atsev-1 p-1 rounded-lg w-full md:w-36
+  flex flex-col gap-1 md:gap-2 justify-between items-center text-sm md:text-lg;
+}
+
+.skill-img{
+  @apply h-6 w-6 md:h-8 md:w-8
 }
 
 .projects {
-  @apply flex flex-col md:grid grid-cols-3 gap-10 w-11/12 justify-center items-center
+  @apply flex flex-col gap-8 md:grid grid-cols-3 md:gap-x-14 md:gap-y-8 w-10/12 justify-center items-center
   my-2 md:my-4 mx-auto;
 }
 
 .project {
-  @apply col-span-1 bg-slate-200 shadow-slate-400 rounded-lg border-2 border-slate-400 ;
+  @apply col-span-1 rounded-xl border border-slate-300 shadow-gray-200
+  shadow-md transform hover:shadow-lg hover:shadow-gray-300;
 }
 
 .project-img{
-  @apply w-full;
+  @apply w-full rounded-xl;
 }
 
 .project-text{
-  @apply text-lg md:text-xl font-bold flex justify-between
+  @apply text-base md:text-lg uppercase font-semibold flex justify-center
+  w-full  items-center my-2;
 }
+
 .grid-child {
   @apply col-span-1 xs:w-4 xs:h-4 w-10 md:w-12 h-10 md:h-12 flex items-center 
   justify-center hover:bg-vesta-6 hover:border-vesta-6
@@ -56,27 +64,6 @@
 
 .copright {
   @apply fixed bottom-0 md:static;
-}
-
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 5px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
 }
 
 @font-face {

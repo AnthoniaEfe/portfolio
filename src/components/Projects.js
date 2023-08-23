@@ -9,34 +9,30 @@ export default function Projects() {
       <div className="project">
         <img src={wave} alt="" className="project-img" />
         <div className="project-text">
-          <p>Attendance System</p>
-          <>
-            {" "}
-            <Github />
-            <Link />
-          </>
+          <p className="grow">Attendance System</p>
+
+          <Github className="grow-0 mr-2" />
+          <Link className="grow-0 mr-2" />
         </div>
       </div>
+
       <div className="project">
         <img src={wave} alt="" className="project-img" />
         <div className="project-text">
-          <p>Attendance System</p>
-          <>
-            {" "}
-            <Github />
-            <Link />
-          </>
+          <p className="grow">Attendance System</p>
+
+          <Github className="grow-0 mr-2" />
+          <Link className="grow-0 mr-2" />
         </div>
       </div>
+
       <div className="project">
         <img src={wave} alt="" className="project-img" />
         <div className="project-text">
-          <p>Attendance System</p>
-          <>
-            {" "}
-            <Github />
-            <Link />
-          </>
+          <p className="grow">Attendance System</p>
+
+          <Github className="grow-0 mr-2" />
+          <Link className="grow-0 mr-2" />
         </div>
       </div>
     </div>

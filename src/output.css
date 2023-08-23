@@ -665,6 +665,10 @@ video {
   margin-bottom: 0.5rem;
 }
 
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -723,6 +727,14 @@ video {
 
 .w-screen {
   width: 100vw;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.grow-0 {
+  flex-grow: 0;
 }
 
 .grid-cols-2 {
@@ -1076,17 +1088,18 @@ video {
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
   display: grid;
-  width: 50%;
+  width: 75%;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 2.5rem;
 }
 
 @media (min-width: 768px) {
   .skills {
     margin-top: 0.75rem;
     margin-bottom: 0.75rem;
+    width: 58.333333%;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 2.5rem;
   }
@@ -1094,7 +1107,12 @@ video {
 
 .skill {
   grid-column: span 1 / span 1;
-  width: 6rem;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.25rem;
   border-radius: 0.5rem;
   border-width: 2px;
   --tw-border-opacity: 1;
@@ -1102,11 +1120,28 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(225 198 253 / var(--tw-bg-opacity));
   padding: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 @media (min-width: 768px) {
   .skill {
-    padding: 0.5rem;
+    width: 9rem;
+    gap: 0.5rem;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+.skill-img {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .skill-img {
+    height: 2rem;
+    width: 2rem;
   }
 }
 
@@ -1116,12 +1151,12 @@ video {
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  width: 91.666667%;
+  width: 83.333333%;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2.5rem;
+  gap: 2rem;
 }
 
 @media (min-width: 768px) {
@@ -1129,36 +1164,56 @@ video {
     margin-top: 1rem;
     margin-bottom: 1rem;
     display: grid;
+    -webkit-column-gap: 3.5rem;
+            column-gap: 3.5rem;
+    row-gap: 2rem;
   }
 }
 
 .project {
   grid-column: span 1 / span 1;
-  border-radius: 0.5rem;
-  border-width: 2px;
+  -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+          transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  border-radius: 0.75rem;
+  border-width: 1px;
   --tw-border-opacity: 1;
-  border-color: rgb(148 163 184 / var(--tw-border-opacity));
-  --tw-bg-opacity: 1;
-  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
-  --tw-shadow-color: #94a3b8;
+  border-color: rgb(203 213 225 / var(--tw-border-opacity));
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-shadow-color: #e5e7eb;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.project:hover {
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-shadow-color: #d1d5db;
   --tw-shadow: var(--tw-shadow-colored);
 }
 
 .project-img {
   width: 100%;
+  border-radius: 0.75rem;
 }
 
 .project-text {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   display: flex;
-  justify-content: space-between;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  font-weight: 700;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 @media (min-width: 768px) {
   .project-text {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     line-height: 1.75rem;
   }
 }
@@ -1218,31 +1273,6 @@ video {
   .copright {
     position: static;
   }
-}
-
-/* width */
-
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-/* Handle */
-
-::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 5px;
-}
-
-/* Handle on hover */
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
 }
 
 @font-face {

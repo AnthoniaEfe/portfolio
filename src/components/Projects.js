@@ -11,8 +11,8 @@ export default function Projects() {
         <div className="project-text">
           <p className="grow">Attendance System</p>
 
-          <Github className="grow-0 mr-2 project-icon" />
-          <Link className="grow-0 mr-2 project-icon" />
+          <Github className="project-icon" />
+          <Link className=" project-icon" />
         </div>
       </div>
 
@@ -21,8 +21,8 @@ export default function Projects() {
         <div className="project-text">
           <p className="grow">Attendance System</p>
 
-          <Github className="grow-0 mr-2" />
-          <Link className="grow-0 mr-2" />
+          <Github className="project-icon " />
+          <Link className="project-icon " />
         </div>
       </div>
 
@@ -31,8 +31,8 @@ export default function Projects() {
         <div className="project-text">
           <p className="grow">Attendance System</p>
 
-          <Github className="grow-0 mr-2" />
-          <Link className="grow-0 mr-2" />
+          <Github className=" project-icon " />
+          <Link className="project-icon " />
         </div>
       </div>
     </div>

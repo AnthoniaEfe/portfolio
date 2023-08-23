@@ -190,10 +190,7 @@ export default function Home() {
             onClick={() => {
               downloadFileAtUrl(FileURL);
             }}
-            className="font-bold text-lg md:text-2xl px-2 py-1 mb-2 md:mb-4 
-             md:p-2 transition duration-300 ease-in-out w-fit hover:text-white mx-4
-              hover:scale-105 border-2 border-vesta-6 rounded-lg hover:bg-vesta-6
-              dark:border-atsev-1 dark:hover:bg-atsev-1 dark:hover:text-vesta-9"
+            className="resume"
           >
             Resume
           </button>

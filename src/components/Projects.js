@@ -11,8 +11,8 @@ export default function Projects() {
         <div className="project-text">
           <p className="grow">Attendance System</p>
 
-          <Github className="grow-0 mr-2" />
-          <Link className="grow-0 mr-2" />
+          <Github className="grow-0 mr-2 project-icon" />
+          <Link className="grow-0 mr-2 project-icon" />
         </div>
       </div>
 

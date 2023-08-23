@@ -601,8 +601,8 @@ video {
   left: -0.75rem;
 }
 
-.right-6 {
-  right: 1.5rem;
+.right-8 {
+  right: 2rem;
 }
 
 .top-1\/4 {
@@ -681,12 +681,12 @@ video {
   display: inline-block;
 }
 
-.flex {
-  display: flex;
-}
-
 .grid {
   display: grid;
+}
+
+.hidden {
+  display: none;
 }
 
 .h-1 {
@@ -789,10 +789,6 @@ video {
   border-radius: 1rem;
 }
 
-.rounded-full {
-  border-radius: 9999px;
-}
-
 .rounded-lg {
   border-radius: 0.5rem;
 }
@@ -804,6 +800,11 @@ video {
 .border-vesta-6 {
   --tw-border-opacity: 1;
   border-color: rgb(64 2 114 / var(--tw-border-opacity));
+}
+
+.border-vesta-3 {
+  --tw-border-opacity: 1;
+  border-color: rgb(85 15 142 / var(--tw-border-opacity));
 }
 
 .bg-atsev-1 {
@@ -820,8 +821,8 @@ video {
   background-size: cover;
 }
 
-.p-1 {
-  padding: 0.25rem;
+.fill-vesta-7 {
+  fill: #36025F;
 }
 
 .p-2 {
@@ -895,6 +896,10 @@ video {
 .text-vesta-3 {
   --tw-text-opacity: 1;
   color: rgb(85 15 142 / var(--tw-text-opacity));
+}
+
+.underline-offset-2 {
+  text-underline-offset: 2px;
 }
 
 .transition {
@@ -996,23 +1001,23 @@ video {
 }
 
 .theme {
-  height: 0.75rem;
-  width: 0.75rem;
-  fill: #fff;
+  height: 1.5rem;
+  width: 1.5rem;
+  -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+          transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-@media (min-width: 640px) {
-  .theme {
-    height: 1.25rem;
-    width: 1.25rem;
-  }
+.theme:hover {
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+  -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+          transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 @media (min-width: 768px) {
   .theme {
     height: 2.5rem;
     width: 2.5rem;
-    padding: 0.5rem;
   }
 }
 
@@ -1146,10 +1151,10 @@ video {
 }
 
 .projects {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
   display: flex;
   width: 83.333333%;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1162,7 +1167,7 @@ video {
 @media (min-width: 768px) {
   .projects {
     margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     display: grid;
     -webkit-column-gap: 3.5rem;
             column-gap: 3.5rem;
@@ -1216,6 +1221,13 @@ video {
     font-size: 1.125rem;
     line-height: 1.75rem;
   }
+}
+
+.project-icon {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  fill: #460977;
 }
 
 .grid-child {
@@ -1322,6 +1334,50 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.hover\:underline:hover {
+  text-decoration-line: underline;
+}
+
+:is(.dark .dark\:border-atsev-1) {
+  --tw-border-opacity: 1;
+  border-color: rgb(225 198 253 / var(--tw-border-opacity));
+}
+
+:is(.dark .dark\:bg-vesta-6) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(64 2 114 / var(--tw-bg-opacity));
+}
+
+:is(.dark .dark\:bg-vesta-8) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(48 5 85 / var(--tw-bg-opacity));
+}
+
+:is(.dark .dark\:bg-vesta-9) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 7 56 / var(--tw-bg-opacity));
+}
+
+:is(.dark .dark\:text-gray-300) {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
+}
+
+:is(.dark .dark\:text-gray-50) {
+  --tw-text-opacity: 1;
+  color: rgb(249 250 251 / var(--tw-text-opacity));
+}
+
+:is(.dark .dark\:hover\:bg-atsev-1:hover) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(225 198 253 / var(--tw-bg-opacity));
+}
+
+:is(.dark .dark\:hover\:text-vesta-9:hover) {
+  --tw-text-opacity: 1;
+  color: rgb(31 7 56 / var(--tw-text-opacity));
+}
+
 @media (min-width: 768px) {
   .md\:my-2 {
     margin-top: 0.5rem;
@@ -1343,6 +1399,10 @@ video {
 
   .md\:mt-6 {
     margin-top: 1.5rem;
+  }
+
+  .md\:block {
+    display: block;
   }
 
   .md\:grid {

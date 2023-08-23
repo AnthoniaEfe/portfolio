@@ -7,7 +7,6 @@ import Projects from "./components/Projects";
 // Assets
 import avatar from "./assets/avatar_blob.svg";
 import wave from "./assets/wave.png";
-import blob from "./assets/blob.svg";
 
 // Icons
 import { ReactComponent as Twitter } from "./assets/twitter.svg";
@@ -16,12 +15,34 @@ import { ReactComponent as Linkedin } from "./assets/linkedin.svg";
 import { ReactComponent as Github } from "./assets/github.svg";
 import { ReactComponent as Sun } from "./assets/sun.svg";
 import { ReactComponent as Moon } from "./assets/moon.svg";
-import { useEffect } from "react";
+
+import { useState, useEffect } from "react";
 
 const FileURL = "https://www.anthoniaefe.com/ANTHONIA_EFE_RESUME.pdf";
 
 export default function Home() {
-  // const [theme, setTheme] = useEffect("light");
+  const [theme, setTheme] = useState(null);
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-color-scheme:dark)").matches) {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  }, []);
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme]);
+
+  const handleTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
+
   const downloadFileAtUrl = (url) => {
     const fileName = url.split("/").pop();
     const aTag = document.createElement("a");
@@ -31,30 +52,31 @@ export default function Home() {
     aTag.click();
     aTag.remove();
   };
+
   return (
     <div
       className=" 
      w-screen h-screen text-vesta-3 bg-cover overflow-y-auto scrollbar scroll-smooth
      overflow-x-hidden relative font-akaya scrollbar-thumb-vesta-6 scrollbar-track-slate-100
+     dark:bg-vesta-9 dark:text-gray-50
       "
     >
       <main className=" md:px-12 px-8 ">
-        {/* theme toggler */}
-        <div
-          id="theme-toggle"
-          className="bg-vesta-3 rounded-full border-2 w-fit h-fit 
-                  p-1 fixed right-6 top-4 "
-        >
-          {" "}
-          {/* {light ? <Sun /> : <Moon />} */}
-          <Sun className="theme" />
-        </div>
+        {/* theme toggle */}
+        <button onClick={handleTheme} className="w-fit fixed right-8 top-4">
+          {theme === "dark" ? (
+            <Sun className="theme" />
+          ) : (
+            <Moon className="theme fill-vesta-7" />
+          )}
+        </button>
 
         {/* socials */}
         <div
           id="socials"
-          className="bg-vesta-3 rounded-2xl border-2 w-fit h-fit flex flex-col 
-                  p-2 gap-2 fixed -left-3 top-1/4"
+          className="bg-vesta-3 border-vesta-3 rounded-2xl border-2 
+          w-fit h-fit flex-col 
+                  p-2 gap-2 fixed -left-3 top-1/4 hidden md:block"
         >
           <a
             href="https://twitter.com/Anthonia_Efe"
@@ -88,7 +110,6 @@ export default function Home() {
             <Gmail className="socials " />
           </a>
         </div>
-
         {/* welcome section */}
         <section id="welcome" className="md:grid grid-cols-2 items-center">
           {/* left half */}{" "}
@@ -126,7 +147,13 @@ export default function Home() {
                 className="text-xl md:text-2xl 
       "
               >
-                Let's <a href="#footer">connect!</a>{" "}
+                Let's{" "}
+                <a
+                  href="#footer"
+                  className="hover:underline underline-offset-2"
+                >
+                  connect!
+                </a>{" "}
               </p>
             </div>
           </div>{" "}
@@ -158,23 +185,20 @@ export default function Home() {
             className="justify-center 
   items-center mx-auto my-2"
           />
-          <p className="text text-center">
-            {" "}
-            Download my resume:
-            <button
-              onClick={() => {
-                downloadFileAtUrl(FileURL);
-              }}
-              className="font-bold text-lg md:text-2xl px-2 py-1 mb-2 md:mb-4 inline-block
+          <p className="text text-center"> Download my resume:</p>
+          <button
+            onClick={() => {
+              downloadFileAtUrl(FileURL);
+            }}
+            className="font-bold text-lg md:text-2xl px-2 py-1 mb-2 md:mb-4 
              md:p-2 transition duration-300 ease-in-out w-fit hover:text-white mx-4
-              hover:scale-105 border-2 border-vesta-6 rounded-lg hover:bg-vesta-6"
-            >
-              Resume
-            </button>
-          </p>
+              hover:scale-105 border-2 border-vesta-6 rounded-lg hover:bg-vesta-6
+              dark:border-atsev-1 dark:hover:bg-atsev-1 dark:hover:text-vesta-9"
+          >
+            Resume
+          </button>
           <Break />
         </section>
-
         <section id="projects">
           {" "}
           <h2 className="heading">PROJECTS </h2>

@@ -7,12 +7,15 @@ import NodeJS from "../assets/nodejs.svg";
 import Reactlogo from "../assets/react.svg";
 import Tailwind from "../assets/tailwind.svg";
 import Tux from "../assets/tux.svg";
+import TS from "../assets/TS.png";
+import CSS from "../assets/css.png";
+import HTML from "../assets/html.png";
 
 export default function Skills() {
   return (
     <div id="skills" className="skills">
       <div className="skill">
-        <img src={Git} alt="" className="skill-img" />
+        <img src={CSS} alt="" className="skill-img" />
         CSS
       </div>{" "}
       <div className="skill">
@@ -28,7 +31,7 @@ export default function Skills() {
         Git
       </div>
       <div className="skill">
-        <img src={Git} alt="" className="skill-img" />
+        <img src={HTML} alt="" className="skill-img" />
         HTML
       </div>
       <div className="skill">
@@ -52,7 +55,7 @@ export default function Skills() {
         TailwindCSS
       </div>
       <div className="skill">
-        <img src={Reactlogo} alt="" className="skill-img" />
+        <img src={TS} alt="" className="skill-img" />
         TypeScript
       </div>
     </div>

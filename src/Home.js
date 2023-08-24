@@ -21,15 +21,16 @@ import { useState, useEffect } from "react";
 const FileURL = "https://www.anthoniaefe.com/ANTHONIA_EFE_RESUME.pdf";
 
 export default function Home() {
-  const [theme, setTheme] = useState(null);
+  const [theme, setTheme] = useState("light");
 
-  useEffect(() => {
-    if (window.matchMedia("(prefers-color-scheme:dark)").matches) {
-      setTheme("dark");
-    } else {
-      setTheme("light");
-    }
-  }, []);
+  // use default system appearance
+  // useEffect(() => {
+  //   if (window.matchMedia("(prefers-color-scheme:dark)").matches) {
+  //     setTheme("dark");
+  //   } else {
+  //     setTheme("light");
+  //   }
+  // }, []);
 
   useEffect(() => {
     if (theme === "dark") {

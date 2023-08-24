@@ -1148,7 +1148,7 @@ video {
   margin-top: 0.5rem;
   margin-bottom: 1.5rem;
   display: flex;
-  width: 83.333333%;
+  width: 66.666667%;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   flex-direction: column;
   align-items: center;
@@ -1161,6 +1161,7 @@ video {
     margin-top: 1rem;
     margin-bottom: 2rem;
     display: grid;
+    width: 83.333333%;
     -webkit-column-gap: 3.5rem;
             column-gap: 3.5rem;
     row-gap: 2rem;

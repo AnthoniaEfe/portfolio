@@ -43,7 +43,7 @@
 }
 
 .projects {
-  @apply flex flex-col gap-8 w-8/12 md:grid grid-cols-3 md:gap-x-14 md:gap-y-8 
+  @apply flex flex-col gap-8 w-9/12 md:grid grid-cols-3 md:gap-x-14 md:gap-y-8 
   md:w-10/12 justify-center items-center
   mt-2 mb-6 md:mt-4 md:mb-8 mx-auto;
 }
@@ -55,7 +55,7 @@
 }
 
 .project-img {
-  @apply w-full rounded-xl;
+  @apply w-full rounded-xl p-1;
 }
 
 .project-text {

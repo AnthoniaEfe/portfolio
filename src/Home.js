@@ -64,7 +64,10 @@ export default function Home() {
     >
       <main className=" md:px-12 px-8 ">
         {/* theme toggle */}
-        <button onClick={handleTheme} className="w-fit fixed right-8 top-4">
+        <button
+          onClick={handleTheme}
+          className="w-fit fixed right-6 md:right-8 top-4"
+        >
           {theme === "dark" ? (
             <Sun className="theme" />
           ) : (
@@ -76,8 +79,7 @@ export default function Home() {
         <div
           id="socials"
           className="bg-vesta-3 border-vesta-3 rounded-2xl border-2 
-          w-fit h-fit flex-col 
-                  p-2 gap-2 fixed -left-3 top-1/4 hidden md:block"
+          w-fit h-fit flex-col p-2 gap-2 fixed -left-3 top-1/4 hidden md:block"
         >
           <a
             href="https://twitter.com/Anthonia_Efe"

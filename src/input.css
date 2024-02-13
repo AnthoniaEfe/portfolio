@@ -3,6 +3,28 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #eeeeee;
+ 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #400272;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #E1C6FD;
+}
+
 .resume {
   @apply font-bold text-lg md:text-2xl px-2 py-1 mb-2 md:mb-4 
   md:p-2 transition duration-300 ease-in-out w-fit hover:text-white mx-4
@@ -14,28 +36,28 @@
 }
 
 .theme {
-  @apply h-6 md:h-10 w-6 md:w-10 hover:scale-105 transform;
+  @apply h-4 md:h-6 w-4 md:w-6 hover:scale-105 transform;
 }
 
 .socials {
-  @apply fill-white sm:h-5 w-3 h-3 md:h-9 sm:w-5 md:w-9 md:p-2  transform hover:scale-110;
+  @apply fill-white sm:h-3 w-2 h-2 md:h-7 sm:w-4 md:w-7 md:p-2  transform hover:scale-110;
 }
 
 .text {
-  @apply text-lg md:text-2xl mx-auto text-justify w-10/12 my-6 md:mt-0;
+  @apply text-base md:text-lg mx-auto text-justify w-10/12 my-6 md:mt-0;
 }
 
 .heading {
   @apply font-extrabold text-3xl md:text-5xl my-2 md:my-4;
 }
 .skills {
-  @apply grid grid-cols-2 md:grid-cols-3 gap-10 md:gap-10 justify-center 
+  @apply grid grid-cols-2 md:grid-cols-3 gap-10 md:gap-20 justify-center 
   items-center mx-auto my-1 md:my-3 w-9/12 md:w-7/12;
 }
 
 .skill {
-  @apply col-span-1 bg-atsev-1 border-2 border-atsev-1 p-1 rounded-lg w-full md:w-36
-  flex flex-col gap-1 md:gap-2 justify-between items-center text-sm md:text-lg;
+  @apply col-span-1 bg-atsev-1 border-2 border-atsev-1  rounded-full  
+  flex flex-col justify-between items-center my-2 ;
 }
 
 .skill-img {
@@ -78,18 +100,8 @@
   @apply fixed bottom-0 md:static;
 }
 
-@font-face {
-  font-family: "blobbychug";
-  src: url("./fonts/blobby-chug/BLOBBYCHUG-Bold.ttf");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "AkayaTelivigala";
-  src: url("./fonts/Akaya_Telivigala/AkayaTelivigala-Regular.ttf");
-  font-weight: normal;
-  font-style: normal;
+.nav-link {
+  @apply text-xl hover:text-vesta-4;
 }
 
 @font-face {

@@ -11,7 +11,7 @@ export default function TabSocials() {
     <div
       id="socials"
       className="bg-vesta-3 border-vesta-3 rounded-2xl border-2 
-    w-fit h-fit flex-col p-2 pl-3 gap-2 fixed -left-3 top-2/4 hidden md:block"
+    w-fit h-fit flex-col p-2 pl-3 gap-2 fixed -left-3 top-1/4 hidden md:block"
     >
       <a
         href="https://twitter.com/Anthonia_Efe"

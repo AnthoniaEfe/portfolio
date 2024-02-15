@@ -35,7 +35,7 @@ export default function Nav() {
     >
       <div className=" flex flex-row justify-center items-center gap-4">
         <img src={avatar} alt="avatar" className="w-12" />
-        Anthonia Efe
+    
       </div>
       <div className=" flex flex-row justify-center items-center gap-10">
         <a href="#welcome" className="nav-link">

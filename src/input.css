@@ -59,27 +59,35 @@
 }
 
 .projects {
-  @apply flex flex-col gap-8 w-9/12 md:grid grid-cols-3 md:gap-x-14 md:gap-y-8 
+  @apply flex flex-col gap-8 w-10/12 md:grid grid-cols-3 md:gap-x-12 md:gap-y-8 
   md:w-10/12 justify-center items-center mt-2 mb-6 md:mt-4 md:mb-8 mx-auto;
 }
 
 .project {
   @apply col-span-1 rounded-xl border border-slate-300 shadow-gray-200
   shadow-md transform hover:shadow-lg hover:shadow-gray-300 dark:bg-vesta-3
-  dark:shadow-zinc-800 dark:hover:shadow-zinc-900 dark:border-zinc-700;
+  dark:shadow-zinc-800 dark:hover:shadow-zinc-900 dark:border-zinc-700
+  px-2 pt-4 pb-6 relative;
 }
 
 .project-img {
-  @apply w-full rounded-xl p-1;
+  @apply w-full rounded-xl bg-cover;
+}
+
+.project-heading {
+  @apply text-base md:text-lg uppercase font-semibold my-2;
 }
 
 .project-text {
-  @apply text-base md:text-lg uppercase font-semibold flex justify-center
-  w-full  items-center my-2;
+  @apply text-xs md:text-sm px-1 md:px-2 text-slate-600;
 }
 
 .project-icon {
-  @apply fill-vesta-5 dark:fill-gray-50 w-fit grow-0 mr-2;
+  @apply fill-vesta-6 dark:fill-gray-50 h-7;
+}
+
+.hidden-links {
+  @apply absolute top-2/4 left-2/4  hidden hover:flex-row gap-2 hover:flex w-full;
 }
 
 .grid-child {

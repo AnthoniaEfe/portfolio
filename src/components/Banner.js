@@ -5,7 +5,7 @@ export default function Banner() {
     <section
       id="welcome"
       className="md:grid grid-cols-2 items-center pt-10 md:pt-20
-      md:px-12 px-8  "
+      md:px-12 px-8  0"
     >
       {/* left half */}{" "}
       <div className="col-span-1  ">

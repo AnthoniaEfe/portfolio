@@ -4,7 +4,9 @@ import { ReactComponent as Linkedin } from "../assets/linkedin.svg";
 import { ReactComponent as Github } from "../assets/github.svg";
 
 export default function Socials() {
-  return (
+  return (<div>
+<form></form>
+
     <div
       className="grid grid-cols-4 w-fit mx-auto px-4 
            justify-start items-start gap-8 md:gap-10 "
@@ -44,6 +46,7 @@ export default function Socials() {
       >
         <Gmail className="icon " />
       </a>
+    </div>
     </div>
   );
 }

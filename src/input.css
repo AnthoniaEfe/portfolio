@@ -11,18 +11,17 @@
 /* Track */
 ::-webkit-scrollbar-track {
   background: #eeeeee;
- 
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #400272;
-    border-radius: 5px;
+  border-radius: 5px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #E1C6FD;
+  background: #e1c6fd;
 }
 
 .resume {
@@ -44,24 +43,19 @@
 }
 
 .text {
-  @apply text-base md:text-lg mx-auto text-justify w-10/12 my-6 md:mt-0;
+  @apply text-base md:text-lg mx-auto text-justify w-9/12 my-8 md:mt-6;
 }
 
 .heading {
-  @apply font-extrabold text-3xl md:text-5xl my-2 md:my-4;
+  @apply font-bold text-3xl md:text-5xl my-4 md:my-8;
 }
 .skills {
-  @apply grid grid-cols-2 md:grid-cols-3 gap-10 md:gap-20 justify-center 
-  items-center mx-auto my-1 md:my-3 w-9/12 md:w-7/12;
-}
-
-.skill {
-  @apply col-span-1 bg-atsev-1 border-2 border-atsev-1  rounded-full  
-  flex flex-col justify-between items-center my-2 ;
+  @apply grid grid-cols-2 md:grid-cols-4 justify-center gap-y-10 md:gap-y-20 
+  items-center m-4 md:m-8 w-10/12 md:w-8/12;
 }
 
 .skill-img {
-  @apply h-6 w-6 md:h-8 md:w-8;
+  @apply h-8 md:h-10 w-8 md:w-10 ;
 }
 
 .projects {
@@ -92,7 +86,7 @@
 .grid-child {
   @apply col-span-1 xs:w-4 xs:h-4 w-10 md:w-12 h-10 md:h-12 flex items-center 
   justify-center hover:bg-vesta-6 hover:border-vesta-6
-   transform hover:scale-110 border-2 border-white rounded-full
+   border-2 border-white rounded-full
     hover:rotate-2 transition duration-300 ease-in-out;
 }
 
@@ -101,7 +95,7 @@
 }
 
 .nav-link {
-  @apply text-xl hover:text-vesta-4;
+  @apply text-base hover:text-vesta-4  transform hover:scale-105 transition duration-300 ease-in-out;
 }
 
 @font-face {

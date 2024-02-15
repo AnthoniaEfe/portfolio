@@ -1,16 +1,16 @@
-import avatar from "../assets/avatar_blob.svg";
+import avatar from "../assets/Group5.png";
 
 export default function Banner() {
   return (
     <section
       id="welcome"
       className="md:grid grid-cols-2 items-center pt-10 md:pt-20
-      md:px-12 px-8 pb-10 md:pb-10 "
+      md:px-12 px-8  "
     >
       {/* left half */}{" "}
-      <div className="col-span-1 justify-center items-center  ">
+      <div className="col-span-1  ">
         {" "}
-        <img src={avatar} alt="avatar" className=" w-4/6 mx-auto my-8" />{" "}
+        <img src={avatar} alt="avatar" className=" w-5/6 mx-auto " />{" "}
       </div>
       {/* right half  */}
       <div className="col-span-1 justify-center items-center ">
@@ -19,7 +19,7 @@ export default function Banner() {
             className="text-4xl md:text-7xl tracking-tighter mt-4
       "
           >
-            Hi there,
+            Hello 👋🏽{" "}
           </h2>
           <h1
             className="text-5xl md:text-8xl my-2 tracking-tighter

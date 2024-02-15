@@ -1,6 +1,5 @@
 // Components
 import Socials from "./components/Socials";
-
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Nav from "./components/Nav";
@@ -11,37 +10,18 @@ import Banner from "./components/Banner";
 import wave from "./assets/wave.png";
 
 export default function Home() {
-  // use default system appearance
-  // useEffect(() => {
-  //   if (window.matchMedia("(prefers-color-scheme:dark)").matches) {
-  //     setTheme("dark");
-  //   } else {
-  //     setTheme("light");
-  //   }
-  // }, []);
-
   return (
     <div
       className=" 
      w-screen h-screen text-black-600-cover overflow-y-auto
-     overflow-x-hidden relative 
-     dark:bg-vesta-9 dark:text-gray-50
+     overflow-x-hidden relative dark:bg-vesta-9 dark:text-gray-50
       "
     >
       <Nav />
-
       <TabSocials />
-
       <Banner />
-
-  
-
       <About />
-
-      <section id="projects">
-        {" "}
-        <Projects />
-      </section>
+      <Projects />
 
       <img
         src={wave}

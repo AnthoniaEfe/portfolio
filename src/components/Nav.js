@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 export default function Nav() {
   const [theme, setTheme] = useState("light");
 
-    // use default system appearance
+  // use default system appearance
   // useEffect(() => {
   //   if (window.matchMedia("(prefers-color-scheme:dark)").matches) {
   //     setTheme("dark");
@@ -30,10 +30,13 @@ export default function Nav() {
 
   return (
     <div
-      className="w-screen flex flex-row justify-between content-center bg-slate-200
-    fixed top-0 left-0 py-2 px-8 opacity-80 backdrop-blur-lg"
+      className="w-screen flex flex-row justify-between content-center bg-atsev-1/30
+    fixed top-0 -left-2.5 py-2 px-8 backdrop-blur-md z-10 "
     >
-      <img src={avatar} alt="avatar" className="w-12" />
+      <div className=" flex flex-row justify-center items-center gap-4">
+        <img src={avatar} alt="avatar" className="w-12" />
+        Anthonia Efe
+      </div>
       <div className=" flex flex-row justify-center items-center gap-10">
         <a href="#welcome" className="nav-link">
           Home

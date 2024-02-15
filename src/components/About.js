@@ -3,8 +3,8 @@ import Skills from "../components/Skills";
 export default function About() {
   return (
     <div
-      className="bg-slate-100 pt-10 md:pt-20
-    md:px-16 px-8 pb-10 md:pb-10"
+      className="bg-stone-50 pt-10 md:pt-20
+    md:px-16 px-8 pb-10 md:pb-10 dark:bg-vesta-9"
     >
       <h2 className="heading"> SKILLS & EXPERIENCES </h2>
       <section id="about" className="md:grid grid-cols-2 items-center gap-0  ">

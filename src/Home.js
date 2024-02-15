@@ -1,11 +1,10 @@
 // Components
-import Socials from "./components/Socials";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Nav from "./components/Nav";
 import TabSocials from "./components/TabSocials";
 import Banner from "./components/Banner";
-
+import Footer from "./components/Footer";
 // Assets
 import wave from "./assets/wave.png";
 
@@ -28,12 +27,7 @@ export default function Home() {
         alt=""
         className="h-10 md:h-1/6 w-full mt-2 md:mt-6 mb-0"
       />
-      <section id="footer" className="my-0 w-full bg-atsev-1">
-        <Socials />
-        <p className="font-mali mt-2 md:mt-4">
-          &copy; {new Date().getFullYear()} Anthonia Efe
-        </p>{" "}
-      </section>
+      <Footer />
     </div>
   );
 }

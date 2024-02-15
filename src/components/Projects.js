@@ -7,16 +7,10 @@ import healthybite from "../assets/healthybite.png";
 export default function Projects() {
   return (
     <div
-      className=" pt-10 md:pt-20
-    md:px-16 px-8 pb-10 md:pb-10"
+      className=" pt-10 md:pt-20 md:px-16 px-8 pb-10 md:pb-10"
       id="projects"
     >
-      <h2 className="heading">COMPLETED PROJECTS </h2>
-
-      <p className="text">
-        Voluptate cupidatat eu proident enim nostrud proident elit labore et.
-        Sint ullamco dolore laboris aliqua veniam ex magna.
-      </p>
+      <h2 className="heading"> PROJECTS </h2>
       <div className="projects">
         <div className="project">
           <img src={healthybite} alt="" className="project-img" />

@@ -30,12 +30,11 @@ export default function Nav() {
 
   return (
     <div
-      className="w-screen flex flex-row justify-between content-center bg-atsev-1/30
-    fixed top-0 -left-2.5 py-2 px-8 backdrop-blur-md z-10 "
+      className="w-4/6 flex flex-row justify-between content-center bg-atsev-1/30
+    fixed top-4 left-52 py-2 px-8 backdrop-blur-md z-10 border rounded-full"
     >
       <div className=" flex flex-row justify-center items-center gap-4">
         <img src={avatar} alt="avatar" className="w-12" />
-    
       </div>
       <div className=" flex flex-row justify-center items-center gap-10">
         <a href="#welcome" className="nav-link">

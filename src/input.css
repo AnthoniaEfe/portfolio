@@ -65,7 +65,7 @@
 
 .project {
   @apply col-span-1 rounded-xl border border-white shadow-gray-300
-  shadow-md transform hover:shadow-xl hover:shadow-gray-300 dark:bg-vesta-3
+  shadow-md transform hover:shadow-xl hover:shadow-gray-300
   dark:shadow-zinc-800 dark:hover:shadow-gray-500 dark:border-zinc-700
   px-2 pt-4 pb-6 relative;
 }
@@ -108,7 +108,7 @@
 }
 
 .form {
-  @apply p-2 flex flex-col gap-10 w-full justify-center items-center mx-auto mt-2 mb-8;
+  @apply p-2 flex flex-col gap-10 justify-center items-center mx-auto mt-2 mb-8;
 }
 
 .form-field {

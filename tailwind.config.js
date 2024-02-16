@@ -1,6 +1,6 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
-  darkMode: 'class', // or 'media' or 'class'
+  darkMode: "class", // or 'media' or 'class'
   theme: {
     fontFamily: {
       blobbychug: ["blobbychug", "sans"],
@@ -9,6 +9,8 @@ module.exports = {
     },
     extend: {
       colors: {
+        white: "#ffffff",
+        black: "#000000",
         vesta: {
           1: "#7239A1",
           2: "#642598",

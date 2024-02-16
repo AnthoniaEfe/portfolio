@@ -64,9 +64,9 @@
 }
 
 .project {
-  @apply col-span-1 rounded-xl border border-slate-300 shadow-gray-200
-  shadow-md transform hover:shadow-lg hover:shadow-gray-300 dark:bg-vesta-3
-  dark:shadow-zinc-800 dark:hover:shadow-zinc-900 dark:border-zinc-700
+  @apply col-span-1 rounded-xl border border-white shadow-gray-300
+  shadow-md transform hover:shadow-xl hover:shadow-gray-300 dark:bg-vesta-3
+  dark:shadow-zinc-800 dark:hover:shadow-gray-500 dark:border-zinc-700
   px-2 pt-4 pb-6 relative;
 }
 
@@ -83,11 +83,13 @@
 }
 
 .project-icon {
-  @apply fill-vesta-6 dark:fill-gray-50 h-7;
+  @apply fill-white h-7 transform hover:scale-125 mx-auto;
 }
 
 .hidden-links {
-  @apply absolute top-2/4 left-2/4  hidden hover:flex-row gap-2 hover:flex w-full;
+  @apply absolute w-full h-full group-hover:flex-row hidden gap-2 top-0 left-0
+  mx-auto group-hover:flex group-hover:bg-black group-hover:opacity-40
+ border rounded-xl;
 }
 
 .grid-child {

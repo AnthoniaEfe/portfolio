@@ -10,42 +10,63 @@ export default function Projects() {
       <h2 className="heading"> PROJECTS </h2>
 
       <div className="projects">
-        <div className="project">
+        <div className="project group">
           <img src={healthybite} alt="" className="project-img" />
           <div className="">
             <p className="project-heading">HealthyBite</p>
             <p className="project-text">
               Irure officia ex culpa ad ipsum non ut officia nostrud.
-            </p>     <div className="hidden-links gap-4">
-            {" "}
-            <Github className="project-icon" />
-            <a href="https://dev-accountability.pantheonsite.io/">
-              {" "}
-              <Link className=" project-icon" />
-            </a>
-          </div>
-          </div>
-
-     
-        </div>
-
-        <div className="project">
-          <img src={attendance} alt="" className="project-img" />
-          <div className="project-text">
-            <p className="grow">Attendance System</p>
-
-            <Github className="project-icon " />
-            <Link className="project-icon " />
+            </p>{" "}
+            <div className="hidden-links gap-4">
+              <div className="mx-auto my-auto flex-row flex gap-8">
+                {" "}
+                <Github className="project-icon " />
+                <a href="https://dev-accountability.pantheonsite.io/">
+                  {" "}
+                  <Link className=" project-icon" />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className="project">
+        <div className="project group">
           <img src={attendance} alt="" className="project-img" />
-          <div className="project-text">
-            <p className="grow">Attendance System</p>
+          <div className="">
+            <p className="project-heading">HealthyBite</p>
+            <p className="project-text">
+              Irure officia ex culpa ad ipsum non ut officia nostrud.
+            </p>{" "}
+            <div className="hidden-links gap-4">
+              <div className="mx-auto my-auto flex-row flex gap-8">
+                {" "}
+                <Github className="project-icon " />
+                <a href="https://dev-accountability.pantheonsite.io/">
+                  {" "}
+                  <Link className=" project-icon" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
 
-            <Github className=" project-icon " />
-            <Link className="project-icon " />
+        <div className="project group">
+          <img src={healthybite} alt="" className="project-img" />
+          <div className="">
+            <p className="project-heading">HealthyBite</p>
+            <p className="project-text">
+              Irure officia ex culpa ad ipsum non ut officia nostrud.
+            </p>{" "}
+            <div className="hidden-links gap-4">
+              <div className="mx-auto my-auto flex-row flex gap-8">
+                {" "}
+                <Github className="project-icon " />
+                <a href="https://dev-accountability.pantheonsite.io/">
+                  {" "}
+                  <Link className=" project-icon" />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

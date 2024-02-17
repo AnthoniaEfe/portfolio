@@ -50,8 +50,8 @@
   @apply font-bold text-3xl md:text-5xl mb-4 md:mb-8;
 }
 .skills {
-  @apply grid grid-cols-2 md:grid-cols-4 justify-center gap-y-10 md:gap-y-20 
-  items-center m-4 md:m-8 w-10/12 md:w-8/12;
+  @apply grid grid-cols-3 md:grid-cols-4 gap-y-10 md:gap-y-20 p-2
+  items-center m-4 md:m-8 w-10/12 md:w-8/12 mx-auto align-middle bg-slate-500 justify-around;
 }
 
 .skill-img {
@@ -59,8 +59,8 @@
 }
 
 .projects {
-  @apply flex flex-col gap-8 w-10/12 md:grid grid-cols-3 md:gap-x-12 md:gap-y-8 
-  md:w-10/12 justify-center items-center mt-2 mb-6 md:mt-4 md:mb-8 mx-auto;
+  @apply flex flex-col gap-8 w-10/12 md:grid grid-cols-2 md:gap-x-12 md:gap-y-8 
+  md:w-10/12 justify-center items-center mt-2 mb-6 md:mt-4 md:mb-8 mx-auto ;
 }
 
 .project {
@@ -104,7 +104,7 @@
 }
 
 .nav-link {
-  @apply text-base hover:text-vesta-4  transform hover:scale-105 transition duration-300 ease-in-out;
+  @apply text-base hover:font-semibold text-vesta-6 transform transition duration-300 ease-in-out;
 }
 
 .form {
@@ -112,7 +112,12 @@
 }
 
 .form-field {
-  @apply h-12 shadow-md rounded-xl border border-slate-300 shadow-gray-200;
+  @apply w-1/2 p-2 shadow-inner rounded-xl border border-slate-200;
+}
+
+.form-button{
+  @apply bg-vesta-6 text-white py-2 px-4 text-base border rounded-xl transform
+   hover:scale-110 transition duration-300 ease-in-out font-bold
 }
 
 @font-face {

@@ -5,9 +5,10 @@ export default function About() {
     <div
       className=" pt-10 md:pt-20
     md:px-16 px-8 pb-10 md:pb-10 dark:bg-vesta-9"
+      id="skills"
     >
       <h2 className="heading"> SKILLS & EXPERIENCES </h2>
-      <section id="about" className="md:grid grid-cols-2 items-center gap-0  ">
+      <section className="md:grid grid-cols-2 items-center gap-0  ">
         {/* left half */}{" "}
         <div className="col-span-1 justify-center items-center  ">
           <p className="text ">

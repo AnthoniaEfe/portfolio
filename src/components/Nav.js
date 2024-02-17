@@ -31,7 +31,7 @@ export default function Nav() {
   return (
     <div
       className="w-4/6 flex flex-row justify-between content-center bg-atsev-1/30
-    fixed top-4 left-52 py-2 px-8 backdrop-blur-md z-10 border rounded-full"
+    fixed top-2 left-52 py-2 px-8 backdrop-blur-md z-10 border rounded-full "
     >
       <div className=" flex flex-row justify-center items-center gap-4">
         <img src={avatar} alt="avatar" className="w-12" />
@@ -40,13 +40,13 @@ export default function Nav() {
         <a href="#welcome" className="nav-link">
           Home
         </a>
-        <a href="#about" className="nav-link">
-          About
+        <a href="#skills" className="nav-link">
+          Skills{" "}
         </a>
         <a href="#projects" className="nav-link">
-          Work
+          Projects
         </a>
-        <a href="#footer" className="nav-link">
+        <a href="#contact" className="nav-link">
           Contact
         </a>
       </div>{" "}

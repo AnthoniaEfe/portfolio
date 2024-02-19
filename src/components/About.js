@@ -7,7 +7,8 @@ export default function About() {
     md:px-16 px-8 pb-10 md:pb-10 dark:bg-vesta-9"
       id="skills"
     >
-      <h2 className="heading"> SKILLS & EXPERIENCES </h2>
+      <h2 className="heading"> Get to know me </h2>
+<hr className="divider"/>
       <section className="md:grid grid-cols-2 items-center gap-0  ">
         {/* left half */}{" "}
         <div className="col-span-1 justify-center items-center  ">

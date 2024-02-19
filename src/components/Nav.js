@@ -30,8 +30,7 @@ export default function Nav() {
 
   return (
     <div
-      className="hidden md:w-4/6 md:flex flex-row justify-between content-center bg-atsev-1/30
-    fixed top-2 left-1/6 py-2 px-8 backdrop-blur-md z-10 border rounded-full "
+      className="nav-bar"
     >
       <div className=" flex flex-row justify-center items-center gap-4">
         <img src={avatar} alt="avatar" className="w-12" />

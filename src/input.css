@@ -47,11 +47,11 @@
 }
 
 .heading {
-  @apply font-bold text-3xl md:text-5xl mb-4 md:mb-8;
+  @apply font-bold text-3xl md:text-5xl mb-2 md:mb-4;
 }
 .skills {
   @apply grid grid-cols-3 md:grid-cols-4 gap-y-10 md:gap-y-20 py-2 px-6
-  items-center justify-center m-4 md:m-8 w-10/12 md:w-8/12 ;
+  items-center justify-center m-4 md:m-8 w-10/12 md:w-8/12;
 }
 
 .skill-img {
@@ -60,14 +60,13 @@
 
 .projects {
   @apply flex flex-col gap-8 w-10/12 md:grid grid-cols-2 md:gap-x-12 md:gap-y-8 
-  md:w-10/12 justify-center items-center mt-2 mb-6 md:mt-4 md:mb-8 mx-auto;
+  md:w-10/12 justify-center items-center mt-4 md:mt-6 mb-6 md:mb-8 mx-auto;
 }
 
 .project {
-  @apply col-span-1 rounded-xl border border-white shadow-gray-300
-  shadow-md transform hover:shadow-xl hover:shadow-gray-300
-  dark:shadow-zinc-800 dark:hover:shadow-gray-500 dark:border-zinc-700
-  px-2 pt-4 pb-6 relative;
+  @apply col-span-1 rounded-xl border border-transparent shadow-gray-300 bg-white
+  shadow-md transform hover:shadow-xl hover:shadow-gray-300 px-2 pt-4 pb-6 relative
+  dark:shadow-zinc-800 dark:hover:shadow-gray-500 dark:border-transparent;
 }
 
 .project-img {
@@ -95,29 +94,38 @@
 .grid-child {
   @apply col-span-1 xs:w-4 xs:h-4 w-10 md:w-12 h-10 md:h-12 flex items-center 
   justify-center hover:bg-vesta-6 hover:border-vesta-6
-   border-2 border-white rounded-full
-    hover:rotate-2 transition duration-300 ease-in-out;
+   border-2 border-white rounded-full hover:rotate-2 transition duration-300 ease-in-out;
 }
 
 .copright {
   @apply fixed bottom-0 md:static;
 }
 
+.nav-bar {
+  @apply hidden md:w-4/6 md:flex flex-row justify-between content-center bg-atsev-1/30
+  fixed top-2 left-1/6 py-2 px-8 backdrop-blur-md z-10 border rounded-full dark:text-gray-50 border-transparent;
+}
+
 .nav-link {
-  @apply text-base hover:font-semibold text-vesta-6 transform transition duration-300 ease-in-out;
+  @apply text-base hover:font-semibold text-vesta-6 dark:text-gray-50 transform transition duration-300 ease-in-out;
 }
 
 .form {
-  @apply p-2 flex flex-col gap-10 justify-center items-center mx-auto mt-2 mb-8;
+  @apply p-2 flex flex-col gap-10 justify-center items-center mx-auto mt-4 md:mt-6 mb-8;
 }
 
 .form-field {
-  @apply w-1/2 p-2 shadow-inner rounded-xl border border-slate-200;
+  @apply w-1/2 p-2 shadow-inner rounded-xl border border-slate-200 outline-none focus:ring-1 
+  focus:ring-vesta-6 focus:border-transparent;
 }
 
 .form-button {
   @apply bg-vesta-6 text-white py-2 px-4 text-base border rounded-xl transform
    hover:scale-110 transition duration-300 ease-in-out font-bold;
+}
+
+.divider {
+  @apply border-2 border-vesta-6 w-4/6 mx-auto mt-0 mb-8 rounded-2xl;
 }
 
 @font-face {

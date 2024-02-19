@@ -10,7 +10,7 @@ export default function TabSocials() {
   return (
     <div
       id="socials"
-      className="bg-vesta-3 border-vesta-3 rounded-2xl border-2 
+      className="bg-vesta-6 border-vesta-6 rounded-2xl border-2 
     w-fit h-fit flex-col p-2 pl-3 gap-2 fixed -left-3 top-1/4 hidden md:block"
     >
       <a

@@ -2,8 +2,8 @@ import React, { useState } from "react";
 
 export default function ContactForm() {
   const emailAddress = "anthoniaefe36@gmail.com";
-  let subject = "Hello from React";
-  const body = "This is a test email from a React component.";
+  let subject = "SERVICE INQUIRY";
+  const body = "Hello, I have some an inquiry about ...";
 
   const [formData, setFormData] = useState({
     name: "",
@@ -21,7 +21,6 @@ export default function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("form submitted");
 
     const mailtoLink = `mailto:${emailAddress}?subject=${encodeURIComponent(
       subject
@@ -30,33 +29,41 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="dark:bg-vesta-9" id="contact">
-      <h2 className="heading">Get In Touch With Me</h2>
+    <div
+      className=" pt-10 md:pt-20
+    md:px-16 px-8 pb-10 md:pb-10 dark:bg-vesta-9"
+      id="contact"
+    >
+      <h2 className="heading">Get in touch with me</h2>
+      <hr className="divider" />
       <form className="form" onSubmit={handleSubmit}>
         <input
           className="form-field h-12"
           type="text"
-          placeholder="Your Name"
+          placeholder="Really Cool Name"
           name="name"
           value={formData.name}
           onChange={handleChange}
+          required
         />
 
         <input
           className="form-field h-12 "
           type="email"
-          placeholder="Your Email"
+          placeholder="reallycool@email.com"
           name="email"
           value={formData.email}
           onChange={handleChange}
+          required
         />
 
         <textarea
           className="form-field h-48"
-          placeholder="Your Message"
+          placeholder="Really cool message"
           name="message"
           value={formData.message}
           onChange={handleChange}
+          required
         ></textarea>
 
         <button type="submit" className="form-button ">

@@ -14,7 +14,7 @@ export default function Home() {
     <div
       className=" 
      w-screen h-screen text-black-600-cover overflow-y-auto
-     overflow-x-hidden relative dark:bg-vesta-9 dark:text-gray-50
+     overflow-x-hidden relative dark:bg-vesta-6 dark:text-gray-50
       "
     >
       <Nav />

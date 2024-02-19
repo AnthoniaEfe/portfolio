@@ -37,6 +37,9 @@ module.exports = {
       screens: {
         xs: { min: "200px", max: "330px" },
       },
+      spacing:{
+        '1/6': '16.666667%',
+      }
     },
   },
   variants: {

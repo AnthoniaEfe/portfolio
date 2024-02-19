@@ -22,7 +22,7 @@ export default function Banner() {
             Hello 👋🏽{" "}
           </h2>
           <h1
-            className="text-5xl md:text-8xl my-2 tracking-tighter
+            className="text-4xl md:text-6xl my-2 tracking-tighter
       "
           >
             I'm Anthonia

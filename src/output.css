@@ -601,8 +601,8 @@ video {
   left: -0.75rem;
 }
 
-.left-52 {
-  left: 13rem;
+.left-1\/3 {
+  left: 33.333333%;
 }
 
 .top-1\/4 {
@@ -611,6 +611,10 @@ video {
 
 .top-2 {
   top: 0.5rem;
+}
+
+.left-1\/6 {
+  left: 16.666667%;
 }
 
 .z-10 {
@@ -703,10 +707,6 @@ video {
 
 .w-12 {
   width: 3rem;
-}
-
-.w-4\/6 {
-  width: 66.666667%;
 }
 
 .w-5\/6 {
@@ -1088,18 +1088,16 @@ video {
 
 .skills {
   margin: 1rem;
-  margin-left: auto;
-  margin-right: auto;
   display: grid;
   width: 83.333333%;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   row-gap: 2.5rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
-  padding: 0.5rem;
-  vertical-align: middle;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 @media (min-width: 768px) {
@@ -1430,12 +1428,20 @@ video {
     display: block;
   }
 
+  .md\:flex {
+    display: flex;
+  }
+
   .md\:grid {
     display: grid;
   }
 
   .md\:h-1\/6 {
     height: 16.666667%;
+  }
+
+  .md\:w-4\/6 {
+    width: 66.666667%;
   }
 
   .md\:gap-10 {
@@ -1472,6 +1478,11 @@ video {
 
   .md\:text-8xl {
     font-size: 6rem;
+    line-height: 1;
+  }
+
+  .md\:text-6xl {
+    font-size: 3.75rem;
     line-height: 1;
   }
 }

@@ -26,7 +26,7 @@ export default function About() {
           </p>
         </div>
         {/* right half  */}
-        <div className="col-span-1 justify-center items-center mb-8 ">
+        <div className="col-span-1 flex justify-center items-center mb-8 ">
           <Skills className="justify-center items-center " />
         </div>{" "}
       </section>{" "}

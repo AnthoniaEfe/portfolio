@@ -39,6 +39,10 @@ module.exports = {
       },
       spacing:{
         '1/6': '16.666667%',
+      },
+      backgroundSize: {
+        '70%': '40%',
+        '16': '4rem',
       }
     },
   },

@@ -2,9 +2,9 @@ import avatar from "../assets/Group5.png";
 
 export default function Banner() {
   return (
-    <section id="welcome" className="bg-slate-50 ">
+    <section id="welcome" className="bg-slate-50 dark:bg-vesta-9">
       <div
-        className="md:grid grid-cols-2 items-center pt-10 md:pt-20 pb-10 md:pb-20
+        className="md:grid grid-cols-2 items-center pt-10 md:pt-20 
       md:px-12 px-8 bg-70% bg-right bg-no-repeat md:custom-bg"
       >
         {/* left half */}{" "}

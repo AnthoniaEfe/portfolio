@@ -35,7 +35,7 @@
 }
 
 .theme {
-  @apply h-4 md:h-6 w-4 md:w-6 hover:scale-105 transform;
+  @apply h-4 md:h-6 w-4 md:w-6 hover:scale-105 transform ;
 }
 
 .socials {
@@ -102,9 +102,10 @@
 }
 
 .nav-bar {
-  @apply md:w-4/6 md:flex flex-row justify-between content-center bg-atsev-1/30
-  fixed top-2 left-1/6 py-2 px-8 backdrop-blur-md z-10 border rounded-full dark:text-gray-50 border-transparent;
+  @apply  w-screen md:w-4/6 flex flex-row justify-between content-center bg-atsev-1/30
+  fixed md:top-2 -left-[10px] md:left-1/6 py-2 px-8 backdrop-blur-md z-10 border md:rounded-full dark:text-gray-50 border-transparent;
 }
+
 
 .nav-link {
   @apply text-base hover:font-semibold text-vesta-6 dark:text-gray-50 transform transition duration-300 ease-in-out;

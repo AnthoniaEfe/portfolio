@@ -3,7 +3,7 @@ import React, { useState } from "react";
 export default function ContactForm() {
   const emailAddress = "anthoniaefe36@gmail.com";
   let subject = "SERVICE INQUIRY";
-  const body = "Hello, I have some an inquiry about ...";
+  const body = "Hello, I have an inquiry about ...";
 
   const [formData, setFormData] = useState({
     name: "",

@@ -35,7 +35,7 @@
 }
 
 .theme {
-  @apply h-4 md:h-6 w-4 md:w-6 hover:scale-105 transform ;
+  @apply h-6 w-6 hover:scale-105 transform ;
 }
 
 .socials {
@@ -43,7 +43,7 @@
 }
 
 .text {
-  @apply text-base md:text-lg mx-auto text-justify w-9/12 my-8 md:mt-6;
+  @apply text-base md:text-lg mx-auto text-justify w-11/12 md:w-9/12 my-8 md:mt-6;
 }
 
 .heading {
@@ -102,8 +102,9 @@
 }
 
 .nav-bar {
-  @apply  w-screen md:w-4/6 flex flex-row justify-between content-center bg-atsev-1/30
-  fixed md:top-2 -left-[10px] md:left-1/6 py-2 px-8 backdrop-blur-md z-10 border md:rounded-full dark:text-gray-50 border-transparent;
+  @apply  w-screen md:w-4/6 grid grid-cols-2 md:grid-cols-3 justify-between md:justify-center 
+  md:items-center bg-atsev-1/30 fixed md:top-2 -left-[10px] md:left-1/6 py-2 gap-3 md:gap-20
+  px-8 backdrop-blur-md z-10 border md:rounded-full dark:text-gray-50 border-transparent;
 }
 
 
@@ -116,7 +117,7 @@
 }
 
 .form-field {
-  @apply w-4/6 md:w-1/2 p-2 shadow-inner rounded-xl border border-slate-200 outline-none focus:ring-1 
+  @apply w-11/12 md:w-1/2 p-2 shadow-inner rounded-xl border border-slate-200 outline-none focus:ring-1 
   focus:ring-vesta-6 focus:border-transparent;
 }
 

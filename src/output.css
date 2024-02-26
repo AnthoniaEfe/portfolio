@@ -1404,7 +1404,6 @@ video {
 
 .nav-bar {
   position: fixed;
-  left: -10px;
   z-index: 10;
   display: grid;
   width: 100vw;

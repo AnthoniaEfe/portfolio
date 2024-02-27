@@ -75,7 +75,8 @@ export default function Nav() {
         {!isOpen ? (
           <button
             onClick={toggleMenu}
-            className="text-bg-vesta-6 transform hover:scale-105 focus:outline-none focus:text-2xl"
+            className="text-bg-vesta-6 transform hover:scale-105 focus:outline-none focus:text-2xl
+            transition-transform ease-in-out delay-150 hover:-translate-y-1 duration-300 ..."
           >
             <svg
               className="h-6 w-6"

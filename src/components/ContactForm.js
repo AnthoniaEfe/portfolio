@@ -2,8 +2,8 @@ import React, { useState } from "react";
 
 export default function ContactForm() {
   const emailAddress = "anthoniaefe36@gmail.com";
-  let subject = "SERVICE INQUIRY";
-  const body = "Hello, I have an inquiry about ...";
+  let subject = "RESUME REQUEST";
+  const body = "Hello, I'd like to request for your resume.";
 
   const [formData, setFormData] = useState({
     name: "",
@@ -40,7 +40,7 @@ export default function ContactForm() {
         <input
           className="form-field h-12"
           type="text"
-          placeholder="Really Cool Name"
+          placeholder="John Doe"
           name="name"
           value={formData.name}
           onChange={handleChange}
@@ -50,7 +50,7 @@ export default function ContactForm() {
         <input
           className="form-field h-12 "
           type="email"
-          placeholder="reallycool@email.com"
+          placeholder="johndoe123@email.com"
           name="email"
           value={formData.email}
           onChange={handleChange}
@@ -59,7 +59,7 @@ export default function ContactForm() {
 
         <textarea
           className="form-field h-48"
-          placeholder="Really cool message"
+          placeholder="I have an inquiry about..."
           name="message"
           value={formData.message}
           onChange={handleChange}

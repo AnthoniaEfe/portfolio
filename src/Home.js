@@ -5,7 +5,6 @@ import Nav from "./components/Nav";
 import TabSocials from "./components/TabSocials";
 import Banner from "./components/Banner";
 import Footer from "./components/Footer";
-import Navigation from "./components/Navigation";
 // Assets
 import wave from "./assets/wave.png";
 import ContactForm from "./components/ContactForm";
@@ -19,8 +18,6 @@ export default function Home() {
       "
     >
       <Nav />
-      
-      {/* <Navigation /> */}
       <TabSocials />
       <Banner />
       <About />

@@ -1,16 +1,16 @@
-import avatar from "../assets/Group5.png";
+import avatar from "../assets/avatar_blob.svg";
 
 export default function Banner() {
   return (
     <section id="welcome" className="bg-slate-50 dark:bg-vesta-9">
       <div
-        className="md:grid grid-cols-2 items-center pt-20 pb-10 md:pb-0 
+        className="md:grid grid-cols-2 items-center pb-10 md:pb-20 pt-20 md:pt-28
       md:px-12 px-8 bg-70% bg-right bg-no-repeat md:custom-bg"
       >
         {/* left half */}{" "}
         <div className="col-span-1  ">
           {" "}
-          <img src={avatar} alt="avatar" className=" w-5/6 mx-auto " />{" "}
+          <img src={avatar} alt="avatar" className=" size-20 mx-auto " />{" "}
         </div>
         {/* right half  */}
         <div className="col-span-1 justify-center items-center ">
@@ -39,7 +39,7 @@ export default function Banner() {
       "
             >
               Let's{" "}
-              <a href="#footer" className="hover:underline underline-offset-2">
+              <a href="#contact" className="text-blue-500">
                 connect!
               </a>{" "}
             </p>

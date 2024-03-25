@@ -1,4 +1,14 @@
-import Skills from "../components/Skills";
+import Git from "../assets/git.svg";
+import Figma from "../assets/figma.svg";
+import Firebase from "../assets/firebase.svg";
+import Javascript from "../assets/javascript.svg";
+import NodeJS from "../assets/nodejs.svg";
+import Reactlogo from "../assets/react.svg";
+import Tailwind from "../assets/tailwind.svg";
+import Tux from "../assets/tux.svg";
+import TS from "../assets/TS.png";
+import CSS from "../assets/css.png";
+import HTML from "../assets/html.png";
 
 export default function About() {
   return (
@@ -8,29 +18,48 @@ export default function About() {
       id="skills"
     >
       <h2 className="heading"> Get to know me </h2>
-<hr className="divider"/>
-      <section className="md:grid grid-cols-2 items-center gap-0  ">
+      <hr className="divider" />
+      <section className="md:grid grid-cols-2 justify-around items-center md:gap-20 ">
         {/* left half */}{" "}
-        <div className="col-span-1 justify-center items-center  ">
+        <div className="col-span-1 flex justify-center md:justify-end items-end content-end ">
+          
           <p className="text ">
-            I'm a software developer with a knack for front-end development and
-            crafting eye-catching web designs. I'm all about pushing my
-            boundaries in creating seamless digital experiences. Dolore proident
-            nulla esse culpa non aute minim reprehenderit anim sunt. Fugiat
-            culpa non ea consequat ut tempor ex sunt Lorem non labore cillum
-            incididunt deserunt. Aliquip culpa labore veniam sint ad et eu
-            cillum cupidatat esse do. Ipsum ullamco culpa excepteur elit velit
-            qui officia occaecat laborum occaecat minim reprehenderit aliqua.
-            Excepteur labore ea ullamco cupidatat cupidatat. Commodo do magna
-            ipsum nostrud et ipsum minim laboris mollit ea ut mollit. Labore
-            fugiat non nisi officia amet ullamco qui consequat minim.
+          
+            Hi! I'm Anthonia, a software developer with a passion for creating
+            beautiful and functional websites. I have a strong foundation in
+            JavaScript and React. I am currently learning new a helpful
+            technologies as they roll out. When I'm not coding you'd find me
+            enjoying nature with friends 😊 Feel free to{" "}
+            <a href="#contact" className="text-blue-500">
+              email
+            </a>{" "}
+            me if you have any questions or just want to chat!
           </p>
         </div>
         {/* right half  */}
-        <div className="col-span-1 flex justify-center items-center mb-8 ">
-          <Skills className="justify-center items-center " />
+        <div
+          id="skills"
+          className="col-span-1 grid grid-cols-3 md:grid-cols-4 gap-y-8 md:gap-y-16
+            w-10/12 md:w-8/12 justify-center items-center mx-auto md:mx-0 px-auto"
+        >
+          {" "}
+          <img src={CSS} alt="css" className="skill-img" />
+          <img src={Figma} alt="figma" className="skill-img" />
+          <img src={Firebase} alt="firebase" className="skill-img" />
+          <img src={Git} alt="git" className="skill-img" />
+          <img src={HTML} alt="html" className="skill-img" />
+          <img src={Javascript} alt="js" className="skill-img" />
+          <img src={Tux} alt="linux" className="skill-img" />
+          <img src={NodeJS} alt="nodejs" className="skill-img" />
+          <img src={Reactlogo} alt="reactjs" className="skill-img" />
+          <img src={Tailwind} alt="" className="skill-img" />
+          <img src={TS} alt="ts" className="skill-img" />
         </div>{" "}
+
+        <a className="resume-btn" href="https://drive.google.com/file/d/19pht_UMUtU_kwSKTubTdYx6hQu_jIMor/view?usp=sharing" 
+        target="_blank" rel="noreferrer" >Résumé</a>
       </section>{" "}
+
     </div>
   );
 }

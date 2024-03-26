@@ -1,6 +1,6 @@
-/* src/index.css */
-
-/* ! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com */
+/*
+! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com
+*/
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -647,12 +647,20 @@ video {
   margin-bottom: 0px;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
 
 .mt-4 {
   margin-top: 1rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
 }
 
 .flex {
@@ -796,10 +804,6 @@ video {
   gap: 2rem;
 }
 
-.gap-y-8 {
-  row-gap: 2rem;
-}
-
 .overflow-y-auto {
   overflow-y: auto;
 }
@@ -816,12 +820,17 @@ video {
   border-width: 2px;
 }
 
-.border-vesta-6 {
+.border-purple-dark {
   --tw-border-opacity: 1;
   border-color: rgb(64 2 114 / var(--tw-border-opacity));
 }
 
-.bg-atsev-1 {
+.bg-purple-dark {
+  --tw-bg-opacity: 1;
+  background-color: rgb(64 2 114 / var(--tw-bg-opacity));
+}
+
+.bg-purple-light {
   --tw-bg-opacity: 1;
   background-color: rgb(225 198 253 / var(--tw-bg-opacity));
 }
@@ -829,11 +838,6 @@ video {
 .bg-slate-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(248 250 252 / var(--tw-bg-opacity));
-}
-
-.bg-vesta-6 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(64 2 114 / var(--tw-bg-opacity));
 }
 
 .bg-70\% {
@@ -848,7 +852,7 @@ video {
   background-repeat: no-repeat;
 }
 
-.fill-vesta-7 {
+.fill-purple-darker {
   fill: #36025F;
 }
 
@@ -869,6 +873,11 @@ video {
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .pb-10 {
@@ -956,23 +965,24 @@ video {
 }
 
 .resume {
-  margin-left: 1rem;
-  margin-right: 1rem;
-  margin-bottom: 0.5rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  border-radius: 0.5rem;
-  border-width: 2px;
+  -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+          transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  border-radius: 0.75rem;
+  border-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgb(64 2 114 / var(--tw-border-opacity));
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(64 2 114 / var(--tw-bg-opacity));
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 700;
+  letter-spacing: 0.025em;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, -webkit-transform, -webkit-filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-transform, -webkit-filter, -webkit-backdrop-filter;
@@ -981,35 +991,10 @@ video {
 }
 
 .resume:hover {
-  --tw-scale-x: 1.05;
-  --tw-scale-y: 1.05;
+  --tw-scale-x: 1.1;
+  --tw-scale-y: 1.1;
   -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
           transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  --tw-bg-opacity: 1;
-  background-color: rgb(64 2 114 / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-:is(.dark .resume) {
-  --tw-border-opacity: 1;
-  border-color: rgb(225 198 253 / var(--tw-border-opacity));
-}
-
-:is(.dark .resume:hover) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(225 198 253 / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(31 7 56 / var(--tw-text-opacity));
-}
-
-@media (min-width: 768px) {
-  .resume {
-    margin-bottom: 1rem;
-    padding: 0.5rem;
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
 }
 
 .icon {
@@ -1078,25 +1063,21 @@ video {
 }
 
 .text {
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  width: 80%;
   text-align: justify;
   font-size: 1rem;
   line-height: 1.5rem;
-}
-
-@media (min-width: 640px) {
-  .text {
-    width: 60%;
-    line-height: 2;
-  }
+  line-height: 1.375;
 }
 
 @media (min-width: 768px) {
   .text {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    width: 66.666667%;
     font-size: 1.125rem;
     line-height: 1.75rem;
   }
@@ -1127,11 +1108,6 @@ video {
     height: 2.5rem;
     width: 2.5rem;
   }
-}
-
-.resume-btn {
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .projects {
@@ -1445,6 +1421,8 @@ video {
           transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   border-radius: 0.75rem;
   border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(64 2 114 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
   background-color: rgb(64 2 114 / var(--tw-bg-opacity));
   padding-top: 0.5rem;
@@ -1513,12 +1491,7 @@ video {
   outline-offset: 2px;
 }
 
-:is(.dark .dark\:bg-vesta-6) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(64 2 114 / var(--tw-bg-opacity));
-}
-
-:is(.dark .dark\:bg-vesta-9) {
+:is(.dark .dark\:bg-purple-darkest) {
   --tw-bg-opacity: 1;
   background-color: rgb(31 7 56 / var(--tw-bg-opacity));
 }
@@ -1529,6 +1502,10 @@ video {
 }
 
 @media (min-width: 640px) {
+  .sm\:mb-4 {
+    margin-bottom: 1rem;
+  }
+
   .sm\:px-3 {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
@@ -1543,6 +1520,15 @@ video {
   .md\:mx-0 {
     margin-left: 0px;
     margin-right: 0px;
+  }
+
+  .md\:my-4 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .md\:mb-2 {
+    margin-bottom: 0.5rem;
   }
 
   .md\:mt-6 {
@@ -1585,8 +1571,9 @@ video {
     gap: 2.5rem;
   }
 
-  .md\:gap-20 {
-    gap: 5rem;
+  .md\:gap-x-8 {
+    -webkit-column-gap: 2rem;
+            column-gap: 2rem;
   }
 
   .md\:gap-y-16 {

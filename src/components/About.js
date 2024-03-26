@@ -14,17 +14,15 @@ export default function About() {
   return (
     <div
       className=" pt-10 md:pt-20
-    md:px-16 px-8 pb-10 md:pb-10 dark:bg-vesta-9"
+    md:px-16 px-8 pb-10 md:pb-10 dark:bg-purple-darkest"
       id="skills"
     >
       <h2 className="heading"> Get to know me </h2>
       <hr className="divider" />
-      <section className="md:grid grid-cols-2 justify-around items-center md:gap-20 ">
+      <section className="flex flex-col justify-center items-center md:grid grid-cols-2 gap-4 md:gap-10 ">
         {/* left half */}{" "}
-        <div className="col-span-1 flex justify-center md:justify-end items-end content-end ">
-          
+        <div className="col-span-1 flex justify-center md:justify-end items-end content-end  ">
           <p className="text ">
-          
             Hi! I'm Anthonia, a software developer with a passion for creating
             beautiful and functional websites. I have a strong foundation in
             JavaScript and React. I am currently learning new a helpful
@@ -39,27 +37,33 @@ export default function About() {
         {/* right half  */}
         <div
           id="skills"
-          className="col-span-1 grid grid-cols-3 md:grid-cols-4 gap-y-8 md:gap-y-16
-            w-10/12 md:w-8/12 justify-center items-center mx-auto md:mx-0 px-auto"
+          className="col-span-1 grid grid-cols-3 md:grid-cols-4 gap-8 md:gap-y-16 md:gap-x-8 sm:mb-4 md:mb-2
+            w-10/12 md:w-8/12  mx-auto md:mx-0 py-2 justify-around items-center"
         >
           {" "}
           <img src={CSS} alt="css" className="skill-img" />
           <img src={Figma} alt="figma" className="skill-img" />
-          <img src={Firebase} alt="firebase" className="skill-img" />
-          <img src={Git} alt="git" className="skill-img" />
-          <img src={HTML} alt="html" className="skill-img" />
-          <img src={Javascript} alt="js" className="skill-img" />
-          <img src={Tux} alt="linux" className="skill-img" />
-          <img src={NodeJS} alt="nodejs" className="skill-img" />
-          <img src={Reactlogo} alt="reactjs" className="skill-img" />
-          <img src={Tailwind} alt="" className="skill-img" />
-          <img src={TS} alt="ts" className="skill-img" />
+          <img src={Firebase} alt="firebase" className="skill-img " />
+          <img src={Git} alt="git" className="skill-img " />
+          <img src={HTML} alt="html" className="skill-img " />
+          <img src={Javascript} alt="js" className="skill-img " />
+          <img src={Tux} alt="linux" className="skill-img " />
+          <img src={NodeJS} alt="nodejs" className="skill-img " />
+          <img src={Reactlogo} alt="reactjs" className="skill-img " />
+          <img src={Tailwind} alt="" className="skill-img " />
+          <img src={TS} alt="ts" className="skill-img " />
         </div>{" "}
-
-        <a className="resume-btn" href="https://drive.google.com/file/d/19pht_UMUtU_kwSKTubTdYx6hQu_jIMor/view?usp=sharing" 
-        target="_blank" rel="noreferrer" >Résumé</a>
+        <div className="col-span-2 mt-8 mb-4 md:my-4">
+          <a
+            className="resume"
+            href="https://drive.google.com/file/d/19pht_UMUtU_kwSKTubTdYx6hQu_jIMor/view?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Résumé
+          </a>
+        </div>
       </section>{" "}
-
     </div>
   );
 }

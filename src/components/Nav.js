@@ -65,7 +65,7 @@ export default function Nav() {
           {theme === "dark" ? (
             <Sun className="theme" />
           ) : (
-            <Moon className="theme fill-vesta-7" />
+            <Moon className="theme fill-purple-darker" />
           )}
         </button>
       </div>
@@ -75,7 +75,7 @@ export default function Nav() {
         {!isOpen ? (
           <button
             onClick={toggleMenu}
-            className="text-bg-vesta-6 transform hover:scale-105 focus:outline-none focus:text-2xl
+            className="text-bg-purple-dark transform hover:scale-105 focus:outline-none focus:text-2xl
             transition-transform ease-in-out delay-150 "
           >
             <svg
@@ -95,7 +95,7 @@ export default function Nav() {
         ) : (
           <button
             onClick={toggleMenu}
-            className="text-bg-vesta-6 transform hover:scale-105 focus:outline-none focus:text-2xl"
+            className="text-bg-purple-dark transform hover:scale-105 focus:outline-none focus:text-2xl"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -103,7 +103,7 @@ export default function Nav() {
               viewBox="0 0 24 24"
               strokeWidth="1.8"
               stroke="currentColor"
-              className="w-6 h-6 text-bg-vesta-6"
+              className="w-6 h-6 text-bg-purple-dark"
             >
               <path
                 strokeLinecap="round"

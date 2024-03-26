@@ -13,9 +13,7 @@ export default function Home() {
   return (
     <div
       className=" 
-     w-screen h-screen text-black-600-cover overflow-y-auto
-     overflow-x-hidden relative dark:bg-purple-darkest dark:text-gray-50
-      "
+     w-screen h-screen text-black-600-cover overflow-y-auto overflow-x-hidden relative "
     >
       <Nav />
       <TabSocials />

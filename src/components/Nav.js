@@ -1,33 +1,8 @@
-import { ReactComponent as Sun } from "../assets/sun.svg";
-import { ReactComponent as Moon } from "../assets/moon.svg";
 import avatar from "../assets/avatar.png";
-
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function Nav() {
-  const [theme, setTheme] = useState("light");
   const [isOpen, setIsOpen] = useState(false);
-
-  // use default system appearance
-  // useEffect(() => {
-  //   if (window.matchMedia("(prefers-color-scheme:dark)").matches) {
-  //     setTheme("dark");
-  //   } else {
-  //     setTheme("light");
-  //   }
-  // }, []);
-
-  useEffect(() => {
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [theme]);
-
-  const handleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  };
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -36,8 +11,9 @@ export default function Nav() {
   return (
     <div className="nav-bar ">
       {/* logo image */}
-      <div className=" flex md:static items-center justify-start">
-        <img src={avatar} alt="avatar" className="w-12 " />
+      <div className=" flex md:static items-center justify-start gap-1">
+        <img src={avatar} alt="avatar" className="w-14 " />
+        <p className="text-lg tracking-tight text-purple-dark font-bold hidden md:block">Anthonia Efe</p>
       </div>
 
       {/* large screen links */}
@@ -47,8 +23,8 @@ export default function Nav() {
           <a href="#welcome" className="nav-link">
             Home
           </a>{" "}
-          <a href="#skills" className="nav-link">
-            Skills{" "}
+          <a href="#about" className="nav-link">
+           About{" "}
           </a>
           <a href="#projects" className="nav-link">
             Projects
@@ -57,17 +33,6 @@ export default function Nav() {
             Contact
           </a>
         </div>
-      </div>
-
-      {/* theme toggle */}
-      <div className="hidden md:flex items-center justify-end">
-        <button onClick={handleTheme}>
-          {theme === "dark" ? (
-            <Sun className="theme" />
-          ) : (
-            <Moon className="theme fill-purple-darker" />
-          )}
-        </button>
       </div>
 
       {/* Hamburger menu for small screens */}

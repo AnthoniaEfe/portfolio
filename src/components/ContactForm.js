@@ -30,8 +30,7 @@ export default function ContactForm() {
 
   return (
     <div
-      className=" pt-10 md:pt-20
-    md:px-16 px-8 pb-10 md:pb-10 dark:bg-purple-darkest"
+      className=" pt-10 md:pt-20 md:px-16 px-8 pb-10 md:pb-10 "
       id="contact"
     >
       <h2 className="heading">Get in touch with me</h2>

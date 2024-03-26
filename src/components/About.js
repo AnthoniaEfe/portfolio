@@ -13,9 +13,8 @@ import HTML from "../assets/html.png";
 export default function About() {
   return (
     <div
-      className=" pt-10 md:pt-20
-    md:px-16 px-8 pb-10 md:pb-10 dark:bg-purple-darkest"
-      id="skills"
+      className=" pt-10 md:pt-20 md:px-16 px-8 pb-10 md:pb-10"
+      id="about"
     >
       <h2 className="heading"> Get to know me </h2>
       <hr className="divider" />
@@ -27,7 +26,7 @@ export default function About() {
             beautiful and functional websites. I have a strong foundation in
             JavaScript and React. I am currently learning new a helpful
             technologies as they roll out. When I'm not coding you'd find me
-            enjoying nature with friends 😊 Feel free to{" "}
+            enjoying nature with friends or playing games 😊 Feel free to{" "}
             <a href="#contact" className="text-blue-500">
               email
             </a>{" "}
@@ -36,8 +35,8 @@ export default function About() {
         </div>
         {/* right half  */}
         <div
-          id="skills"
-          className="col-span-1 grid grid-cols-3 md:grid-cols-4 gap-8 md:gap-y-16 md:gap-x-8 sm:mb-4 md:mb-2
+   
+          className="col-span-1 grid grid-cols-3 md:grid-cols-4 gap-8 md:gap-y-12 md:gap-x-8 sm:mb-4 md:mb-2
             w-10/12 md:w-8/12  mx-auto md:mx-0 py-2 justify-around items-center"
         >
           {" "}

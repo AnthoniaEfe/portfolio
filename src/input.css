@@ -59,8 +59,7 @@
 
 .project {
   @apply col-span-1 rounded-xl border border-transparent shadow-gray-300 bg-white
-  shadow-md transform hover:shadow-xl hover:shadow-gray-300 px-2 pt-4 pb-6 relative
-  dark:shadow-zinc-800 dark:hover:shadow-gray-500 dark:border-transparent;
+  shadow-md transform hover:shadow-xl hover:shadow-gray-300 px-2 pt-4 pb-6 relative;
 }
 
 .project-img {
@@ -96,13 +95,13 @@
 }
 
 .nav-bar {
-  @apply w-screen md:w-4/6 grid grid-cols-2 md:grid-cols-3 justify-between md:justify-center 
-  md:items-center bg-purple-light/30 fixed md:top-2 md:left-1/6 py-2 gap-3 md:gap-20
-  px-8 backdrop-blur-md z-10 border md:rounded-full dark:text-gray-50 border-transparent;
+  @apply w-screen md:w-4/6 grid grid-cols-2 justify-between
+  items-center bg-purple-light/30 fixed md:top-2 md:left-1/6 py-2 gap-3 md:gap-20
+  px-6 backdrop-blur-md z-10 border md:rounded-full dark:text-gray-50 border-transparent;
 }
 
 .nav-link {
-  @apply text-base hover:font-semibold text-purple-dark dark:text-gray-50 transform transition duration-300 ease-in-out;
+  @apply text-base hover:font-semibold text-purple-dark transform transition duration-300 ease-in-out;
 }
 
 .form {

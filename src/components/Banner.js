@@ -2,7 +2,7 @@ import avatar from "../assets/avatar_blob.svg";
 
 export default function Banner() {
   return (
-    <section id="welcome" className="bg-slate-50 dark:bg-purple-darkest">
+    <section id="welcome" className="bg-slate-50">
       <div
         className="md:grid grid-cols-2 items-center pb-10 md:pb-20 pt-20 md:pt-28
       md:px-12 px-8 bg-70% bg-right bg-no-repeat md:custom-bg"

@@ -1,17 +1,12 @@
-import { ReactComponent as Twitter } from "../assets/twitter.svg";
-import { ReactComponent as Gmail } from "../assets/gmail.svg";
-import { ReactComponent as Linkedin } from "../assets/linkedin.svg";
-import { ReactComponent as Github } from "../assets/github.svg";
+
 
 export default function Socials() {
-  return (<div>
-<form></form>
-
+  return (
     <div
       className="grid grid-cols-4 w-fit mx-auto px-4 
            justify-start items-start gap-8 md:gap-10 "
     >
-      <a
+      {/* <a
         href="https://twitter.com/Anthonia_Efe"
         target="_blank"
         rel="noreferrer"
@@ -45,8 +40,8 @@ export default function Socials() {
         className="grid-child "
       >
         <Gmail className="icon " />
-      </a>
+      </a> */}
     </div>
-    </div>
+
   );
 }

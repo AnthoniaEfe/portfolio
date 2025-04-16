@@ -1,6 +1,4 @@
 import React from "react";
-import { ReactComponent as Github } from "../assets/github.svg";
-import { ReactComponent as Link } from "../assets/link.svg";
 import attendance from "../assets/attendance.png";
 import healthybite from "../assets/healthybite.png";
 
@@ -22,12 +20,12 @@ export default function Projects() {
             </p>{" "}
             <div className="hidden-links gap-4">
               <div className="mx-auto my-auto flex-row flex gap-8">
-                {" "}
+                {/* {" "}
                 <Github className="project-icon " />
                 <a href="https://dev-accountability.pantheonsite.io/">
                   {" "}
                   <Link className=" project-icon" />
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
@@ -41,14 +39,14 @@ export default function Projects() {
               Irure officia ex culpa ad ipsum non ut officia nostrud.
             </p>{" "}
             <div className="hidden-links gap-4">
-              <div className="mx-auto my-auto flex-row flex gap-8">
+              {/* <div className="mx-auto my-auto flex-row flex gap-8">
                 {" "}
                 <Github className="project-icon " />
                 <a href="https://dev-accountability.pantheonsite.io/">
                   {" "}
                   <Link className=" project-icon" />
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -61,14 +59,14 @@ export default function Projects() {
               Irure officia ex culpa ad ipsum non ut officia nostrud.
             </p>{" "}
             <div className="hidden-links gap-4">
-              <div className="mx-auto my-auto flex-row flex gap-8">
+              {/* <div className="mx-auto my-auto flex-row flex gap-8">
                 {" "}
                 <Github className="project-icon " />
                 <a href="https://dev-accountability.pantheonsite.io/">
                   {" "}
                   <Link className=" project-icon" />
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

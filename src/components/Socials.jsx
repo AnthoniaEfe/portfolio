@@ -1,46 +1,27 @@
+import { faGithub, faXTwitter, faLinkedinIn, faInstagram} from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+const socials =  [
+ {icon: faGithub, link: "https://twitter.com/Anthonia_Efe"},
+ {icon: faXTwitter, link: "https://twitter.com/Anthonia_Efe"},
+ {icon: faLinkedinIn, link: "https://twitter.com/Anthonia_Efe"},
+ {icon: faInstagram, link: "https://twitter.com/Anthonia_Efe"} 
+]
 
 export default function Socials() {
   return (
-    <div
-      className="grid grid-cols-4 w-fit mx-auto px-4 
-           justify-start items-start gap-8 md:gap-10 "
-    >
-      {/* <a
-        href="https://twitter.com/Anthonia_Efe"
+    <div className="">
+      {socials.map((item, index)=>(
+              <a
+        href={item.link}
         target="_blank"
         rel="noreferrer"
-        className="grid-child  "
+        key={index}
+        className=""
       >
-        <Twitter className="icon " />
+          <FontAwesomeIcon icon={item.icon} />
       </a>
-
-      <a
-        href="https://www.linkedin.com/in/anthoniaefe/"
-        target="_blank"
-        rel="noreferrer"
-        className="grid-child  "
-      >
-        <Linkedin className="icon " />
-      </a>
-
-      <a
-        href="https://github.com/AnthoniaEfe"
-        target="_blank"
-        rel="noreferrer"
-        className="grid-child "
-      >
-        <Github className="icon " />
-      </a>
-
-      <a
-        href="mailto:anthoniaefe36@gmail.com"
-        target="_blank"
-        rel="noreferrer"
-        className="grid-child "
-      >
-        <Gmail className="icon " />
-      </a> */}
+      ))}
     </div>
 
   );

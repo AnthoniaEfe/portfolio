@@ -1,18 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
 @import "tailwindcss";
 
 
 @theme {
-  --color-White: hsl(0, 0%, 100%);
-  --color-Black: hsl(0, 0%, 0%);
   --color-grey: hsl(0, 0%, 85%);
-  --color-purple-light:#E1C6FD;
-  --color-purple-dark: #400272;
-  --color-purple-darker: #36025F;
-  --font-body-size: 15px;
-  --font-display: "Alata", sans-serif;
-  --font-josefin-sans: "Josefin Sans", system-ui, sans-serif;
+  --color-textblack: #0d1823;
+  --color-purple-light:#9112eb;
+  --color-purple-dark: #36025F;
+  --font-roboto: "Roboto", sans-serif, system-ui;
+  --font-dm-serif-text: "DM Serif Text", sans-serif, system-ui;
 }
 
 :root {

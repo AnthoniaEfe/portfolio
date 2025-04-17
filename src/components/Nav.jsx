@@ -1,104 +1,68 @@
-import avatar from "../assets/avatar.png";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import {faXmark, faBars} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import portfolioLogo from "../assets/portfolio-logo.jpeg"
+
+const navItems = ['home', 'about', 'projects', 'contact', 'footer'];
 
 export default function Nav() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
-    <div className="nav-bar ">
-      {/* logo image */}
-      <div className=" flex md:static items-center justify-start gap-1">
-        <img src={avatar} alt="avatar" className="w-14 " />
-        <p className="text-lg tracking-tight text-purple-dark font-bold hidden md:block">Anthonia Efe</p>
-      </div>
-
-      {/* large screen links */}
-      <div className="hidden md:block">
-        {" "}
-        <div className="flex flex-row justify-center items-center gap-10">
-          <a href="#welcome" className="nav-link">
-            Home
-          </a>{" "}
-          <a href="#about" className="nav-link">
-           About{" "}
-          </a>
-          <a href="#projects" className="nav-link">
-            Projects
-          </a>
-          <a href="#contact" className="nav-link">
-            Contact
-          </a>
+    <nav className={`fixed top-0 w-full z-50 px-6 py-4 transition-all duration-300 ${scrolled ? 'bg-white/10 backdrop-blur-md shadow-md' : 'bg-transparent'}
+     flex flex-row m-0 px-4 md:px-20 py-8 gap-4 justify-between items-center absolute bg-[rgba(0,0,0,0)] z-10 top-0 left-0 w-full text-black`} aria-label="Main navigation">
+       <img src={portfolioLogo} alt="loop studios logo" className='w-36 z-10'/>
+      {/* nav menu */}
+        <div className='flex flex-row md:flex-row-reverse m-0 gap-4'>
+          {isMobile ? <div className='flex flex-column m-0 p-0 justify-center items-center' onClick={() => setIsOpen(!isOpen)}  aria-controls="mobile-menu">
+           <FontAwesomeIcon icon={isOpen ? faXmark : faBars} className="z-10 text-2xl"/>
+                </div> : (
+                <ul className="flex flex-row m-0 gap-4 justify-center items-center" role="menubar">
+                {navItems.map((item) => (
+                  <li key={item} role="menuitem">
+                    <a href="#" className='capitalize decoration-purple-light decoration-4 hover:underline underline-offset-16 transition duration-300'>{item}</a> 
+                  </li>))}
+                </ul>
+          )}
         </div>
-      </div>
 
-      {/* Hamburger menu for small screens */}
-      <div className="flex md:hidden items-center justify-end">
-        {!isOpen ? (
-          <button
-            onClick={toggleMenu}
-            className="text-bg-purple-dark transform hover:scale-105 focus:outline-none focus:text-2xl
-            transition-transform ease-in-out delay-150 "
-          >
-            <svg
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16m-7 6h7"
-              ></path>
-            </svg>
-          </button>
-        ) : (
-          <button
-            onClick={toggleMenu}
-            className="text-bg-purple-dark transform hover:scale-105 focus:outline-none focus:text-2xl"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.8"
-              stroke="currentColor"
-              className="w-6 h-6 text-bg-purple-dark"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M6 18 18 6M6 6l12 12"
-              />
-            </svg>
-          </button>
-        )}
-      </div>
-
-      {/* Mobile menu */}
-      {isOpen && (
-        <span className="md:hidden col-span-2">
-          <div className="flex flex-col gap-5 px-2 pb-3 sm:px-3">
-            <a href="#welcome" className="nav-link">
-              Home
-            </a>{" "}
-            <a href="#skills" className="nav-link">
-              Skills{" "}
-            </a>
-            <a href="#projects" className="nav-link">
-              Projects
-            </a>
-            <a href="#contact" className="nav-link">
-              Contact
-            </a>
+        {/* Mobile Menu */}
+        {isOpen && (
+          <div className="fixed top-0 right-full translate-x-[100%] p-8 w-full h-full text-black bg-white">
+          <ul className="list-none flex flex-col gap-8 items-start justify-center h-full">
+            {navItems.map((item, index) => (
+              <li
+                key={index}
+                role="menuitem"
+              >
+                <a href="#" className="text-2xl cursor-pointer active:underline underline-offset-16 uppercase">
+                  {item}</a>
+          
+              </li>
+            ))}
+          </ul> 
           </div>
-        </span>
-      )}
-    </div>
+        )}
+      </nav>
   );
 }

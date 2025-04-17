@@ -1,76 +1,12 @@
-import React from "react";
-import attendance from "../assets/attendance.png";
-import healthybite from "../assets/healthybite.png";
-
 export default function Projects() {
   return (
     <div
       className=" bg-slate-50  pt-10 md:pt-20 md:px-16 px-8 pb-10 md:pb-10"
       id="projects"
     >
-      <h2 className="heading"> Projects </h2>
-      <hr className="divider" />
-      <div className="projects">
-        <div className="project group">
-          <img src={healthybite} alt="" className="project-img" />
-          <div className="">
-            <p className="project-heading">HealthyBite</p>
-            <p className="project-text">
-              Irure officia ex culpa ad ipsum non ut officia nostrud.
-            </p>{" "}
-            <div className="hidden-links gap-4">
-              <div className="mx-auto my-auto flex-row flex gap-8">
-                {/* {" "}
-                <Github className="project-icon " />
-                <a href="https://dev-accountability.pantheonsite.io/">
-                  {" "}
-                  <Link className=" project-icon" />
-                </a> */}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="project group">
-          <img src={attendance} alt="" className="project-img" />
-          <div className="">
-            <p className="project-heading">HealthyBite</p>
-            <p className="project-text">
-              Irure officia ex culpa ad ipsum non ut officia nostrud.
-            </p>{" "}
-            <div className="hidden-links gap-4">
-              {/* <div className="mx-auto my-auto flex-row flex gap-8">
-                {" "}
-                <Github className="project-icon " />
-                <a href="https://dev-accountability.pantheonsite.io/">
-                  {" "}
-                  <Link className=" project-icon" />
-                </a>
-              </div> */}
-            </div>
-          </div>
-        </div>
-
-        <div className="project group">
-          <img src={healthybite} alt="" className="project-img" />
-          <div className="">
-            <p className="project-heading">HealthyBite</p>
-            <p className="project-text">
-              Irure officia ex culpa ad ipsum non ut officia nostrud.
-            </p>{" "}
-            <div className="hidden-links gap-4">
-              {/* <div className="mx-auto my-auto flex-row flex gap-8">
-                {" "}
-                <Github className="project-icon " />
-                <a href="https://dev-accountability.pantheonsite.io/">
-                  {" "}
-                  <Link className=" project-icon" />
-                </a>
-              </div> */}
-            </div>
-          </div>
-        </div>
-      </div>
+      <h2 className=""> Projects </h2>
+      <hr className="" />
+    
     </div>
   );
 }

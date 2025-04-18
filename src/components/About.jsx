@@ -2,6 +2,7 @@ import aboutImage from "../assets/about-image.jpeg"
 import {faAnglesRight} from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
+import HorizontalLine from "./HorizontalLine";
 
 export default function About() {
   return (
@@ -14,7 +15,7 @@ export default function About() {
         </div>
 
         <div className="w-full h-full flex flex-col justify-around items-start gap-4 md:gap-10 p-0">
-          <hr className="w-full"></hr>
+         <HorizontalLine/>
           <h2 className="font-dm-serif-text text-2xl md:text-3xl lg:text-4xl"> About me </h2>
           <p className=" ">
           Hi! I'm Anthonia, a software developer with a passion for creating
@@ -33,7 +34,7 @@ export default function About() {
             <FontAwesomeIcon icon={faAnglesRight} className="text-purple-light mr-6 h-10"/>
             Go to portfolio
           </Link>
-          <hr className="w-full"></hr>
+          <HorizontalLine/>
         </div>
     </section>
   );

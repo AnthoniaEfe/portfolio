@@ -10,14 +10,14 @@ const socials =  [
 
 export default function Socials() {
   return (
-    <div className="">
+    <div className="flex flex-row gap-4 justify-center items-center">
       {socials.map((item, index)=>(
               <a
         href={item.link}
         target="_blank"
         rel="noreferrer"
         key={index}
-        className=""
+        className="hover:cursor:pointer hover:text-purple-light md:text-xl active:text-purple-light focus:text-purple-light"
       >
           <FontAwesomeIcon icon={item.icon} />
       </a>

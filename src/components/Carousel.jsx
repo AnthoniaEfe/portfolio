@@ -4,18 +4,21 @@ import {faChevronLeft, faChevronRight} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import aboutImage from "../assets/about-image.jpeg"  
 import bannerImage from "../assets/banner-image.jpeg"  
-import HorizontalLine from './HorizontalLine';
    
 const slides = [
-  {bookmark: "lorem ipsum",
+  {bookmark: "Lorem ipsum dolor sit amet consaerat quia nobis quasi, nisi nihil numquam placeat tempore, atque obcaecati, possimus labore.",
     background: "Lorem ipsum dolor sit amet consaerat quia nobis quasi, nisi nihil numquam placeat tempore, atque obcaecati, possimus labore.",
     bannerImage: [aboutImage, "banner image"],
-    staticPreviewImage: [ aboutImage, bannerImage]
+    staticPreviewImage: [ aboutImage, bannerImage],
+    tags: ['interactive design', 'responsive design', 'front end dev'],
+    stack: ['HTML', 'css', 'js']
   },
-  {bookmark: "lorem ipsum",
+  {bookmark: "Lorem ipsum dolor sit amet consaerat quia nobis quasi, nisi nihil numquam placeat tempore, atque obcaecati, possimus labore.",
     background: "Lorem ipsum dolor sit amet consaerat quia nobis quasi, nisi nihil numquam placeat tempore, atque obcaecati, possimus labore.",
     bannerImage: [aboutImage, "banner image"],
-    staticPreviewImage: [ aboutImage, bannerImage]
+    staticPreviewImage: [ aboutImage, bannerImage],
+    tags: ['interactive design', 'responsive design', ],
+    stack: ['css', 'js']
   },
 
 ];
@@ -39,49 +42,50 @@ export default function Carousel() {
       style={{ transform: `translateX(-${currentIndex * 100}%)` }}
     >
       {slides.map((slide, index) => (
-        <div key={index} className="w-full flex-shrink-0 flex flex-col p-4 md:p-8 lg:p-10">
+        <div key={index} className="w-full flex-shrink-0 flex flex-col p-4 md:p-8 lg:p-10 gap-10 md:gap-12">
           <div className='w-full h-full p-4'>
             <img src={slide.bannerImage[0]} alt={slide.bannerImage[1]} className='w-full h-full 
-            max-h-[70vh] px-6 md:px-20 object-cover object-top'/>
+            max-h-[60vh] px-6 md:px-20 object-fill object-center '/>
           </div>
 
-          <div className='flex flex-row gap-4 md:gap-8 justify-stretch items-center'>
-          <div className='w-full h-full p-4'>
-            <HorizontalLine/>
-            <h1 className='font-dm-serif-text font-extrabold'>Bookmark</h1>
-            <p>{slide.bookmark}</p>
-            <a href="#">Visit Website</a>
-            <HorizontalLine/>
+          <div className='flex flex-col md:flex-row gap- justify-stretch items-center'>
+          <div className='w-[50%] h-full p-8 flex flex-col gap-4 '>
+           <hr></hr>
+            <h2>Project</h2>
+            <p className='mt-4'>{slide.bookmark}</p>
+            <p className='text-purple-light capitalize text-xs'>{slide.tags.join(' / ')}</p>
+            <p className='text-purple-light uppercase text-xs'>{slide.stack.join(' / ')}</p>
+            <a href="#" className='hollow-button text-xs tracking-wider'>Visit Website</a>
+           <hr className='mt-4'></hr>
           </div>
 
-          <div className='w-full h-full p-4'>
-            <h2 className='font-dm-serif-text font-bold'>Project Background</h2>
+          <div className='w-full h-full flex flex-col gap-6 p-8'>
+            <h3>Project Background</h3>
             <p>{slide.background}</p>
 
-            <h2 className='font-dm-serif-text font-bold'>Static Previews</h2>
-            <img src={slide.staticPreviewImage[0]} alt="static preview image" />
-            <img src={slide.staticPreviewImage[1]} alt="static preview image" />
+            <h3 className='mt-4'>Static Previews</h3>
+            {slide.staticPreviewImage.map((item, index)=>(
+              <img key={index} src={item} alt={`static preview image ${index}`} />
+            ))}
           </div>
           </div>
         </div>
       ))}
     </div>
 
-    {/* Arrows */}
-    <button
-      onClick={prevSlide}
-      className=" p-2 "
-    >
-      
-      <FontAwesomeIcon icon={faChevronLeft} />previous project
-    </button>
-    <button
-      onClick={nextSlide}
-      className="p-2"
-    >
-      next project
-      <FontAwesomeIcon icon={faChevronRight} />
-    </button>
+   
+    <div className='px-8 md:px-18 flex flex-row justify-between border-y-[1px] border-gray-200 items-center'>
+      {/* left arrow */}
+      <button onClick={prevSlide} className="carousel-button">
+        <FontAwesomeIcon icon={faChevronLeft} className='h-12 mr-5 text-purple-light'/>previous project
+      </button>
+        {/* Vertical divider */}
+        <div className="w-px self-stretch bg-gray-200"></div>
+      {/* right arrow */}
+      <button onClick={nextSlide} className="carousel-button text-right" >
+        next project <FontAwesomeIcon icon={faChevronRight} className='h-12 ml-5 text-purple-light' />
+      </button>
+    </div>
   </div>
   )
 }

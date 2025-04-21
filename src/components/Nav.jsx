@@ -38,7 +38,7 @@ export default function Nav() {
 
   return (
     <nav  ref={navRef} 
-    className='font-body fixed top-0 w-full z-50 px-6 py-4 transition-all duration-300 bg-white/10 backdrop-blur-md shadow-2xs
+    className='font-body fixed top-0 w-full z-50 px-6 py-4 transition-all duration-300 bg-white/60 backdrop-blur-md shadow-2xs
      flex flex-row m-0 md:px-20 gap-4 justify-between items-center left-0 text-textblack' aria-label="Main navigation">
        <Link to="/" className="z-10">
         <img src={portfolioLogo} alt="anthonia efe logo" className='h-12 '/>
@@ -53,7 +53,7 @@ export default function Nav() {
                 {navItems.map((item, index) => (
                   <li key={index} role="menuitem">
                     <Link to={item.link}
-                    className='uppercase decoration-purple-light decoration-4 hover:underline underline-offset-12 
+                    className='uppercase decoration-purple-light decoration-4 hover:underline active:underline underline-offset-12 
                     transition duration-300'>{item.text}</Link> 
                   </li>))}
                 </ul>

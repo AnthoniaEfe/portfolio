@@ -26,3 +26,43 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+@layer base{
+  h1{
+    @apply font-dm-serif-text text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  h2{
+    @apply font-dm-serif-text text-2xl md:text-3xl lg:text-4xl;
+  }
+
+  h3{
+    @apply font-dm-serif-text text-xl md:text-2xl lg:text-3xl;
+  }
+
+  hr{
+    @apply border-t-[1px] border-gray-200 w-full;
+  }
+
+  section{
+    @apply bg-off-white p-8 pt-18 md:p-18 m-0 flex flex-col md:flex-row justify-center items-center gap-4 md:gap-10;
+  }
+
+  footer{
+    @apply font-body m-0 w-full px-6 py-4 md:px-20 md:py-6 gap-4 bg-textblack text-off-white flex flex-col 
+    justify-center items-center;
+  }
+}
+
+@layer components{
+  .hollow-button{
+    @apply uppercase border-2 border-textblack py-2 px-4 w-fit;
+  }
+
+  .solid-button{
+    @apply uppercase text-white bg-textblack py-3 pr-8 pl-6 w-fit;
+  }
+
+  .carousel-button{
+    @apply text-lg capitalize flex-1 text-left px-4 py-8;
+  }
+}

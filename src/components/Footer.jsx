@@ -10,8 +10,7 @@ const navItems = [
 
 export default function Footer() {
   return (
-    <footer className="font-body m-0 w-full px-6 py-4  md:px-20 md:py-6 gap-4 bg-textblack text-off-white flex flex-col 
-     justify-center items-center">
+    <footer>
       <div className="flex flex-col md:flex-row gap-8 md:gap-10 justify-between items-center w-full">
     <Link to="/">
     <img src={logo} alt="anthonia efe logo" className="h-16"/>

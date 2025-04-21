@@ -5,7 +5,7 @@ import Footer from "../components/Footer"
 
 function Home() {
   return (
-    <div className="font-body text-textblack w-full h-screen overflow-y-auto overflow-x-hidden relative ">
+    <div className="page-styles">
       <Banner />
       <About />
       <ContactCTA />

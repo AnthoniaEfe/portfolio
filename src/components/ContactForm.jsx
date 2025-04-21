@@ -1,74 +1,137 @@
 import React, { useState } from "react";
+import { faCheck } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-export default function ContactForm() {
-  const emailAddress = "anthoniaefe36@gmail.com";
-  let subject = "RESUME REQUEST";
-  const body = "Hello, I'd like to request for your resume.";
-
+const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
+    consent: false,
   });
+  const [errors, setErrors] = useState({});
+  const [successMessage, setSuccessMessage] = useState("");
+  const emailAddress = "anthoniaefe36@gmail.com";
+  const subject = "PORTFOLIO SITE FORM";
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
+    const { name, value, type, checked } = e.target;
+    setFormData({
+      ...formData,
+      [name]: type === "checkbox" ? checked : value,
+    });
+    setErrors({ ...errors, [name]: "" });
+  };
+
+  const validateForm = () => {
+    let newErrors = {};
+    if (!formData.name.trim()) newErrors.firstName = "This field is required";
+    if (!formData.email.trim()) newErrors.email = "Please enter a valid email address";
+    if (!formData.message.trim()) newErrors.message = "This field is required";
+    if (!formData.consent) newErrors.consent = "To submit this form, please consent to being contacted";
+    
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (validateForm()) { 
+      window.location.href = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(formData.message)}`;
+      console.log("Form Submitted", formData);
 
-    const mailtoLink = `mailto:${emailAddress}?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailtoLink;
+      setSuccessMessage("Thanks for completeing the form. We'll be in touch soon.");
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+        consent: false,
+      });
+    } else {
+      setSuccessMessage("");
+    }
   };
 
   return (
-    <div
-      className=" pt-10 md:pt-20 md:px-16 px-8 pb-10 md:pb-10 "
-      id="contact"
-    >
-      <h2 className="heading">Get in touch with me</h2>
-      <hr className="divider" />
-      <form className="form" onSubmit={handleSubmit}>
-        <input
-          className="form-field h-12"
-          type="text"
-          placeholder="John Doe"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
+    <main>
+      <form className="contact__form" onSubmit={handleSubmit} aria-labelledby="contact__heading" noValidate>
+        {/* success message */}
+           {successMessage && <div className="success__message" aria-live="polite">
+            <h2> 
+              <FontAwesomeIcon icon={faCheck}/>
+              Message Sent!
+              </h2>
+             <p>{successMessage}</p>
+            </div>
+            } 
 
-        <input
-          className="form-field h-12 "
-          type="email"
-          placeholder="johndoe123@email.com"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
+            {/* form title */}
+            <h1 id="contact__heading">Contact Us</h1>
+   
+          {/* name */}
+        <div className="form__group">
+          <label htmlFor="firstName">First Name *</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={formData.firstName}
+            onChange={handleChange}
+            aria-required="true"
+            aria-describedby="name-error"
+          />
+          {errors.name && <p className="error__message" id="name__error" aria-live="polite">{errors.name}</p>}
+        </div>
 
-        <textarea
-          className="form-field h-48"
-          placeholder="I have an inquiry about..."
-          name="message"
-          value={formData.message}
-          onChange={handleChange}
-          required
-        ></textarea>
+        {/* email */}
+        <div className="form__group">
+          <label htmlFor="email">Email Address *</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            aria-required="true"
+            aria-describedby="email-error"
+          />
+          {errors.email && <p className="error__message" id="email__error" aria-live="polite">{errors.email}</p>}
+        </div>
 
-        <button type="submit" className="form-button ">
-          Send Message
-        </button>
+        {/* message */}
+        <div className="form__group">
+          <label htmlFor="message">Message *</label>
+          <textarea
+            id="message"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            aria-required="true"
+            aria-describedby="message__error"
+          ></textarea>
+          {errors.message && <p className="error__message" id="message-error" aria-live="polite">{errors.message}</p>}
+        </div>
+
+        {/* consent checkbox */}
+        <div className="form__group ">
+          <div className="checkbox__group">
+          <input
+            type="checkbox"
+            id="consent"
+            name="consent"
+            checked={formData.consent}
+            onChange={handleChange}
+            aria-required="true"
+            aria-describedby="consent-error"
+          />
+          <label htmlFor="consent">I consent to being contacted by the team *</label> 
+       </div>   
+       {errors.consent && <p className="error__message" id="consent-error" aria-live="polite">{errors.consent}</p>}
+       </div>
+        <button type="submit" className="submit__button">Submit</button>
       </form>
-    </div>
+    </main>
   );
-}
+};
+
+export default ContactForm;

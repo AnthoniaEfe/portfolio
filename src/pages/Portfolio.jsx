@@ -5,7 +5,7 @@ import Carousel from '../components/Carousel'
 
 export default function Portfolio() {
   return (
-    <div className='font-body pt-20 w-full m-0 text-textblack'>
+    <div className='page-styles'>
       <Carousel/>
       <ContactCTA/>
       <Footer/>

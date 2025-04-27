@@ -4,6 +4,7 @@ import {faChevronLeft, faChevronRight} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import aboutImage from "../assets/about-image.jpeg"  
 import bannerImage from "../assets/banner-image.jpeg"  
+import {motion} from "framer-motion"
    
 const slides = [
   {bookmark: "Lorem ipsum dolor sit amet consaerat quia nobis quasi, nisi nihil numquam placeat tempore, atque obcaecati, possimus labore.",
@@ -25,6 +26,7 @@ const slides = [
 
 export default function Carousel() {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const MotionDiv = motion.div;
   
     const prevSlide = () => {
       setCurrentIndex((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
@@ -35,7 +37,7 @@ export default function Carousel() {
     };
   
   return (
-    <div className="w-full overflow-hidden ">
+    <motion.div className="w-full overflow-hidden ">
     {/* Slides container */}
     <div
       className="flex transition-transform duration-500 ease-in-out w-full"
@@ -76,16 +78,49 @@ export default function Carousel() {
    
     <div className='px-8 md:px-18 flex flex-row justify-between border-y-[1px] border-gray-200 items-center'>
       {/* left arrow */}
-      <button onClick={prevSlide} className="carousel-button">
-        <FontAwesomeIcon icon={faChevronLeft} className='h-12 mr-5 text-purple-light'/>previous project
+      <button onClick={prevSlide} className="carousel-button flex">
+      <motion.div 
+                   animate={{
+                    x: [0, -3, 0],
+                  }}
+                  transition={{
+                    duration: 1,
+                    repeat: Infinity,
+                    repeatType: "loop",
+                    ease: "easeInOut",
+                  }}
+                  whileHover={{ 
+                    x: -6, 
+                    transition: { type: "spring", stiffness: 300, duration:0.5 }   
+                  }}
+              >
+        <FontAwesomeIcon icon={faChevronLeft} className='h-12 mr-5 text-purple-light'/>
+        </motion.div>
+        previous project
       </button>
         {/* Vertical divider */}
         <div className="w-px self-stretch bg-gray-200"></div>
       {/* right arrow */}
-      <button onClick={nextSlide} className="carousel-button text-right" >
-        next project <FontAwesomeIcon icon={faChevronRight} className='h-12 ml-5 text-purple-light' />
+      <button onClick={nextSlide} className="carousel-button text-right flex" >
+        next project
+        <motion.div 
+                   animate={{
+                    x: [0, -3, 0],
+                  }}
+                  transition={{
+                    duration: 1,
+                    repeat: Infinity,
+                    repeatType: "loop",
+                    ease: "easeInOut",
+                  }}
+                  whileHover={{ 
+                    x: 6, 
+                    transition: { type: "spring", stiffness: 300, duration:0.5 }   
+                  }}
+              > <FontAwesomeIcon icon={faChevronRight} className='h-12 ml-5 text-purple-light' />
+      </motion.div>
       </button>
     </div>
-  </div>
+  </motion.div>
   )
 }

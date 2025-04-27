@@ -2,7 +2,8 @@ import { useState, useEffect, useRef } from "react";
 import {faXmark, faBars} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import portfolioLogo from "../assets/logo-nav.png"
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+import { motion } from "framer-motion";
 
 const navItems = [
   {text:'home', link:'/'},
@@ -14,8 +15,10 @@ export default function Nav() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [isOpen, setIsOpen] = useState(false);
   const navRef = useRef(null);
+  const MotionDiv = motion.div;
+  // const [hoveredLink, setHoveredLink] = useState(null);
 
-  // Close when clicking outside
+  // Close menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (navRef.current && !navRef.current.contains(e.target)) {
@@ -38,7 +41,7 @@ export default function Nav() {
 
   return (
     <nav  ref={navRef} 
-    className='font-body fixed top-0 w-full z-50 px-6 py-4 transition-all duration-300 bg-white/60 backdrop-blur-md shadow-2xs
+    className='font-body fixed top-0 w-full z-50 px-6 py-4 transition-all duration-300 bg-white/10 backdrop-blur-md shadow-2xs
      flex flex-row m-0 md:px-20 gap-4 justify-between items-center left-0 text-textblack' aria-label="Main navigation">
        <Link to="/" className="z-10">
         <img src={portfolioLogo} alt="anthonia efe logo" className='h-12 '/>
@@ -51,14 +54,18 @@ export default function Nav() {
                 </div> : (
                 <ul className="flex flex-row m-0 gap-4 justify-center items-center" role="menubar">
                 {navItems.map((item, index) => (
-                  <li key={index} role="menuitem">
-                    <Link to={item.link}
-                    className='uppercase decoration-purple-light decoration-4 hover:underline active:underline underline-offset-12 
-                    transition duration-300'>{item.text}</Link> 
-                  </li>))}
+                <li key={index} role="menuitem" className="relative cursor-pointer group inline-block">
+                    <NavLink to={item.link}  className={({ isActive }) => 
+        `uppercase ${isActive ? 'underline decoration-4 decoration-purple-light transition delay-1000 duration-300 underline-offset-10' : ''}`
+      }>
+                      {item.text}
+                    </NavLink> 
+                    <span className="absolute left-0 -bottom-2 h-0.5 bg-purple-light w-0 transition-all duration-300 group-hover:w-full"></span>
+                  </li>
+                 ))}
                 </ul>
-          )}
-        </div>
+              )}
+            </div>
 
         {/* Mobile Menu */}
         {isOpen && (

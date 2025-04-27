@@ -2,10 +2,17 @@ import aboutImage from "../assets/about-image.jpeg"
 import {faAnglesRight} from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
+import {motion} from "framer-motion"
 
 export default function About() {
+  const MotionSection = motion.section;
+  const MotionDiv = motion.div;
+
   return (
-    <section id="about">
+    <motion.section id="about"
+    initial={{ opacity: 0, y: 50 }}     
+    animate={{ opacity: 1, y: 0 }}       
+    transition={{ duration: 0.5 }}  >
         <div className="w-full md:w-4/5 h-full ">
           <img src={aboutImage} alt="w-full h-full object-cover"/>
         </div>
@@ -25,13 +32,30 @@ export default function About() {
           </Link>{" "}
             me if you have any questions or just want to chat!
           </p>
-          <Link className="solid-button"
+          <Link className="solid-button flex"
             to="/portfolio">
-            <FontAwesomeIcon icon={faAnglesRight} className="text-purple-light mr-6 h-10"/>
+              <motion.div 
+                   animate={{
+                    x: [0, -3, 0],
+                  }}
+                  transition={{
+                    duration: 1,
+                    repeat: Infinity,
+                    repeatType: "loop",
+                    ease: "easeInOut",
+                  }}
+                  whileHover={{ 
+                    x: 6, 
+                    transition: { type: "spring", stiffness: 300, duration:0.5 }   
+                  }}
+              >
+                <FontAwesomeIcon icon={faAnglesRight} className="text-purple-light mr-6 h-10"/>
+              </motion.div>
+           
             Go to portfolio
           </Link>
           <hr></hr>
         </div>
-    </section>
+    </motion.section>
   );
 }

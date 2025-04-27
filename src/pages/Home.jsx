@@ -6,7 +6,7 @@ import Footer from "../components/Footer"
 function Home() {
   return (
     <div className="page-styles">
-      <Banner />
+      <Banner/>
       <About />
       <ContactCTA />
       <Footer/>

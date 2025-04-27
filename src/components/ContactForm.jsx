@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import { faCheck } from '@fortawesome/free-solid-svg-icons'
+import { faCheck, faPaperPlane} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {motion} from "framer-motion"
 
 const ContactForm = () => {
+  const MotionDiv = motion.div;
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -54,9 +56,9 @@ const ContactForm = () => {
 
   return (
     <main>
-      <form className="contact__form" onSubmit={handleSubmit} aria-labelledby="contact__heading" noValidate>
+      <form onSubmit={handleSubmit} aria-labelledby="contact__heading" noValidate>
         {/* success message */}
-           {successMessage && <div className="success__message" aria-live="polite">
+           {successMessage && <div aria-live="polite">
             <h2> 
               <FontAwesomeIcon icon={faCheck}/>
               Message Sent!
@@ -66,69 +68,76 @@ const ContactForm = () => {
             } 
 
             {/* form title */}
-            <h1 id="contact__heading">Contact Us</h1>
+            <h1>Contact Us</h1>
    
           {/* name */}
-        <div className="form__group">
+        <div>
           <label htmlFor="firstName">First Name *</label>
           <input
             type="text"
-            id="name"
             name="name"
             value={formData.firstName}
             onChange={handleChange}
             aria-required="true"
             aria-describedby="name-error"
           />
-          {errors.name && <p className="error__message" id="name__error" aria-live="polite">{errors.name}</p>}
+          {errors.name && <p aria-live="polite">{errors.name}</p>}
         </div>
 
         {/* email */}
-        <div className="form__group">
+        <div>
           <label htmlFor="email">Email Address *</label>
           <input
             type="email"
-            id="email"
             name="email"
             value={formData.email}
             onChange={handleChange}
             aria-required="true"
             aria-describedby="email-error"
           />
-          {errors.email && <p className="error__message" id="email__error" aria-live="polite">{errors.email}</p>}
+          {errors.email && <p aria-live="polite">{errors.email}</p>}
         </div>
 
         {/* message */}
-        <div className="form__group">
+        <div>
           <label htmlFor="message">Message *</label>
           <textarea
-            id="message"
             name="message"
             value={formData.message}
             onChange={handleChange}
             aria-required="true"
             aria-describedby="message__error"
           ></textarea>
-          {errors.message && <p className="error__message" id="message-error" aria-live="polite">{errors.message}</p>}
+          {errors.message && <p aria-live="polite">{errors.message}</p>}
         </div>
 
         {/* consent checkbox */}
-        <div className="form__group ">
-          <div className="checkbox__group">
+        <div>
+          <div>
           <input
             type="checkbox"
-            id="consent"
             name="consent"
             checked={formData.consent}
             onChange={handleChange}
             aria-required="true"
             aria-describedby="consent-error"
+            className="w-fit"
           />
           <label htmlFor="consent">I consent to being contacted by the team *</label> 
        </div>   
-       {errors.consent && <p className="error__message" id="consent-error" aria-live="polite">{errors.consent}</p>}
+       {errors.consent && <p aria-live="polite">{errors.consent}</p>}
        </div>
-        <button type="submit" className="submit__button">Submit</button>
+        <button type="submit" className="solid-button flex">
+          Submit 
+           <motion.div          
+              whileHover={{ 
+                x:8, 
+                y:-8,
+                transition: { type: "spring", stiffness: 300, duration:0.5 }   
+              }}
+          ><FontAwesomeIcon icon={faPaperPlane} className="text-purple-light ml-5"/>
+          </motion.div> 
+          </button>
       </form>
     </main>
   );

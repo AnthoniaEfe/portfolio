@@ -17,7 +17,7 @@ export default function Socials() {
         target="_blank"
         rel="noreferrer"
         key={index}
-        className="hover:cursor:pointer hover:text-purple-light md:text-xl active:text-purple-light focus:text-purple-light"
+        className="hover:cursor:pointer hover:scale-110 md:text-xl active:scale-110 focus:scale-110"
       >
           <FontAwesomeIcon icon={item.icon} />
       </a>

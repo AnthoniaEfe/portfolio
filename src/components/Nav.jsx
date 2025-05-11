@@ -2,13 +2,15 @@ import { useState, useEffect, useRef } from "react";
 import {faXmark, faBars} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import portfolioLogo from "../assets/logo-nav.png"
-import { Link, NavLink } from 'react-router-dom';
 import { motion } from "framer-motion";
 
 const navItems = [
-  {text:'home', link:'/'},
-  {text:'portfolio', link:'/portfolio'},
-  {text:'contact me', link:'/contact'}
+  {text:'banner', link:'#banner'},
+  {text:'about', link:'#about'},
+  {text:'services', link:'#services'},
+  {text:'experiences', link:'#experiences'},
+  {text:'projects', link:'#projects'},
+  {text:'contact me', link:'#contact'}
 ];
 
 export default function Nav() {
@@ -43,9 +45,9 @@ export default function Nav() {
     <nav  ref={navRef} 
     className='font-body fixed top-0 w-full z-50 px-6 py-4 transition-all duration-300 bg-white/10 backdrop-blur-md shadow-2xs
      flex flex-row m-0 md:px-20 gap-4 justify-between items-center left-0 text-textblack' aria-label="Main navigation">
-       <Link to="/" className="z-10">
+       <a href="/" className="z-10">
         <img src={portfolioLogo} alt="anthonia efe logo" className='h-12 '/>
-      </Link>
+      </a>
       {/* nav menu */}
         <div className='flex flex-row md:flex-row-reverse m-0 gap-4'>
           {isMobile ? <div className='flex flex-column m-0 p-0 justify-center items-center' onClick={() => setIsOpen(!isOpen)} 
@@ -55,11 +57,9 @@ export default function Nav() {
                 <ul className="flex flex-row m-0 gap-4 justify-center items-center" role="menubar">
                 {navItems.map((item, index) => (
                 <li key={index} role="menuitem" className="relative cursor-pointer group inline-block">
-                    <NavLink to={item.link}  className={({ isActive }) => 
-        `uppercase ${isActive ? 'underline decoration-4 decoration-purple-light transition delay-1000 duration-300 underline-offset-10' : ''}`
-      }>
+                    <a href={item.link}  >
                       {item.text}
-                    </NavLink> 
+                    </a> 
                     <span className="absolute left-0 -bottom-2 h-0.5 bg-purple-light w-0 transition-all duration-300 group-hover:w-full"></span>
                   </li>
                  ))}
@@ -77,10 +77,10 @@ export default function Nav() {
                 key={index}
                 role="menuitem"
               >
-                <Link to={item.link} onClick={() => setIsOpen(false)}
+                <a href={item.link} onClick={() => setIsOpen(false)}
                 className="text-lg cursor-pointer active:underline underline-offset-12
                  decoration-purple-light decoration-4 hover:underline uppercase">
-                  {item.text}</Link>
+                  {item.text}</a>
               </li>
             ))}
           </ul> 

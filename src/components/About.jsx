@@ -1,7 +1,6 @@
 import aboutImage from "../assets/about-image.jpeg"
 import {faAnglesRight} from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from "react-router-dom";
 import {motion} from "framer-motion"
 
 export default function About() {
@@ -18,7 +17,6 @@ export default function About() {
         </div>
 
         <div className="w-full h-full flex flex-col justify-around items-start gap-4 md:gap-10 p-0">
-         <hr></hr>
           <h2> About me </h2>
           <p className=" ">
           Hi! I'm Anthonia, a software developer with a passion for creating
@@ -26,14 +24,14 @@ export default function About() {
           JavaScript and React. I am currently learning new a helpful
           technologies as they roll out. When I'm not coding you'd find me
           enjoying nature with friends or playing games 😊 Feel free to{" "}
-          <Link
-           to="/contact" className="text-purple-light hover:underline">
+          <a
+           href="/contact" className="text-purple-light hover:underline">
             contact me
-          </Link>{" "}
+          </a>{" "}
             me if you have any questions or just want to chat!
           </p>
-          <Link className="solid-button flex"
-            to="/portfolio">
+          <a className="solid-button flex"
+            href="/portfolio">
               <motion.div 
                    animate={{
                     x: [0, -3, 0],
@@ -53,7 +51,7 @@ export default function About() {
               </motion.div>
            
             Go to portfolio
-          </Link>
+          </a>
           <hr></hr>
         </div>
     </motion.section>

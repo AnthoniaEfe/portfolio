@@ -74,12 +74,15 @@
   .solid-button{
     @apply uppercase text-white bg-textblack py-3 pr-8 pl-6 w-fit;
   }
+}
 
-  .carousel-button{
-    @apply text-lg capitalize flex-1 text-left px-4 py-8;
+@layer utilities {
+  @keyframes blink {
+    0%, 100% { border-color: transparent; }
+    50% { border-right:3px solid #9112eb; }
   }
 
-  .page-styles{
-    @apply pt-20 w-full m-0 text-textblack font-body h-screen overflow-y-auto overflow-x-hidden relative;
+  .animate-blink {
+    animation: blink 1s step-start infinite;
   }
 }

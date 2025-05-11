@@ -1,17 +1,15 @@
 import React from 'react'
 import { faPhone, faEnvelope, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import ContactForm from '../components/ContactForm';
-import Footer from "../components/Footer"
+import ContactForm from './ContactForm';
 import {motion} from "framer-motion"
 
 export default function Contact() {
   const MotionDiv = motion.div;
 
   return (
-    <div className='page-styles '>
-      <h1 className='capitalize my-8 p-8 md:p-18'>contact</h1>
-      <section className='px-8 md:px-18 py-6 md:py-10 flex flex-col md:flex-row justify-between border-y-[1px] border-gray-200 items-center'>
+      <section id="contact"
+       className='px-8 md:px-18 py-6 md:py-10 flex flex-col md:flex-row justify-between border-y-[1px] border-gray-200 items-center'>
         <div className='flex-1 flex flex-col justify-center items-start gap-8'>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -54,7 +52,5 @@ export default function Contact() {
           <ContactForm/>
         </div>
       </section>
-      <Footer/>
-    </div>
   )
 }

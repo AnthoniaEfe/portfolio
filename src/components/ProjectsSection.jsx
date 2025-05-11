@@ -1,68 +1,78 @@
-import { useRef, useEffect } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
 
-const projects = [
-  { title: "Portfolio Website", description: "Built with React and Tailwind." },
-  { title: "Weather App", description: "Uses OpenWeatherMap API." },
-  { title: "Blog Platform", description: "Custom CMS with Next.js." },
-  { title: "E-commerce Store", description: "Built with Stripe and Sanity." },
-  { title: "Chat App", description: "Built with Firebase and React." },
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import aboutImage from "../assets/about-image.jpeg"  
+import bannerImage from "../assets/banner-image.jpg"  
+
+gsap.registerPlugin(ScrollTrigger);
+const slides = [
+  {bookmark: "Lorem ipsum dolor sit amet consaerat quia nobis quasi, nisi nihil numquam placeat tempore, atque obcaecati, possimus labore.",
+    background: "Lorem ipsum dolor sit amet consaerat quia nobis quasi, nisi nihil numquam placeat tempore, atque obcaecati, possimus labore.",
+    bannerImage: [aboutImage, "banner image"],
+    staticPreviewImage: [ aboutImage, bannerImage],
+    tags: ['interactive design', 'responsive design', 'front end dev'],
+    stack: ['HTML', 'css', 'js']
+  },
+  {bookmark: "Lorem ipsum dolor sit amet consaerat quia nobis quasi, nisi nihil numquam placeat tempore, atque obcaecati, possimus labore.",
+    background: "Lorem ipsum dolor sit amet consaerat quia nobis quasi, nisi nihil numquam placeat tempore, atque obcaecati, possimus labore.",
+    bannerImage: [aboutImage, "banner image"],
+    staticPreviewImage: [ aboutImage, bannerImage],
+    tags: ['interactive design', 'responsive design', ],
+    stack: ['css', 'js']
+  },
 ];
 
-const ProjectsSection = () => {
-  const MotionDiv=motion.div;
+export default function ProjectsSection() {
   const containerRef = useRef(null);
-  const scrollContainerRef = useRef(null);
+  const sectionsRef = useRef([]);
 
-  // Track vertical scroll progress
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end start"],
-  });
-
-  // Translate horizontal container based on vertical scroll
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", `-${(projects.length - 1) * 100}%`]);
-
-  // Convert mouse wheel scroll to horizontal scroll
   useEffect(() => {
-    const el = scrollContainerRef.current;
-    if (!el) return;
+    const container = containerRef.current;
+    const sections = sectionsRef.current;
 
-    const onWheel = (e) => {
-      e.preventDefault();
-      el.scrollLeft += e.deltaY;
+    const totalSections = sections.length;
+
+    const tween = gsap.to(sections, {
+      xPercent: -100 * (totalSections - 1),
+      ease: "none",
+      scrollTrigger: {
+        trigger: container,
+        pin: true,
+        scrub: 1,
+        snap: 1 / (totalSections - 1),
+        end: () => "+=" + container.offsetWidth,
+      },
+    });
+
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+      tween.kill();
     };
-
-    el.addEventListener("wheel", onWheel, { passive: false });
-    return () => el.removeEventListener("wheel", onWheel);
   }, []);
 
-  return (
-    <section ref={containerRef} className="h-[300vh] bg-gray-100 px-4 py-20">
+  const colors = ["bg-white", "bg-black", "bg-white", "bg-black", "bg-white", "bg-black", "bg-white", "bg-black"];
 
-      <div className="relative top-0 h-screen overflow-hidden">
-        <motion.div
-          style={{ x }}
-          className="h-full flex"
+  return (
+    <section
+      id="projects"
+      className="flex w-[400vw] overflow-x-hidden h-screen"
+      ref={containerRef}
+    >
+      {colors.map((bg, i) => (
+        <div
+          key={i}
+          ref={el => (sectionsRef.current[i] = el)}
+          className={`w-screen h-screen flex items-center justify-center text-white text-5xl font-bold ${bg}`}
         >
-          <div
-            ref={scrollContainerRef}
-            className="flex h-full w-screen overflow-x-scroll snap-x snap-mandatory"
-          >
-            {projects.map((project, index) => (
-              <div
-                key={index}
-                className="snap-center flex-shrink-0 w-screen h-[80vh] bg-white p-8 rounded-xl shadow-md flex flex-col justify-center items-center"
-              >
-                <h3 className="text-2xl font-bold mb-4">{project.title}</h3>
-                <p className="text-gray-600 text-center">{project.description}</p>
-              </div>
-            ))}
-          </div>
-        </motion.div>
-      </div>
+          {slides.map((slide, index) => (
+            <div key={index} className="w-screen flex-shrink-0 flex flex-col p-4 md:p-8 lg:p-10 gap-10 md:gap-12">
+            
+            </div>
+          ))}    
+        </div>
+      ))}
     </section>
   );
-};
-
-export default ProjectsSection;
+}

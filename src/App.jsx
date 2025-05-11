@@ -1,22 +1,25 @@
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// pages
-import Home from "./pages/Home";
-import Portfolio from "./pages/Portfolio"
-import Contact from "./pages/Contact";
-// components
+import Banner from "./components/Banner"
 import Nav from "./components/Nav"
+import About from "./components/About"
+import ContactCTA from "./components/ContactCTA"
+import ProjectsSection from "./components/ProjectsSection"
+import Contact from "./components/Contact"
+import Footer from "./components/Footer";
+
 
 function App() {
   return (
-    <Router>
-      <Nav /> 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </Router>
+    <div className="overflow-x-hidden overflow-y-auto">
+      <Nav/>
+      <Banner/>
+      <hr></hr>
+      <About />
+      <ContactCTA />
+      <ProjectsSection/>
+      <Contact/>
+      <Footer/>
+    </div>
   );
 }
 

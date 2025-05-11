@@ -1,5 +1,4 @@
 import Socials from "./Socials";
-import { Link } from "react-router-dom";
 import logo from "../assets/logo-footer.png"
 
 const navItems = [
@@ -12,14 +11,14 @@ export default function Footer() {
   return (
     <footer>
       <div className="flex flex-col md:flex-row gap-8 md:gap-10 justify-between items-center w-full">
-    <Link to="/">
+    <a href="/">
     <img src={logo} alt="anthonia efe logo" className="h-12"/>
-    </Link>  
+    </a>  
       <ul className="flex flex-col md:flex-row m-0 gap-4 justify-center items-center" role="menubar">
         {navItems.map((item, index) => (
           <li key={index} role="menuitem" className="cursor-pointer relative group inline-block">
-            <Link to={item.link} className='uppercase'>{item.text}</Link> 
-                                <span className="absolute left-0 -bottom-2 h-0.5 bg-purple-light w-0 transition-all duration-300 group-hover:w-full"></span>
+            <a href={item.link} className='uppercase'>{item.text}</a> 
+              <span className="absolute left-0 -bottom-2 h-0.5 bg-purple-light w-0 transition-all duration-300 group-hover:w-full"></span>
           </li>))}
       </ul>
       <Socials className="flex flex-row  gap-4 "/>

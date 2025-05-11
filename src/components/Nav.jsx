@@ -42,7 +42,7 @@ export default function Nav() {
   }, []);
 
   return (
-    <nav  ref={navRef} 
+    <nav ref={navRef} id="nav"
     className='font-body fixed top-0 w-full z-50 px-6 py-4 transition-all duration-300 bg-white/10 backdrop-blur-md shadow-2xs
      flex flex-row m-0 md:px-20 gap-4 justify-between items-center left-0 text-textblack' aria-label="Main navigation">
        <a href="/" className="z-10">

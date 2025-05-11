@@ -3,7 +3,7 @@ import { useState } from 'react';
 import {faChevronLeft, faChevronRight} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import aboutImage from "../assets/about-image.jpeg"  
-import bannerImage from "../assets/banner-image.jpeg"  
+import bannerImage from "../assets/banner-image.jpg"  
 import {motion} from "framer-motion"
    
 const slides = [

@@ -2,11 +2,13 @@
 import ContactCTA from '../components/ContactCTA'
 import Footer from '../components/Footer'
 import Carousel from '../components/Carousel'
+import ProjectsSection from "../components/ProjectsSection"
 
 export default function Portfolio() {
   return (
-    <div className='page-styles'>
-      <Carousel/>
+    <div className=''>
+      {/* <Carousel/> */}
+      <ProjectsSection/>
       <ContactCTA/>
       <Footer/>
     </div>

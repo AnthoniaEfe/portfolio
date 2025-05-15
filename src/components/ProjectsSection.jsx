@@ -68,7 +68,7 @@ export default function HorizontalScroll() {
 
 
   return (
-    <div
+    <div id="projects"
       className="flex w-[500vw] h-screen"
       ref={containerRef}
     >

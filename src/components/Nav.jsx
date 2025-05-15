@@ -39,9 +39,11 @@ export default function Nav() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  
+
   return (
     <nav  ref={navRef} 
-    className='font-body fixed top-0 w-full z-50 px-6 py-4 transition-all duration-300 bg-white/30 backdrop-blur-xl shadow-2xs
+    className='font-body fixed top-0 w-full z-50 px-6 py-4 transition-all duration-300 bg-white/20 backdrop-blur-md shadow-2xs
      flex flex-row m-0 md:px-20 gap-4 justify-between items-center left-0 text-textblack' aria-label="Main navigation">
        <a href="/" className="z-10">
         <img src={portfolioLogo} alt="anthonia efe logo" className='h-12 '/>

@@ -7,8 +7,11 @@ import ProjectsSection from "./components/ProjectsSection"
 import Contact from "./components/Contact"
 import Footer from "./components/Footer";
 import Services from "./components/Services";
+import useAnchorScroll from "./hooks/useAnchorScroll";
 
 function App() {
+    useAnchorScroll();
+
   return (
     <div className="overflow-x-hidden overflow-y-auto ">
       <Nav/>

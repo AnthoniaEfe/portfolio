@@ -93,7 +93,7 @@ export default function TypewriterScroll() {
     >
 
       {/* animated plane */}
-      <div className=" sm:h-[50%] md:h-[40%] lg:h-[80%] w-screen absolute top-10 left-0 ">
+      <div className="hidden md:block sm:h-[50%] md:h-[40%] lg:h-[80%] w-screen absolute top-10 left-0 ">
       <svg
         ref={svgRef}
         xmlns="http://www.w3.org/2000/svg"
@@ -150,7 +150,7 @@ export default function TypewriterScroll() {
       </h1>
 
       {/* social links */}
-      <div className="absolute md:flex md:flex-col top-[40%] right-10 hidden gap-4 justify-center items-center h-auto w-fit">
+      <div className="absolute md:flex md:flex-col top-[40%] right-10 hidden gap-4 justify-between items-center h-auto w-fit">
       {socials.map((item, index)=>(
         <div   key={index}
         className="border-textblack border-[1px] rounded-full px-2 py-1 hover:border-2 box-border">

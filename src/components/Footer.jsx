@@ -1,4 +1,5 @@
-import Socials from "./Socials";
+import { faGithub, faXTwitter, faLinkedinIn, faInstagram} from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import logo from "../assets/logo-footer.png"
 
 const navItems = [
@@ -6,6 +7,13 @@ const navItems = [
   {text:'portfolio', link:'/portfolio'},
   {text:'contact me', link:'/contact'}
 ];
+
+const socials =  [
+ {icon: faGithub, link: "https://github.com/AnthoniaEfe"},
+ {icon: faXTwitter, link: "https://twitter.com/Anthonia_Efe"},
+ {icon: faLinkedinIn, link: "https://www.linkedin.com/in/anthoniaefe/"},
+ {icon: faInstagram, link: "https://www.instagram.com/anthonia__efe/"} 
+]
 
 export default function Footer() {
   return (
@@ -21,7 +29,21 @@ export default function Footer() {
               <span className="absolute left-0 -bottom-2 h-0.5 bg-purple-light w-0 transition-all duration-300 group-hover:w-full"></span>
           </li>))}
       </ul>
-      <Socials className="flex flex-row  gap-4 "/>
+
+      <div className="flex gap-4 justify-center items-center">
+      {socials.map((item, index)=>(
+        <a
+          href={item.link}
+          target="_blank"
+          rel="noreferrer"
+          key={index}
+          className="hover:cursor:pointer hover:scale-110 md:text-xl active:scale-110 focus:scale-110"
+        >
+          <FontAwesomeIcon icon={item.icon} />
+        </a>
+      ))}
+    </div>
+
       </div>
       <p className="text-xs tracking-wider mt-6">
         &copy; {new Date().getFullYear()} Anthonia Efe

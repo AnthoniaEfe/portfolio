@@ -1,6 +1,6 @@
 import aboutImage from "../assets/about-image.jpeg"
-import {faAnglesRight} from "@fortawesome/free-solid-svg-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import {faAnglesRight} from "@fortawesome/free-solid-svg-icons"
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {motion} from "framer-motion"
 import RippleLink from "./RippleLink";
 
@@ -9,17 +9,17 @@ export default function About() {
   const MotionDiv = motion.div;
 
   return (
-    <motion.section id="about"
+    <motion.section id="about" className="justify-between px-8 md:px-20 lg:px-24 gap-16"
     initial={{ opacity: 0, y: 50 }}     
     animate={{ opacity: 1, y: 0 }}       
     transition={{ duration: 0.5 }}  >
         <div className="w-full md:w-4/5 h-full ">
-          <img src={aboutImage} alt="w-full h-full object-cover"/>
+          <img src={aboutImage} alt="object-cover"/>
         </div>
 
-        <div className="w-full h-full flex flex-col justify-around items-start gap-4 md:gap-10 p-0">
+        <div className="w-full h-full flex flex-col justify-around items-start gap-4 md:gap-8 p-0">
           <h2> About me </h2>
-          <p className=" ">
+          <p className="font-mono text-md">
           Hi! I'm Anthonia, a software developer with a passion for creating
           beautiful and functional websites. I have a strong foundation in
           JavaScript and React. I am currently learning new a helpful
@@ -33,7 +33,7 @@ export default function About() {
           </p>
          
           <RippleLink     href="#projects" className="flex justify-center items-center ">
-              <motion.div 
+              {/* <motion.div 
                    animate={{
                     x: [0, -3, 0],
                   }}
@@ -48,10 +48,10 @@ export default function About() {
                     transition: { type: "spring", stiffness: 300, duration:0.5 }   
                   }} >               
                    <FontAwesomeIcon icon={faAnglesRight} className="text-purple-light mr-6 h-10"/>
-                   </motion.div>
-                   Go to Projects
+                   </motion.div> */}
+                   Read my Ts & Cs
                    </RippleLink>
-          <hr></hr>
+    
         </div>
     </motion.section>
   );

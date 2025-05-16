@@ -1,5 +1,5 @@
 import React from 'react'
-import { faPhone, faEnvelope, faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ContactForm from './ContactForm';
 import {motion} from "framer-motion"
@@ -9,8 +9,9 @@ export default function Contact() {
 
   return (
       <section id="contact"
-       className='px-8 md:px-18 py-6 md:py-10 flex flex-col md:flex-row justify-between border-y-[1px] border-gray-200 items-center'>
-        <div className='flex-1 flex flex-col justify-center items-start gap-8'>
+       className='px-8 md:px-18 py-6 md:py-10 flex flex-col justify-between border-y-[1px] border-gray-200 items-center'>
+        <h2>Say Hello</h2>
+ 
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. 
             Laborum doloremque qui recusandae id est ipsum omnis dicta quibusdam, 
@@ -25,7 +26,7 @@ export default function Contact() {
             <a href="mailto:anthoniaefe36@gmail.com">anthoniaefe36@gmail.com</a>
           </span>
 
-          <button className='solid-button flex '>
+          {/* <button className='solid-button flex '>
             Send message 
             <motion.div 
                    animate={{
@@ -43,14 +44,10 @@ export default function Contact() {
                   }}
               ><FontAwesomeIcon icon={faChevronRight} className='text-purple-light ml-5'/>
               </motion.div>
-              </button>
-        </div>
-
-        <div className="w-px self-stretch bg-gray-200"></div>
-
-        <div className='flex-1'>
+              </button> */}
+    
           <ContactForm/>
-        </div>
+      
       </section>
   )
 }

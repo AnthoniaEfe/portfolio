@@ -114,7 +114,7 @@ export default function TypewriterScroll() {
       </div>
 
       {/* jump to top button */}
-        <a className="fixed bottom-6 right-10 z-10 hidden md:block"
+        <a className="fixed bottom-6 right-10 z-10 hidden md:block "
           href="#banner">
             <motion.div 
                   animate={{
@@ -131,7 +131,8 @@ export default function TypewriterScroll() {
                   transition: { type: "spring", stiffness: 300, duration:0.5 }   
                 }}
             >
-              <FontAwesomeIcon icon={faChevronCircleUp} className=" text-purple-light w-10 text-[30px] hover:scale-110 transition duration-300"/>
+              <FontAwesomeIcon icon={faChevronCircleUp} className=" text-purple-light rounded-full p-0 drop-shadow-2xl 
+             w-10 text-[30px] hover:scale-110 transition duration-300"/>
             </motion.div>
         </a>
 

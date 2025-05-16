@@ -2,7 +2,7 @@ import "./App.css";
 import Banner from "./components/Banner"
 import Nav from "./components/Nav"
 import About from "./components/About"
-import ContactCTA from "./components/ContactCTA"
+import Stack from "./components/Stack"
 import ProjectsSection from "./components/ProjectsSection"
 import Contact from "./components/Contact"
 import Footer from "./components/Footer";
@@ -81,7 +81,7 @@ function App() {
    
       <About />
       <Services/>
-      <ContactCTA />
+      <Stack />
       <ProjectsSection/>
       <Contact/> 
       {/* <Footer/> */}

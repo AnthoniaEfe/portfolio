@@ -8,8 +8,9 @@
   --color-off-white: #fffffe;
   --color-textblack: #130102;
   --color-purple-light:#9112eb;
+  --color-purple-950: #3f0d54;
   --color-purple-dark: #36025F;
-  --color-purple-darler: #400272;
+  --color-purple-darker: #400272;
   --font-body: "Roboto Condensed", sans-serif, system-ui;
   --font-dm-serif-text: "DM Serif Text", sans-serif, system-ui;
 }
@@ -29,15 +30,15 @@
 
 @layer base{
   h1{
-    @apply font-mono text-3xl md:text-4xl lg:text-5xl;
+    @apply font-dm-serif-text text-3xl md:text-4xl lg:text-5xl;
   }
 
   h2{
-    @apply font-mono text-2xl md:text-3xl lg:text-4xl;
+    @apply font-dm-serif-text  text-2xl md:text-3xl lg:text-4xl;
   }
 
   h3{
-    @apply font-mono text-xl md:text-2xl lg:text-3xl;
+    @apply font-dm-serif-text  text-xl md:text-2xl lg:text-3xl;
   }
 
   hr{

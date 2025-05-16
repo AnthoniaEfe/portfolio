@@ -1,8 +1,6 @@
-// HorizontalScroll.jsx
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import image from "../assets/image.png"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -42,7 +40,7 @@ export default function HorizontalScroll() {
     description: "Lorem ipsum dolor sit amet consaerat quia nobis quasi, nisi nihil numquam placeat tempore, atque obcaecati, possimus labore.",
     tags: ['interactive design', 'responsive design', 'front end dev'],
     stack: ['HTML', 'css', 'js'],
-    image: image
+ 
   },
   {title: "project 1",
     description: "Lorem ipsum dolor sit amet consaerat quia nobis quasi, nisi nihil numquam placeat tempore, atque obcaecati, possimus labore.",

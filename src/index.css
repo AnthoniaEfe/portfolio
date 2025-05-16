@@ -66,6 +66,8 @@
   }
 }
 
+
+
 @layer components{
   .hollow-button{
     @apply uppercase border-2 border-textblack py-2 px-4 w-fit;

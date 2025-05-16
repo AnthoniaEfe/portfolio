@@ -2,6 +2,7 @@ import aboutImage from "../assets/about-image.jpeg"
 import {faAnglesRight} from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {motion} from "framer-motion"
+import RippleLink from "./RippleLink";
 
 export default function About() {
   const MotionSection = motion.section;
@@ -30,8 +31,8 @@ export default function About() {
           </a>{" "}
             me if you have any questions or just want to chat!
           </p>
-          <a className="solid-button flex"
-            href="/portfolio">
+         
+          <RippleLink     href="#projects" className="flex justify-center items-center ">
               <motion.div 
                    animate={{
                     x: [0, -3, 0],
@@ -45,13 +46,11 @@ export default function About() {
                   whileHover={{ 
                     x: 6, 
                     transition: { type: "spring", stiffness: 300, duration:0.5 }   
-                  }}
-              >
-                <FontAwesomeIcon icon={faAnglesRight} className="text-purple-light mr-6 h-10"/>
-              </motion.div>
-           
-            Go to portfolio
-          </a>
+                  }} >               
+                   <FontAwesomeIcon icon={faAnglesRight} className="text-purple-light mr-6 h-10"/>
+                   </motion.div>
+                   Go to Projects
+                   </RippleLink>
           <hr></hr>
         </div>
     </motion.section>

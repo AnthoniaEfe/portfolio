@@ -3,28 +3,40 @@ import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ContactForm from './ContactForm';
 import {motion} from "framer-motion"
+import RippleLink from './RippleLink';
 
 export default function Contact() {
   const MotionDiv = motion.div;
 
   return (
-      <section id="contact"
-       className='px-8 md:px-18 py-6 md:py-10 flex flex-col justify-between border-y-[1px] border-gray-200 items-center'>
-        <h2>Say Hello</h2>
+      <div id="contact"
+       className=' justify-around px-8 md:px-20 lg:px-24 gap-16 py-6 md:py-10 lg:py-20 flex flex-col items-left font-mono'>
+        <h2 className='text-left'>Send a message</h2>
  
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Laborum doloremque qui recusandae id est ipsum omnis dicta quibusdam, 
-            enim molestiae odio beatae non dolor eaque quasi voluptatum quae quia excepturi.
+          <p className='md:max-w-[60%]'>
+           Feel free to reach out—I’d love to hear from you! Whether you have a project in mind, a question, 
+           or just want to say hello, you can contact me using the form below or via email. 
+           I’ll do my best to get back to you as soon as possible. Let’s connect and create something great together!
           </p>
-          <span>
-            <FontAwesomeIcon icon={faPhone}/> 
-            <p>+234 8138238511</p>
-          </span>
-          <span>
-            <FontAwesomeIcon icon={faEnvelope}/> 
-            <a href="mailto:anthoniaefe36@gmail.com">anthoniaefe36@gmail.com</a>
-          </span>
+
+          <div className='flex flex-row gap-4 md:gap-8 i'>
+            <RippleLink href="tel:08138238511">
+              <div className='flex flex-row w-full h-full gap-4 items-center justify-center'> 
+                <FontAwesomeIcon icon={faPhone}/> 
+                <p>+234-813-823-8511</p>
+            </div>
+          </RippleLink>
+        
+        <RippleLink href="mailto:anthoniaefe36@gmail.com">
+            <div className='flex flex-row w-full h-full gap-4 items-center justify-center'> 
+          <FontAwesomeIcon icon={faEnvelope}/> 
+          anthoniaefe36@gmail.com 
+          </div>
+        </RippleLink >
+          </div>
+
+       
+       
 
           {/* <button className='solid-button flex '>
             Send message 
@@ -48,6 +60,6 @@ export default function Contact() {
     
           <ContactForm/>
       
-      </section>
+      </div>
   )
 }

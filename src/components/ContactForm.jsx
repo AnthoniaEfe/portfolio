@@ -42,7 +42,7 @@ const ContactForm = () => {
       window.location.href = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(formData.message)}`;
       console.log("Form Submitted", formData);
 
-      setSuccessMessage("Thanks for completeing the form. We'll be in touch soon.");
+      setSuccessMessage("Thanks for completeing the form. I'll be in touch with you soon :)");
       setFormData({
         name: "",
         email: "",
@@ -66,13 +66,11 @@ const ContactForm = () => {
              <p>{successMessage}</p>
             </div>
             } 
-
-            {/* form title */}
-            <h1>Contact Us</h1>
    
+   <div className="flex flex-row items-center justify-center gap-8">
           {/* name */}
-        <div>
-          <label htmlFor="firstName">First Name *</label>
+        <div className="w-full">
+          <label htmlFor="firstName">First Name </label>
           <input
             type="text"
             name="name"
@@ -80,13 +78,14 @@ const ContactForm = () => {
             onChange={handleChange}
             aria-required="true"
             aria-describedby="name-error"
+            required
           />
           {errors.name && <p aria-live="polite">{errors.name}</p>}
         </div>
 
         {/* email */}
-        <div>
-          <label htmlFor="email">Email Address *</label>
+        <div className="w-full">
+          <label htmlFor="email">Email Address </label>
           <input
             type="email"
             name="email"
@@ -94,19 +93,21 @@ const ContactForm = () => {
             onChange={handleChange}
             aria-required="true"
             aria-describedby="email-error"
+                 required
           />
           {errors.email && <p aria-live="polite">{errors.email}</p>}
         </div>
-
+</div>
         {/* message */}
         <div>
-          <label htmlFor="message">Message *</label>
+          <label htmlFor="message">Message </label>
           <textarea
             name="message"
             value={formData.message}
             onChange={handleChange}
             aria-required="true"
             aria-describedby="message__error"
+                 required
           ></textarea>
           {errors.message && <p aria-live="polite">{errors.message}</p>}
         </div>
@@ -127,8 +128,9 @@ const ContactForm = () => {
        </div>   
        {errors.consent && <p aria-live="polite">{errors.consent}</p>}
        </div>
-        <button type="submit" className="solid-button flex">
-          Submit 
+        <button type="submit" className=" px-8 py-6 overflow-hidden font-semibold text-textblack hover:bg-textblack flex transition-all
+         bg-off-white border-[1px] border-textblack rounded-full group ${className} hover:text-off-white duration-300">
+         Send Message
            <motion.div          
               whileHover={{ 
                 x:8, 

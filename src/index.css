@@ -50,8 +50,8 @@
   }
 
   footer{
-    @apply font-body m-0 w-full px-6 py-4 md:px-20 md:py-6 gap-4 bg-textblack text-off-white flex flex-col 
-    justify-center items-center ;
+    @apply font-body m-0 w-full  py-4 md:px-20 md:py-6 gap-4 bg-textblack text-off-white flex flex-col md:flex-row
+    justify-between items-center px-8 lg:px-24  ;
   }
 
   span{
@@ -59,20 +59,27 @@
   }
   
   form{
-    @apply w-full;
+    @apply w-full ;
   }
 
   input{
-    @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent;
+    @apply w-full mt-2 mb-8 px-4 py-3 border-textblack border-[1px] rounded-2xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent;
+  }
+/* 
+  label{
+    @apply mb-10 ;
+  } */
+
+  textarea{
+
+    @apply  w-full px-4 py-3 border-textblack border-[1px] rounded-2xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent;
   }
 }
 
 
 
 @layer components{
-  .hollow-button{
-    @apply uppercase border-2 border-textblack py-2 px-4 w-fit;
-  }
+
 
   .solid-button{
     @apply uppercase text-white bg-textblack py-3 pr-8 pl-6 w-fit;

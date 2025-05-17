@@ -84,7 +84,7 @@ function App() {
       <Stack />
       <ProjectsSection/>
       <Contact/> 
-      {/* <Footer/> */}
+      <Footer/>
     </div>
   );
 }

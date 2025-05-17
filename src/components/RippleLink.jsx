@@ -14,7 +14,7 @@ const RippleLink = ({ href, children, className = "" }) => {
 
     gsap.set(fill, { x, y });
     gsap.to(fill, {
-      scale: 30,
+      scale: 50,
       duration: 0.3,
       ease: "power3.out",
     });
@@ -32,8 +32,8 @@ const RippleLink = ({ href, children, className = "" }) => {
     <a
       href={href}
       ref={linkRef}
-      className={`hollow-button relative inline-block px-8 py-6 overflow-hidden font-semibold text-textblack
-         bg-off-white border-[1px] border-textblack rounded-full group ${className} hover:text-off-white transition-colors duration-200`}
+      className={` relative inline-block px-8 py-6 overflow-hidden font-semibold text-textblack
+         bg-off-white border-[1px] border-textblack rounded-full group ${className} hover:text-off-white transition-colors duration-300`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >

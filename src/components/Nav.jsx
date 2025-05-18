@@ -43,7 +43,7 @@ export default function Nav() {
 
   return (
     <nav  ref={navRef} 
-    className='font-body fixed top-0 w-full z-50 px-8 md:px-20 lg:px-24 py-4 transition-all duration-300 bg-white/20 backdrop-blur-md shadow-2xs
+    className='font-body fixed top-0 w-full z-50 px-8 md:px-20 lg:px-24 py-2 transition-all duration-300 bg-white/10 backdrop-blur-sm shadow-2xs
      flex flex-row m-0  gap-4 justify-between items-center left-0 text-textblack' aria-label="Main navigation">
        <a href="/" className="z-10">
         <img src={portfolioLogo} alt="anthonia efe logo" className='h-12 '/>
@@ -57,7 +57,7 @@ export default function Nav() {
                 <ul className="flex flex-row m-0 gap-4 justify-center items-center" role="menubar">
                 {navItems.map((item, index) => (
                 <li key={index} role="menuitem" className="relative cursor-pointer group inline-block">
-                    <a href={item.link}  >
+                    <a href={item.link} className="text-xs capitalize" >
                       {item.text}
                     </a> 
                     <span className="absolute left-0 -bottom-2 h-0.5 bg-purple-light w-0 transition-all duration-300 group-hover:w-full"></span>
@@ -78,7 +78,7 @@ export default function Nav() {
                 role="menuitem"
               >
                 <a href={item.link} onClick={() => setIsOpen(false)}
-                className="text-lg cursor-pointer active:underline underline-offset-12
+                className="text-base cursor-pointer active:underline underline-offset-12
                  decoration-purple-light decoration-4 hover:underline uppercase">
                   {item.text}</a>
               </li>

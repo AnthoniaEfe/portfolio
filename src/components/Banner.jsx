@@ -114,7 +114,7 @@ export default function TypewriterScroll() {
       </div>
 
       {/* jump to top button */}
-        <a className="fixed bottom-6 right-10 z-10 hidden md:block "
+        <a className="fixed bottom-4 right-10 z-10 hidden md:block "
           href="#banner">
             <motion.div 
                   animate={{

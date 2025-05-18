@@ -75,10 +75,7 @@ function App() {
   return (
     <div className="overflow-x-hidden overflow-y-auto relative ">
       <Nav/>
-
-
       <Banner/>
-   
       <About />
       <Services/>
       <Stack />

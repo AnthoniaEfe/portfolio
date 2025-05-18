@@ -13,8 +13,8 @@ const ContactForm = () => {
   });
   const [errors, setErrors] = useState({});
   const [successMessage, setSuccessMessage] = useState("");
-  const emailAddress = "anthoniaefe36@gmail.com";
-  const subject = "PORTFOLIO SITE FORM";
+  // const emailAddress = "anthoniaefe36@gmail.com";
+  // const subject = "PORTFOLIO SITE FORM";
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -27,7 +27,7 @@ const ContactForm = () => {
 
   const validateForm = () => {
     let newErrors = {};
-    if (!formData.name.trim()) newErrors.firstName = "This field is required";
+    if (!formData.name.trim()) newErrors.name = "Please enter your full name";
     if (!formData.email.trim()) newErrors.email = "Please enter a valid email address";
     if (!formData.message.trim()) newErrors.message = "This field is required";
     if (!formData.consent) newErrors.consent = "To submit this form, please consent to being contacted";
@@ -39,7 +39,7 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) { 
-      window.location.href = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(formData.message)}`;
+      // window.location.href = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(formData.message)}`;
       console.log("Form Submitted", formData);
 
       setSuccessMessage("Thanks for completeing the form. I'll be in touch with you soon :)");
@@ -57,30 +57,21 @@ const ContactForm = () => {
   return (
     <main>
       <form onSubmit={handleSubmit} aria-labelledby="contact__heading" noValidate>
-        {/* success message */}
-           {successMessage && <div aria-live="polite">
-            <h2> 
-              <FontAwesomeIcon icon={faCheck}/>
-              Message Sent!
-              </h2>
-             <p>{successMessage}</p>
-            </div>
-            } 
    
-   <div className="flex flex-row items-center justify-center gap-8">
+   <div className="flex flex-row items-center justify-between gap-4 md:gap-8 w-full ">
           {/* name */}
-        <div className="w-full">
-          <label htmlFor="firstName">First Name </label>
+        <div className="w-full" >
+          <label htmlFor="name">Full Name </label>
           <input
             type="text"
             name="name"
-            value={formData.firstName}
+            value={formData.name}
             onChange={handleChange}
             aria-required="true"
             aria-describedby="name-error"
             required
           />
-          {errors.name && <p aria-live="polite">{errors.name}</p>}
+          {errors.name && <p aria-live="polite" className="error-message">{errors.name}</p>}
         </div>
 
         {/* email */}
@@ -95,26 +86,26 @@ const ContactForm = () => {
             aria-describedby="email-error"
                  required
           />
-          {errors.email && <p aria-live="polite">{errors.email}</p>}
+          {errors.email && <p aria-live="polite" className="error-message">{errors.email}</p>}
         </div>
-</div>
+      </div>
         {/* message */}
         <div>
-          <label htmlFor="message">Message </label>
+          <label htmlFor="message"> Message </label>
           <textarea
             name="message"
             value={formData.message}
             onChange={handleChange}
             aria-required="true"
             aria-describedby="message__error"
-                 required
+            required
           ></textarea>
-          {errors.message && <p aria-live="polite">{errors.message}</p>}
+          {errors.message && <p aria-live="polite" className="error-message">{errors.message}</p>}
         </div>
 
         {/* consent checkbox */}
-        <div>
-          <div>
+        <div >
+          <div className="flex flex-row items-center gap-4 ">
           <input
             type="checkbox"
             name="consent"
@@ -122,13 +113,15 @@ const ContactForm = () => {
             onChange={handleChange}
             aria-required="true"
             aria-describedby="consent-error"
-            className="w-fit"
+            className="w-fit m-0 bg-purple-light border-purple-light rounded focus:ring-purple-light 
+            focus:ring-1 text-off-white checked:bg-purple-light"
           />
-          <label htmlFor="consent">I consent to being contacted by the team *</label> 
+          <label htmlFor="consent" >I consent to being contacted by the team </label> 
        </div>   
-       {errors.consent && <p aria-live="polite">{errors.consent}</p>}
+       {errors.consent && <p aria-live="polite" className="error-message">{errors.consent}</p>}
        </div>
-        <button type="submit" className=" px-8 py-6 overflow-hidden font-semibold text-textblack hover:bg-textblack flex transition-all
+
+        <button type="submit" className="w-fit px-4 md:px-8 py-3 md:py-6 overflow-hidden font-semibold text-textblack hover:bg-textblack flex transition-all
          bg-off-white border-[1px] border-textblack rounded-full group ${className} hover:text-off-white duration-300">
          Send Message
            <motion.div          
@@ -140,6 +133,16 @@ const ContactForm = () => {
           ><FontAwesomeIcon icon={faPaperPlane} className="text-purple-light ml-5"/>
           </motion.div> 
           </button>
+
+             {/* success message */}
+           {successMessage && <div aria-live="polite" className="success-message">
+            <h3 className="text-2xl"> 
+              <FontAwesomeIcon icon={faCheck} className="mr-2 text-3xl text-green-500"/>
+              Message Sent!
+              </h3>
+             <p >{successMessage}</p>
+            </div>
+            } 
       </form>
     </main>
   );

@@ -4,7 +4,7 @@
   text-align: left;
 }
 
-  .ripple {
+.ripple {
   position: absolute;
   border-radius: 50%;
   background: #000;

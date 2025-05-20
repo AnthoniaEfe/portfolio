@@ -100,7 +100,7 @@ export default function TypewriterScroll() {
       <div className="absolute md:flex md:flex-col top-[40%] right-10 hidden gap-4 justify-between items-center h-auto w-fit">
         {socials.map((item, index)=>(
           <div   key={index}
-          className="border-textblack border-[1px] rounded-full px-2 py-1 hover:border-2 box-border">
+          className="border-textblack border-[1px] rounded-full px-3 py-1 hover:border-2 box-border">
           <a
             href={item.link}
             target="_blank"

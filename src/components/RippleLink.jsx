@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { gsap } from "gsap";
 
-const RippleLink = ({ href, children, className = "" }) => {
+const RippleLink = ({ href, target, rel, children, className = "" }) => {
   const linkRef = useRef(null);
   const fillRef = useRef(null);
 
@@ -30,8 +30,7 @@ const RippleLink = ({ href, children, className = "" }) => {
 
   return (
     <a
-      href={href}
-      ref={linkRef}
+      href={href} ref={linkRef} target={target} rel={rel}
       className={` relative inline-block px-4 md:px-8 py-3 md:py-6 overflow-hidden font-semibold text-textblack text-xs md:text-base
          bg-off-white border-[1px] border-textblack rounded-full group ${className} hover:text-off-white transition-colors duration-300`}
       onMouseEnter={handleMouseEnter}

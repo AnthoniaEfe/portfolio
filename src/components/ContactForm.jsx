@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { faCheck, faPaperPlane} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {motion} from "framer-motion"
+import axios from 'axios';
 
 const ContactForm = () => {
   const MotionDiv = motion.div;
@@ -13,8 +14,6 @@ const ContactForm = () => {
   });
   const [errors, setErrors] = useState({});
   const [successMessage, setSuccessMessage] = useState("");
-  // const emailAddress = "anthoniaefe36@gmail.com";
-  // const subject = "PORTFOLIO SITE FORM";
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -27,7 +26,7 @@ const ContactForm = () => {
 
   const validateForm = () => {
     let newErrors = {};
-    if (!formData.name.trim()) newErrors.name = "Please enter your full name";
+    if (!formData.name.trim()) newErrors.name = "Please enter your name";
     if (!formData.email.trim()) newErrors.email = "Please enter a valid email address";
     if (!formData.message.trim()) newErrors.message = "This field is required";
     if (!formData.consent) newErrors.consent = "To submit this form, please consent to being contacted";
@@ -36,10 +35,18 @@ const ContactForm = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  async function handleSubmit(e) {
     e.preventDefault();
-    if (validateForm()) { 
-      // window.location.href = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(formData.message)}`;
+
+    if (validateForm()) {
+    
+     try {
+      await axios.post('http://localhost:5000/send-email', formData);
+      alert('Email sent!');
+    } catch (err) {
+      alert('Failed to send email.');
+      console.error(err);
+    }
       console.log("Form Submitted", formData);
 
       setSuccessMessage("Thanks for completeing the form. I'll be in touch with you soon :)");
@@ -52,7 +59,7 @@ const ContactForm = () => {
     } else {
       setSuccessMessage("");
     }
-  };
+  }
 
   return (
     <main>
@@ -116,7 +123,7 @@ const ContactForm = () => {
             className="w-fit m-0 bg-purple-light border-purple-light rounded focus:ring-purple-light 
             focus:ring-1 text-off-white checked:bg-purple-light"
           />
-          <label htmlFor="consent" >I consent to being contacted by the team </label> 
+          <label htmlFor="consent" >I consent to being contacted </label> 
        </div>   
        {errors.consent && <p aria-live="polite" className="error-message">{errors.consent}</p>}
        </div>
@@ -137,7 +144,7 @@ const ContactForm = () => {
              {/* success message */}
            {successMessage && <div aria-live="polite" className="success-message">
             <h3 className="text-2xl"> 
-              <FontAwesomeIcon icon={faCheck} className="mr-2 text-3xl text-green-500"/>
+              <FontAwesomeIcon icon={faCheck} className="mr-2 text-3xl text-[#09E85E]"/>
               Message Sent!
               </h3>
              <p >{successMessage}</p>

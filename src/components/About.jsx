@@ -17,7 +17,7 @@ export default function About() {
           <img src={aboutImage} alt="object-cover"/>
         </div>
 
-        <div className="w-full h-full flex flex-col justify-around items-start gap-4 md:gap-8 p-0">
+        <div className="w-full h-full flex flex-col justify-around items-start gap-4 md:gap-10 p-0">
           <h2> About me </h2>
           <p className="font-mono text-md">
           Hi! I'm Anthonia, a software developer with a passion for creating
@@ -26,13 +26,15 @@ export default function About() {
           technologies as they roll out. When I'm not coding you'd find me
           enjoying nature with friends or playing games 😊 Feel free to{" "}
           <a
-           href="/contact" className="text-purple-light hover:underline">
+           href="#contact" className="text-purple-light hover:underline">
             contact me
           </a>{" "}
             me if you have any questions or just want to chat!
           </p>
-         
-          <RippleLink     href="#projects" className="flex justify-center items-center ">
+
+  
+          <RippleLink href="/public/TandC.pdf" 
+           target="_blank" rel="noopener noreferrer" className="flex justify-center items-center ">
               {/* <motion.div 
                    animate={{
                     x: [0, -3, 0],

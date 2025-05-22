@@ -23,7 +23,7 @@ export default function Contact() {
         <RippleLink href="tel:08138238511">
           <div className='flex flex-row w-full h-full gap-2 md:gap-4 items-center justify-center'> 
             <FontAwesomeIcon icon={faMessage} className='hidden md:block'/> 
-            <p className='text-xs md:text-base'>081-38238511</p>
+            <p className='text-xs md:text-base'>08138238511</p>
           </div>
         </RippleLink>
     

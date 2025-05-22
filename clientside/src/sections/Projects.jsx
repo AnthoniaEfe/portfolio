@@ -38,7 +38,7 @@ export default function Projects() {
     };
   }, []);
 
-  const colors = [ "bg-off-white", "bg-textblack/95", "bg-off-white", "bg-textblack/95", "bg-off-white"];
+  const colors = [ "bg-off-white", "bg-textblack", "bg-off-white", "bg-textblack", "bg-off-white"];
   const textColors = [ "text-textblack", "text-off-white", "text-textblack", "text-off-white", "text-textblack"];
 
   const slides = [

@@ -3,7 +3,7 @@ This is a personal portfolio website for to Anthonia Efe. View the live site at 
 
 ## Screenshot
 
-![](./Screenshot.png)
+![](./clientside/Screenshot.png)
 
 
 ### Built with

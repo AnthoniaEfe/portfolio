@@ -143,11 +143,13 @@ const ContactForm = () => {
 
              {/* success message */}
            {successMessage && <div aria-live="polite" className="success-message">
-            <h3 className="text-2xl"> 
-              <FontAwesomeIcon icon={faCheck} className="mr-2 text-3xl text-[#09E85E]"/>
-              Message Sent!
-              </h3>
-             <p >{successMessage}</p>
+             
+             
+                 <h3 className="text-2xl">
+                   <FontAwesomeIcon icon={faCheck} className="mr-2 text-3xl md:text-4xl text-[#09E85E]"/>Message Sent!</h3>
+             <p>{successMessage}</p>
+              
+           
             </div>
             } 
       </form>

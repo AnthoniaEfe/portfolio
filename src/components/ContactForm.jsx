@@ -128,7 +128,7 @@ const ContactForm = () => {
        {errors.consent && <p aria-live="polite" className="error-message">{errors.consent}</p>}
        </div>
 
-        <button type="submit" className="w-fit px-4 md:px-8 py-3 md:py-6 overflow-hidden font-semibold text-textblack hover:bg-textblack flex transition-all
+        <button type="submit" className="w-fit px-6 md:px-8 py-4 md:py-6 overflow-hidden font-semibold text-textblack hover:bg-textblack flex transition-all
          bg-off-white border-[1px] border-textblack rounded-full group ${className} hover:text-off-white duration-300">
          Send Message
            <motion.div          

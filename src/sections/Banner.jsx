@@ -19,9 +19,11 @@ const socials =  [
  {icon: faInstagram, link: "https://www.instagram.com/anthonia__efe/"} 
 ]
 const messages = [
-  "Web developer ",
-  "Budding mobile developer ",
+  "Software developer ",
+  "Front End Developer",
+  // "Budding mobile developer ",
   "Web Designer ",
+  "Web Developer",
   "Mechatronics Engineer ",
 ];
 

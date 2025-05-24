@@ -1,11 +1,12 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Screenshot from "../assets/Screenshot (1).png";
-import Screenshot2 from "../assets/Screenshot (2).png";
-import Screenshot3 from "../assets/Screenshot (3).png";
-import Screenshot5 from "../assets/Screenshot (4).png";
-import Screenshot4 from "../assets/Screenshot2.png";
+import anthoniaefe from "../assets/anthonia.png"
+import kiara from "../assets/kiara.png" 
+import frame from "../assets/frame.png"
+import calc from "../assets/calc.png"
+import ecommerce from "../assets/ecommerce.png"
+import contact from "../assets/contact.png"
 import RippleLink from "../components/RippleLink";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -42,77 +43,79 @@ export default function Projects() {
   const textColors = [ "text-textblack", "text-off-white", "text-textblack", "text-off-white", "text-textblack"];
 
   const slides = [
-  {title: "E-commerce Product Page",
-    description: "Users should be able to: View the optimal layout for the site depending on their device's screen size, See hover states for all interactive elements on the page, Open a lightbox gallery by clicking on the large product image, Switch the large product image by clicking on the small thumbnail images, Add items to the cart, View the cart and remove items from it",
-    tags: ['interactive design', 'responsive design', 'front end dev'],
-    stack: ['React', 'Tailwindcss'],
-    image: Screenshot,
-    siteLink: "https://chatgpt.com/",
-    repoLink : "https://github.com/AnthoniaEfe"
+  {title: "Kiara Properties Ltd",
+    description: "Informational website for Kiara Properties Ltd, premier real estate agency in Abuja, built on WordPress with Elementor page builder.",
+    tags: [' Wordpress', 'Animation', 'Responsive design', 'No Code Dev'],
+    image: kiara,
+    siteLink: "https://kiarapropertiesltd.com/",
+   
   },
-  {title: "Results Summary Component",
-    description: "The challenge Users should be able to: View the optimal layout for the interface depending on their device's screen size, See hover and focus states for all interactive elements on the page bonus: Use the local JSON data to dynamically populate the content",
-    tags: ['interactive design', 'responsive design', ],
-    stack: ['css', 'js'],
-    image: Screenshot2,
-    siteLink: "https://chatgpt.com/",
-    repoLink : "https://github.com/AnthoniaEfe"
+  {title: "The Frame Agency",
+    description: "Clone of The Frame Agency informational website, all female marketing agency, built on WordPress with Elementor page builder.",
+    tags: ['Headless Wordpress','Animation', 'Responsive design', 'No Code Dev'],
+    image: frame,
+    siteLink: "https://dev-the-frame-agency.pantheonsite.io/",
   },
-  {title: "project 2",
-    description: "Lorem ipsum dolor sit amet consaerat quia nobis quasi, nisi nihil numquam placeat tempore, atque obcaecati, possimus labore.",
-    tags: ['interactive design', 'responsive design', ],
-    stack: ['css', 'js'],
-    image: Screenshot3,
-    siteLink: "https://chatgpt.com/",
-    repoLink : "https://github.com/AnthoniaEfe"
+  {title: "Anthonia Efe Portfolio",
+    description: "Personal professional portfolio for Anthonia Efe, software developer. Built with ReactJS, styled with TailwindCSS and animations with GSAP & Motion.  ",
+    tags: ['React','TailwindCSS', 'GSAP', 'Motion', 'Responsive Design',  ],
+    image: anthoniaefe,
+    siteLink: "https://www.anthoniaefe.com/",
+    repoLink : "https://github.com/AnthoniaEfe/portfolio"
   },
-  {title: "project 3",
-    description: "Lorem ipsum dolor sit amet consaerat quia nobis quasi, nisi nihil numquam placeat tempore, atque obcaecati, possimus labore.",
-    tags: ['interactive design', 'responsive design', ],
-    stack: ['css', 'js'],
-    image: Screenshot4,
-    siteLink: "https://chatgpt.com/",
-    repoLink : "https://github.com/AnthoniaEfe"
+    {title: "E-commerce Product Page component",
+    description: "Reusable E-commerce product page component with lightbox feature built with ReactJS and styles with TailwindCSS",
+    tags: ['React','TailwindCSS','Responsive Design',  ],
+    image: ecommerce,
+    siteLink: "https://ecommerce-product-page-lovat-three.vercel.app/",
+    repoLink : "https://github.com/AnthoniaEfe/ecommerce-product-page"
   },
-  {title: "project 4",
-    description: "Lorem ipsum dolor sit amet consaerat quia nobis quasi, nisi nihil numquam placeat tempore, atque obcaecati, possimus labore.",
-    tags: ['interactive design', 'responsive design', ],
-    stack: ['css', 'js'],
-    image: Screenshot5,
-    siteLink: "https://chatgpt.com/",
-    repoLink : "https://github.com/AnthoniaEfe"
+  {title: "Tip Calculator Component",
+    description: "Reusable tip calculator component build with ReactJS and styled with SCSS",
+    tags: ['ReactJS', 'SCSS', 'Responsive Design', ],
+    image: calc,
+    siteLink: "https://tip-calc-app-wheat.vercel.app/",
+    repoLink : "https://github.com/AnthoniaEfe/tip_calc_app"
+  },
+  {title: "Contact Form Card ",
+    description: "Reusable contact form card with lightbox feature built with ReactJS and styles with TailwindCSS",
+    tags: ['React','TailwindCSS','Responsive Design',  ],
+    image: contact,
+    siteLink: "https://contact-form-card-one.vercel.app/",
+    repoLink : "https://github.com/AnthoniaEfe/contact-form-card"
   },
 ];
 
 
   return (
     <div id="projects"
-      className="flex w-[500vw] h-screen"
+      className={`flex w-[${slides.length * 100}vw] h-screen`} 
       ref={containerRef}
     >
-      {colors.map((bg, i) => (
-        <section
-          key={i}
-          ref={el => (sectionsRef.current[i] = el)}
-          className={`w-screen min-h-screen md:h-screen flex flex-col gap-6 items-center justify-center ${textColors[i]} ${bg}
-          text-center px-6 pb-10 pt-16 `}
-        >     
-          <img src={slides[i].image} alt="" className="object-cover max-h-[45%]"/>
-          <h2>{slides[i].title}</h2>
-          <p className="w-full md:max-w-[70%] text-base">{slides[i].description}</p>
-          <p className="text-purple-light text-sm ">{slides[i].tags.join(" | ")} </p>
+   {slides.map((slide, i) => (
+  <section
+    key={i}
+    ref={el => (sectionsRef.current[i] = el)}
+    className={`w-screen min-h-screen md:h-screen flex flex-col gap-6 items-center justify-center ${textColors[i]} ${colors[i]} text-center px-6 pb-10 pt-16`}
+  >
+    <img src={slide.image} alt="" className="object-cover max-h-[45%]" />
+    <h2>{slide.title}</h2>
+    <p className="w-full md:max-w-[70%] text-base">{slide.description}</p>
+    <p className="text-purple-light text-sm">{slide.tags.join(" | ")}</p>
 
-          <div className="flex flex-row gap-4 items-center justify-center w-fit">
-            <RippleLink href={slides[i].repoLink} target="_blank"> 
-             <p className="text-xs md:text-sm">View Repo</p>
-            </RippleLink >  
-            <RippleLink href={slides[i].siteLink} target="_blank">  
-             <p className="text-xs md:text-sm">View Site</p> 
-            </RippleLink> 
-          </div>
-      
-        </section>
-      ))}
+    <div className="flex flex-row gap-4 items-center justify-center w-fit">
+      {slide.repoLink && (
+        <RippleLink href={slide.repoLink} target="_blank">
+          <p className="text-xs md:text-sm">View Repo</p>
+        </RippleLink>
+      )}
+      <RippleLink href={slide.siteLink} target="_blank">
+        <p className="text-xs md:text-sm">View Site</p>
+      </RippleLink>
+    </div>
+  </section>
+))}
+
     </div>
   );
 }

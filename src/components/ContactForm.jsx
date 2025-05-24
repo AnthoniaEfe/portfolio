@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { faCheck, faPaperPlane} from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {motion} from "framer-motion"
+import { faCheck, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
   const MotionDiv = motion.div;
@@ -28,30 +29,56 @@ const ContactForm = () => {
     if (!formData.name.trim()) newErrors.name = "Please enter your name";
     if (!formData.email.trim()) newErrors.email = "Please enter a valid email address";
     if (!formData.message.trim()) newErrors.message = "This field is required";
-    if (!formData.consent) newErrors.consent = "To submit this form, please consent to being contacted";
-    
+    if (!formData.consent) newErrors.consent = "Please consent to being contacted";
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
-   function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
 
-    if (validateForm()) {
-      console.log("Form Submitted", formData);
+    if (!validateForm()) {
+      setSuccessMessage("");
+      return;
+    }
 
-      setSuccessMessage("Thanks for completeing the form. I'll be in touch with you soon :)");
+    const templateParams = {
+      name: formData.name,
+      email: formData.email,
+      message: formData.message,
+    };
+
+    try {
+      // Send to admin notification
+      await emailjs.send(
+        "service_8v47cxw",      
+        "template_0zugojr",    
+        templateParams,
+        "6xxbBwxZHskQC7Ch_" 
+      );
+
+      // Send auto-reply to the user
+      await emailjs.send(
+       "service_8v47cxw",      
+        "template_um55u3r",    
+        templateParams,
+        "6xxbBwxZHskQC7Ch_"  
+      );
+
+      setSuccessMessage("Thanks for completing the form. I'll be in touch with you soon 🙂");
+
       setFormData({
         name: "",
         email: "",
         message: "",
         consent: false,
       });
-    } else {
-      setSuccessMessage("");
+    } catch (err) {
+      console.error("Email error:", err);
+      alert("Failed to send email.");
     }
   }
-
   return (
     <main>
       <form onSubmit={handleSubmit} aria-labelledby="contact__heading" noValidate>
@@ -119,6 +146,17 @@ const ContactForm = () => {
        {errors.consent && <p aria-live="polite" className="error-message">{errors.consent}</p>}
        </div>
 
+
+             {/* success message */}
+           {successMessage && <div aria-live="polite" className="success-message">
+              <h3 className="text-2xl">
+                <FontAwesomeIcon icon={faCheck} className="mr-2 text-3xl md:text-4xl text-[#09E85E]"/>
+                Message Sent!
+              </h3>
+              <p>{successMessage}</p>
+            </div>
+            }
+
         <button type="submit" className="w-fit px-6 md:px-8 py-4 md:py-6 overflow-hidden font-semibold text-textblack hover:bg-textblack flex transition-all
          bg-off-white border-[1px] border-textblack rounded-full group ${className} hover:text-off-white duration-300">
          Send Message
@@ -131,18 +169,6 @@ const ContactForm = () => {
           ><FontAwesomeIcon icon={faPaperPlane} className="text-purple-light ml-5"/>
           </motion.div> 
           </button>
-
-             {/* success message */}
-           {successMessage && <div aria-live="polite" className="success-message">
-             
-             
-                 <h3 className="text-2xl">
-                   <FontAwesomeIcon icon={faCheck} className="mr-2 text-3xl md:text-4xl text-[#09E85E]"/>Message Sent!</h3>
-             <p>{successMessage}</p>
-              
-           
-            </div>
-            } 
       </form>
     </main>
   );

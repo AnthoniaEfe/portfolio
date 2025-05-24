@@ -39,9 +39,6 @@ export default function Projects() {
     };
   }, []);
 
-  const colors = [ "bg-off-white", "bg-textblack", "bg-off-white", "bg-textblack", "bg-off-white"];
-  const textColors = [ "text-textblack", "text-off-white", "text-textblack", "text-off-white", "text-textblack"];
-
   const slides = [
   {title: "Kiara Properties Ltd",
     description: "Informational website for Kiara Properties Ltd, premier real estate agency in Abuja, built on WordPress with Elementor page builder.",
@@ -96,11 +93,14 @@ export default function Projects() {
   <section
     key={i}
     ref={el => (sectionsRef.current[i] = el)}
-    className={`w-screen min-h-screen md:h-screen flex flex-col gap-6 items-center justify-center ${textColors[i]} ${colors[i]} text-center px-6 pb-10 pt-16`}
+    className={`w-screen min-h-screen md:h-screen flex flex-col gap-6 items-center justify-center text-off-white
+    bg-cover bg-center bg-no-repeat text-center px-6 pb-10 pt-16`}
+         style={{ backgroundImage: `url(${slide.image})` }} 
   >
-    <img src={slide.image} alt="" className="object-cover max-h-[45%]" />
+          {/* dark overlay */}
+          <div className="absolute inset-0 bg-black/75 backdrop-blur-xs -z-10 " />
     <h2>{slide.title}</h2>
-    <p className="w-full md:max-w-[70%] text-base">{slide.description}</p>
+    <p className="w-full md:max-w-[70%] text-base -10">{slide.description}</p>
     <p className="text-purple-light text-sm">{slide.tags.join(" | ")}</p>
 
     <div className="flex flex-row gap-4 items-center justify-center w-fit">

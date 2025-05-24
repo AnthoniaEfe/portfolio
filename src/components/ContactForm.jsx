@@ -2,7 +2,6 @@ import { useState } from "react";
 import { faCheck, faPaperPlane} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {motion} from "framer-motion"
-import axios from 'axios';
 
 const ContactForm = () => {
   const MotionDiv = motion.div;
@@ -35,18 +34,10 @@ const ContactForm = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  async function handleSubmit(e) {
+   function handleSubmit(e) {
     e.preventDefault();
 
     if (validateForm()) {
-    
-     try {
-      await axios.post('http://localhost:5000/send-email', formData);
-      alert('Email sent!');
-    } catch (err) {
-      alert('Failed to send email.');
-      console.error(err);
-    }
       console.log("Form Submitted", formData);
 
       setSuccessMessage("Thanks for completeing the form. I'll be in touch with you soon :)");

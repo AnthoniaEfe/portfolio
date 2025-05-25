@@ -86,14 +86,15 @@ export default function Projects() {
 
   return (
     <div id="projects"
-      className={`flex w-[${slides.length * 100}vw] h-screen`} 
+      className="flex h-screen"
+      style={{ width: `${slides.length * 100}vw` }}
       ref={containerRef}
     >
    {slides.map((slide, i) => (
   <section
     key={i}
     ref={el => (sectionsRef.current[i] = el)}
-    className={`w-screen min-h-screen md:h-screen flex flex-col gap-6 items-center justify-center text-off-white
+    className={`relative w-screen min-h-screen md:h-screen flex flex-col gap-6 items-center justify-center text-off-white
     bg-cover bg-center bg-no-repeat text-center px-6 pb-10 pt-16`}
          style={{ backgroundImage: `url(${slide.image})` }} 
   >

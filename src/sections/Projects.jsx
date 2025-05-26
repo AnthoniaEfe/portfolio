@@ -83,7 +83,6 @@ export default function Projects() {
   },
 ];
 
-
   return (
     <div id="projects"
       className="flex h-screen"

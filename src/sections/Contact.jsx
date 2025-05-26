@@ -2,11 +2,9 @@ import React from 'react'
 import { faMessage, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ContactForm from '../components/ContactForm';
-import {motion} from "framer-motion"
 import RippleLink from '../components/RippleLink';
 
 export default function Contact() {
-  const MotionDiv = motion.div;
 
   return (
     <div id="contact"

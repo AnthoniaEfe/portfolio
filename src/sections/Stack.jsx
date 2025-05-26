@@ -1,5 +1,3 @@
-
-import { motion } from "framer-motion";
 import leftBrace from "../assets/left_brace.png"
 import rightBrace from "../assets/right_brace.png"
 import react from "../assets/reactjs.svg"
@@ -28,9 +26,8 @@ const icons = [
  { text:"Python", src:python},
 ]
 export default function Stack() {
-  const MotionSection = motion.section;
   return (
-    <motion.div
+    <div
     className='px-8 md:px-20 lg:px-24 py-8 font-mono items-left w-screen h-screen flex flex-col my-10 md:my-14'
   >
     <span className="flex justify-center items-center gap-4 my-8 " >
@@ -47,6 +44,6 @@ export default function Stack() {
           </div>
         ))}
       </div>
-    </motion.div>
+    </div>
   )
 }

@@ -1,11 +1,9 @@
 import { useState } from "react";
 import { faCheck, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
-  const MotionDiv = motion.div;
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -160,14 +158,7 @@ const ContactForm = () => {
         <button type="submit" className="w-fit px-6 md:px-8 py-4 md:py-6 overflow-hidden font-semibold text-textblack hover:bg-textblack flex transition-all
          bg-off-white border-[1px] border-textblack rounded-full group ${className} hover:text-off-white duration-300">
          Send Message
-           <motion.div          
-              whileHover={{ 
-                x:8, 
-                y:-8,
-                transition: { type: "spring", stiffness: 300, duration:0.5 }   
-              }}
-          ><FontAwesomeIcon icon={faPaperPlane} className="text-purple-light ml-5"/>
-          </motion.div> 
+          <FontAwesomeIcon icon={faPaperPlane} className="text-purple-light ml-5"/>
           </button>
       </form>
     </main>

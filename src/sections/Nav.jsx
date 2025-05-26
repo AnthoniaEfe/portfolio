@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from "react";
 import { faXmark, faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import portfolioLogo from "../assets/logo-nav.png";
-// import { motion } from "framer-motion";
 
 const navItems = [
   {text: "welcome", link: "#banner"}, 

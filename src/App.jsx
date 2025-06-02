@@ -3,10 +3,10 @@ import Banner from "./sections/Banner"
 import Nav from "./sections/Nav"
 import About from "./sections/About"
 import Stack from "./sections/Stack"
-import Projects from "./sections/Projects"
 import Contact from "./sections/Contact"
 import Footer from "./sections/Footer";
-import Services from "./sections/Services";
+import Project from "./sections/Project";
+import Service from "./sections/Service";
 import LoadingWave from "./components/LoadingWave";
 import useAnchorScroll from "./hooks/useAnchorScroll";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -17,7 +17,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 function App() {
   useAnchorScroll();
- const pathRef = useRef(null);
    const [isLoading, setIsLoading] = useState(true);
   const loaderRef = useRef();
 
@@ -34,21 +33,7 @@ function App() {
     return () => clearTimeout(timeout);
   }, []);
 
-  useEffect(() => {
-    gsap.fromTo(
-      pathRef.current,
-      { drawSVG: "0% 0%" },
-      {
-        drawSVG: "0% 100%",
-        scrollTrigger: {
-          trigger: "#timeline-wrapper",
-          start: "top top",
-          end: "bottom bottom",
-          scrub: true,
-        },
-      }
-    );
-  }, []);
+
 
   return (
     <>
@@ -62,9 +47,9 @@ function App() {
         <Nav/>
         <Banner/>
         <About />
-        <Services/>
+        <Service/>
         <Stack />
-        <Projects/>
+        <Project/>
         <Contact/> 
         <Footer/>
       </div>}

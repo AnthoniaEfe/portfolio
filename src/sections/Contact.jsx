@@ -1,16 +1,22 @@
-import React from 'react'
 import { faMessage, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ContactForm from '../components/ContactForm';
 import RippleLink from '../components/RippleLink';
+import leftBrace from "../assets/left_brace.png"
+import rightBrace from "../assets/right_brace.png"
 
 export default function Contact() {
 
   return (
     <div id="contact"
-      className=' justify-around px-8 md:px-20 lg:px-24 gap-16 py-6 md:py-10 lg:py-20 flex flex-col items-left font-mono mt-30 mb-10'>
-      <h2 className='text-left text-textblack text-3xl md:text-5xl '>Say Hello!</h2>
+      className='flex flex-col items-left font-mono my-20 md:my-50 justify-around w-full md:w-[80vw] mx-auto gap-8 md:gap-10 px-8 py-6 md:p-0'>
 
+   <span className="flex justify-start items-center gap-4 my-8 " >
+      <img src={leftBrace} alt="" className="h-10 md:h-14"/> 
+      <h2 className='text-left text-textblack text-3xl md:text-5xl '>Say Hello!</h2>
+      <img src={rightBrace} alt="" className="h-10 md:h-14"/>
+    </span>
+    
       <p className='md:max-w-[70%]'>
         Feel free to reach out—I’d love to hear from you! Whether you have a project in mind, a question, 
         or just want to say hello, you can contact me using the form below, via email or an SMS. 

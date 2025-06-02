@@ -8,6 +8,7 @@ import {motion} from "framer-motion"
 import { faGithub, faXTwitter, faLinkedinIn, faInstagram} from '@fortawesome/free-brands-svg-icons';
 import leftBrace from "../assets/left_brace.png"
 import rightBrace from "../assets/right_brace.png"
+import hexBgImg from "../assets/banner-bg-image.jpg"
 
 gsap.registerPlugin(DrawSVGPlugin, MotionPathPlugin);
 gsap.registerPlugin(ScrollTrigger);
@@ -82,6 +83,27 @@ export default function TypewriterScroll() {
 
     loop();
   }, []);
+
+// kens burns effect
+  const imageRef = useRef(null);
+
+  useEffect(() => {
+    const tl = gsap.timeline({ repeat: -1, yoyo: true, defaults: { ease: "power1.inOut", duration: 12 } });
+
+    tl.to(imageRef.current, {
+      scale: 1.3,
+      xPercent: -4,
+      yPercent: -4,
+    }).to(imageRef.current, {
+      scale: 1.2,
+      xPercent: 3,
+      yPercent: 3,
+    });
+
+    return () => {
+      tl.kill();
+    };
+  }, []);
   
   return (
     <section
@@ -89,11 +111,19 @@ export default function TypewriterScroll() {
       ref={sectionRef}
       className="h-[60vh] lg:h-screen flex flex-col items-center justify-center bg-off-white relative"
     >
+     {/* Animated Image */}
+      <img
+        ref={imageRef}
+        src={hexBgImg}
+        alt="Ken Burns"
+        className="absolute inset-0 w-full h-full object-cover scale-110"
+      />
+
       {/* heading */}
-      <h1 className="font-dm-serif-text">Hi, I'm Anthonia Efe</h1>
+      <h1 className="font-dm-serif-text z-10 text-3xl md:text-5xl ">Hi, I'm Anthonia Efe</h1>
 
       {/* description */}
-      <div className="flex items-center justify-center gap-4 ">
+      <div className="flex items-center justify-center gap-4 z-10">
           <img src={leftBrace} alt="open curly brace" className="h-16"/>
           <span ref={textRef} className="text-textblack font-mono whitespace-nowrap animate-blink border-white text-wrap px-2"> </span>   
           <img src={rightBrace} alt="close curly brace"  className="h-16"/>

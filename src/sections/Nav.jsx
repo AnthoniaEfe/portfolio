@@ -65,12 +65,13 @@ export default function Nav() {
       });
     };
   }, []);
+  
 
   return (
     <nav
       ref={navRef}
       className="font-body fixed top-0 w-full z-50 px-8 md:px-20 lg:px-24 py-2 transition-all duration-300 bg-white/30 backdrop-blur-sm shadow-2xs
-      flex flex-row gap-4 justify-between items-center left-0 text-textblack"
+      flex flex-row gap-6 justify-between items-center left-0 text-textblack"
       aria-label="Main navigation"
     >
       <a href="/" className="z-10">
@@ -91,7 +92,7 @@ export default function Nav() {
             />
           </div>
         ) : (
-          <ul className="flex flex-row gap-4 justify-center items-center" role="menubar">
+          <ul className="flex flex-row gap-6 justify-center items-center" role="menubar">
             {navItems.map((item, index) => (
               <li key={index} role="menuitem" className="relative cursor-pointer group inline-block">
                 <a

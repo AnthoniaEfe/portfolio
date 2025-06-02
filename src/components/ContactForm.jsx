@@ -81,7 +81,7 @@ const ContactForm = () => {
     <main>
       <form onSubmit={handleSubmit} aria-labelledby="contact__heading" noValidate>
    
-   <div className="flex flex-row items-center justify-between gap-4 md:gap-8 w-full ">
+      <div className="flex flex-row items-center justify-between gap-4 md:gap-8 w-full ">
           {/* name */}
         <div className="w-full" >
           <label htmlFor="name">Full Name </label>

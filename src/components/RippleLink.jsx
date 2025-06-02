@@ -37,7 +37,7 @@ const RippleLink = ({ href, target, rel, children, className = "" }) => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}      
       className={` relative inline-block px-4 md:px-8 py-3 md:py-6 overflow-hidden font-semibold text-textblack text-xs md:text-base hover:cursor:pointer
-         bg-off-white border-[1px] border-textblack rounded-full group ${className} hover:text-off-white transition-colors duration-300`}
+         bg-off-white border-[1px] border-textblack rounded-full group ${className} hover:text-off-white transition-colors duration-150`}
     >
       <span
         ref={fillRef}

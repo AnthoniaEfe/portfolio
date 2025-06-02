@@ -71,8 +71,8 @@ export default function Project() {
           ease: "power2.out",
           scrollTrigger: {
             trigger: panel,
-            start: "40% 40%",
-            end: "80% 15%",
+            start: "10% 40%",
+            end: "100% 40%",
             scrub: 1,
             snap: {
               snapTo: 1,
@@ -103,7 +103,7 @@ export default function Project() {
       {panelsData.map(({ id, image, title, description, tags, repoLink, siteLink }) => (
         <section
           key={id}
-          className="stack-panel w-[80vw] h-[80vh] mx-auto rounded-3xl overflow-hidden shadow-xl/40 text-shadow-xs relative"
+          className="stack-panel w-full md:w-[80vw] h-[80vh] mx-auto rounded-3xl overflow-hidden shadow-xl/40 text-shadow-xs relative"
         >
           {/* Background Image */}
           <img

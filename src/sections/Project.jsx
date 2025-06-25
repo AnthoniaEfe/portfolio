@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import anthoniaefe from "../assets/anthonia.png"
@@ -10,6 +9,7 @@ import contact from "../assets/contact.png"
 import RippleLink from "../components/RippleLink";
 import leftBrace from "../assets/left_brace.png"
 import rightBrace from "../assets/right_brace.png"
+import * as motion from "motion/react-client"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -58,73 +58,56 @@ const panelsData = [
 ];
 
 export default function Project() {
-  useEffect(() => {
-    const panels = gsap.utils.toArray(".stack-panel");
-
-    panels.forEach((panel, i) => {
-      gsap.fromTo(
-        panel,
-        { y: 100, opacity: 1 },
-        {
-          y: 0,
-          opacity: 1,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: panel,
-            start: "10% 40%",
-            end: "100% 40%",
-            scrub: 1,
-            snap: {
-              snapTo: 1,
-              duration: 0.5,
-              ease: "power1.inOut",
-            },
-            id: `panel-${i}`,  
-            pin: i === panels.length - 1 ? false : true,
-            pinSpacing: false,
-          },
-        }
-      );
-    });
-
-    return () => ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-  }, []);
+  const MotionDiv = motion.div;
 
   return (
     <div id="projects" className="relative min-h-screen w-full md:w-[80vw] mx-auto gap-8 md:gap-10 px-8 md:p-0 my-20 md:my-50">
 
-      <span className="flex justify-start items-center gap-4" >
+         <motion.span    
+            initial={{ opacity: 0, scale: 0.5 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{
+              duration: 0.6,
+              scale: { type: "spring", visualDuration: 0.6, bounce: 0.3 },
+            }} className="flex justify-start items-center gap-4" >
         <img src={leftBrace} alt="" className="h-10 md:h-14"/>
         
         <h2 className='text-left text-textblack text-3xl md:text-5xl '>Some Projects</h2>
         <img src={rightBrace} alt="" className="h-10 md:h-14"/>
-      </span>
+      </motion.span>
 
-      {panelsData.map(({ id, image, title, description, tags, repoLink, siteLink }) => (
-        <section
-          key={id}
-          className="stack-panel w-full md:w-[80vw] h-[80vh] mx-auto rounded-3xl overflow-hidden shadow-xl/40 text-shadow-xs relative"
+    <section className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mx-auto my-4 px-2 justify-between items-center">
+      {panelsData.map(({ index, title, description, tags, repoLink, siteLink }) => (
+        <motion.div
+          key={index}
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 + index * 0.1, duration: 0.3 }}
+          className=" w-full border-[1px] border-textblack rounded-3xl mx-auto overflow-hidden relative"
         >
           {/* Background Image */}
-          <img
+          {/* <img
             src={image}
-            className="absolute inset-0 w-full h-full object-cover z-0"
-          />
+            className="absolute inset-0 w-full object-cover z-0"
+          /> */}
 
           {/* Solid Overlay */}
-          <div className="absolute inset-0 bg-black/50 backdrop-blur-sm z-10" />
+          {/* <div className="absolute inset-0 bg-black/50 backdrop-blur-sm z-10" /> */}
 
           {/* Text Content */}
-          <div className="relative z-20 h-full w-full flex flex-col items-center justify-center text-center p-8 gap-6 md:gap-8 text-off-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 drop-shadow-lg">
+          <div className="relative z-20 h-full w-full flex flex-col items-start justify-center p-8 gap-4 text-textblack">
+            <h2 className="text-3xl font-bold mb-4">
               {title}
             </h2>
-            <p className="text-base md:text-lg font-medium max-w-2xl drop-shadow-lg">
+            <p className="text-base font-medium max-w-2xl mb-2">
               {description}
             </p>
-            <p className="text-purple-light text-sm drop-shadow-lg">{tags.join(" | ")}</p>
+            <p className="text-purple-light text-sm">{tags.join(" | ")}</p>
 
-            <div className="flex flex-row gap-4 items-center justify-center w-fit">
+            <div className="flex flex-row gap-4 items-center justify-center w-fit mt-4">
       {repoLink && (
         <RippleLink href={repoLink} target="_blank">
           <p className="text-xs md:text-sm">View Repo</p>
@@ -135,8 +118,9 @@ export default function Project() {
       </RippleLink>
     </div>
           </div>
-        </section>
+        </motion.div>
       ))}
+       </section>
     </div>
   );
 }

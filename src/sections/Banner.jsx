@@ -120,7 +120,14 @@ export default function TypewriterScroll() {
       />
 
       {/* heading */}
-      <h1 className="font-dm-serif-text z-10 text-3xl md:text-5xl ">Hi, I'm Anthonia Efe</h1>
+      <motion.h1      initial={{ opacity: 0, scale: 0.7 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{
+            duration: 0.6,
+            scale: { type: "spring", visualDuration: 0.6, bounce: 0.3 },
+          }} 
+          className="font-dm-serif-text z-10 text-3xl md:text-5xl ">Hi, I'm Anthonia Efe</motion.h1>
 
       {/* description */}
       <div className="flex items-center justify-center gap-4 z-10">

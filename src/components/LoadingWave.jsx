@@ -6,7 +6,7 @@ export default function LoadingWave() {
 
   useEffect(() => {
     gsap.from(charsRef.current, {
-      y: 20,
+      y: 16,
       opacity: 0,
       stagger: {
         each: 0.08,
@@ -18,7 +18,7 @@ export default function LoadingWave() {
     });
   }, []);
 
-  const text = "Loading...";
+  const text = ".....";
 
   return (
     <div className="flex items-center justify-center h-screen ">

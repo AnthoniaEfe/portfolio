@@ -2,8 +2,11 @@ import { useState } from "react";
 import { faCheck, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import emailjs from "@emailjs/browser";
+import * as motion from "motion/react-client"
 
-const ContactForm = () => {
+export default function ContactForm() {
+  const MotionDiv = motion.div;
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -81,7 +84,12 @@ const ContactForm = () => {
     <main>
       <form onSubmit={handleSubmit} aria-labelledby="contact__heading" noValidate>
    
-      <div className="flex flex-row items-center justify-between gap-4 md:gap-8 w-full ">
+      <motion.div 
+       initial={{ opacity: 0, x: 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ delay: 0.5, duration: 0.5 }}
+        className="flex flex-row items-center justify-between gap-4 md:gap-8 w-full ">
           {/* name */}
         <div className="w-full" >
           <label htmlFor="name">Full Name </label>
@@ -111,9 +119,14 @@ const ContactForm = () => {
           />
           {errors.email && <p aria-live="polite" className="error-message">{errors.email}</p>}
         </div>
-      </div>
+      </motion.div>
+
         {/* message */}
-        <div>
+        <motion.div  initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ delay: 0.55, duration: 0.5 }}
+              >
           <label htmlFor="message"> Message </label>
           <textarea
             name="message"
@@ -124,10 +137,13 @@ const ContactForm = () => {
             required
           ></textarea>
           {errors.message && <p aria-live="polite" className="error-message">{errors.message}</p>}
-        </div>
+        </motion.div>
 
         {/* consent checkbox */}
-        <div >
+        <motion.div  initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ delay: 0.6, duration: 0.5 }}>
           <div className="flex flex-row items-center gap-4 ">
           <input
             type="checkbox"
@@ -142,7 +158,7 @@ const ContactForm = () => {
           <label htmlFor="consent" >I consent to being contacted </label> 
        </div>   
        {errors.consent && <p aria-live="polite" className="error-message">{errors.consent}</p>}
-       </div>
+       </motion.div>
 
 
              {/* success message */}
@@ -155,14 +171,16 @@ const ContactForm = () => {
             </div>
             }
 
-        <button type="submit" className="w-fit px-6 md:px-8 py-4 md:py-6 overflow-hidden font-semibold text-textblack hover:bg-textblack flex transition-all
+        <motion.button  initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ delay: 0.6, duration: 0.5 }}
+          type="submit" className="w-fit px-6 md:px-8 py-4 md:py-6 overflow-hidden font-semibold text-textblack hover:bg-textblack flex transition-all
          bg-off-white border-[1px] border-textblack rounded-full group ${className} hover:text-off-white duration-300">
          Send Message
           <FontAwesomeIcon icon={faPaperPlane} className="text-purple-light ml-5"/>
-          </button>
+          </motion.button>
       </form>
     </main>
   );
 };
-
-export default ContactForm;

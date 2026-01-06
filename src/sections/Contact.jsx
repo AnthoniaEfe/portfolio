@@ -1,4 +1,4 @@
-import { faMessage, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ContactForm from '../components/ContactForm';
 import RippleLink from '../components/RippleLink';
@@ -42,13 +42,7 @@ export default function Contact() {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.5 }}
         transition={{ delay: 0.4, duration: 0.5 }}
-        className='flex flex-row gap-4 md:gap-8 w-full md:w-fit'>
-        <RippleLink href="tel:08138238511">
-          <div className='flex flex-row w-full h-full gap-2 md:gap-4 items-center justify-center'> 
-            <FontAwesomeIcon icon={faMessage} className='hidden md:block'/> 
-            <p className='text-xs md:text-base'>08138238511</p>
-          </div>
-        </RippleLink>
+        className=' w-full '>
     
         <RippleLink href="mailto:anthoniaefe36@gmail.com">
           <div className='flex flex-row w-full h-full gap-2 md:gap-4 items-center justify-center'> 
